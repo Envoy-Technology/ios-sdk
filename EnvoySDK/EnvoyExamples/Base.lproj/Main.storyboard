@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mEH-bJ-IqS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EnvoyExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="wIy-uK-PkF">
+                                <rect key="frame" x="16" y="120" width="69" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="RGL-55-SU2"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_play_bg" translatesAutoresizingMaskIntoConstraints="NO" id="O9a-U3-kP6">
+                                <rect key="frame" x="16" y="200" width="382" height="224"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjw-v6-eZD">
+                                <rect key="frame" x="162" y="281" width="90" height="62"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ic_play"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWX-Lh-4IC">
+                                <rect key="frame" x="75" y="496" width="264" height="78"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbN-1g-hqk">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="78"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_twitter"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEn-Ju-bpB">
+                                        <rect key="frame" x="88" y="0.0" width="88" height="78"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_facebook"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKe-74-UPn">
+                                        <rect key="frame" x="176" y="0.0" width="88" height="78"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_gift"/>
+                                        <connections>
+                                            <action selector="giftAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NIk-6D-K7h"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CWX-Lh-4IC" firstAttribute="top" secondItem="O9a-U3-kP6" secondAttribute="bottom" constant="72" id="B8x-Tm-igX"/>
+                            <constraint firstItem="CWX-Lh-4IC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CYx-mS-cAx"/>
+                            <constraint firstItem="O9a-U3-kP6" firstAttribute="top" secondItem="wIy-uK-PkF" secondAttribute="bottom" constant="48" id="D7M-un-Q2C"/>
+                            <constraint firstItem="wIy-uK-PkF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JK9-Fc-Z8G"/>
+                            <constraint firstItem="vjw-v6-eZD" firstAttribute="centerX" secondItem="O9a-U3-kP6" secondAttribute="centerX" id="Odv-PX-2I7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O9a-U3-kP6" secondAttribute="trailing" constant="16" id="R6U-Nh-fDc"/>
+                            <constraint firstItem="O9a-U3-kP6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SlJ-uo-RaI"/>
+                            <constraint firstItem="wIy-uK-PkF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="VUw-rd-iB0"/>
+                            <constraint firstItem="vjw-v6-eZD" firstAttribute="centerY" secondItem="O9a-U3-kP6" secondAttribute="centerY" id="zjV-v3-fsV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9II-uF-4AL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="715.94202898550725" y="10.714285714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wo4-Of-Yfk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mEH-bJ-IqS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pnZ-YN-uhp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ALg-QY-5wM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edT-lm-Act" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194.20289855072465" y="10.714285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_facebook" width="64" height="64"/>
+        <image name="ic_gift" width="64" height="64"/>
+        <image name="ic_logo" width="69" height="18.5"/>
+        <image name="ic_play" width="66" height="48"/>
+        <image name="ic_play_bg" width="343" height="224"/>
+        <image name="ic_twitter" width="64" height="64"/>
+    </resources>
+</document>
