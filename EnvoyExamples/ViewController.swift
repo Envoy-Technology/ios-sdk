@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     @IBAction func giftAction(_ sender: Any) {
         let createLinkRequest = CreateLinkRequest(
-            userId: "1",
+            userId: "3",
             contentConfig: .init(
                 contentType: "VIDEO",
                 contentName: "Amazing content",

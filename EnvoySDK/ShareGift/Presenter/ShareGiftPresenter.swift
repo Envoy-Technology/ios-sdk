@@ -44,13 +44,8 @@ private extension ShareGiftPresenter {
         ) { [weak self] response, error in
             guard let self = self else { return }
             self.view?.updateWith(isLoading: false)
-            if let _ = error {
-//                self.viewState.error = error.message
-                self.viewState.response = .init(
-                    url: "https://contents.pallycon.com/bunny/stream.mpd",
-                    userRemainingQuota: 5
-                )
-                self.startSharing()
+            if let error = error {
+                self.viewState.error = error.message
             } else {
                 self.viewState.response = response
                 self.startSharing()
