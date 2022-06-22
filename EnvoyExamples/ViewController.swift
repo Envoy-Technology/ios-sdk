@@ -3,17 +3,14 @@ import EnvoySDK
 
 class ViewController: UIViewController {
 
-    private let apiKey = "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NTQ2OTAwMzUsImlzcyI6IkVudm95IFBsYXRmb3JtIiwianRpIjoiYzUzOTlmNjMtZTI2Mi00YjQ0LTk3M2MtYTcwNTA3YmU5ZmNiIiwibGlua19xdW90YSI6MTAwLCJvcmdfbmFtZSI6IkRldmVsdXgiLCJzYW5kYm94X2xpbmtfcXVvdGEiOjEwMH0.RfWBPrFVJgxOrlxPR4ZgifEVhlbdNGrVENsfRJHQXuqj2GDMHRXXMfTctv5FwA5FIZjmFhRcg6CmhaRkyYaFqA"
+    @IBOutlet private weak var segmentedControl: UISegmentedControl!
+    @IBOutlet private weak var stackView: UIStackView!
 
-    lazy var envoySDK = Envoy(apiKey: apiKey)
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    @IBAction func giftAction(_ sender: Any) {
-        let createLinkRequest = CreateLinkRequest(
-            userId: "3",
+    private lazy var envoySDK = Envoy(apiKey: apiKey)
+    private lazy var giftButton = envoySDK.giftButton(request: request)
+    private var request: CreateLinkRequest {
+        .init(
+            userId: "4",
             contentConfig: .init(
                 contentType: "VIDEO",
                 contentName: "Amazing content",
@@ -27,13 +24,28 @@ class ViewController: UIViewController {
                 )
             )
         )
-        envoySDK.presentShareGift(
-            from: self,
-            createLinkRequest: createLinkRequest
-        )
-//        if let navigationController = navigationController {
-//            envoySDK.pushShareGift(in: navigationController)
-//        }
+    }
+    private let apiKey = "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NTQ2OTAwMzUsImlzcyI6IkVudm95IFBsYXRmb3JtIiwianRpIjoiYzUzOTlmNjMtZTI2Mi00YjQ0LTk3M2MtYTcwNTA3YmU5ZmNiIiwibGlua19xdW90YSI6MTAwLCJvcmdfbmFtZSI6IkRldmVsdXgiLCJzYW5kYm94X2xpbmtfcXVvdGEiOjEwMH0.RfWBPrFVJgxOrlxPR4ZgifEVhlbdNGrVENsfRJHQXuqj2GDMHRXXMfTctv5FwA5FIZjmFhRcg6CmhaRkyYaFqA"
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        stackView.addArrangedSubview(giftButton)
+        giftButton.addTarget(self, action: #selector(giftAction(_:)), for: .touchUpInside)
+    }
+
+    @IBAction func giftAction(_ sender: Any) {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            envoySDK.presentShareGift(
+                from: self,
+                request: request
+            )
+        default:
+            envoySDK.pushShareGift(
+                in: self.navigationController!,
+                request: request
+            )
+        }
     }
 }
 

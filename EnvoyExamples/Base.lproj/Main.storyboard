@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,54 +26,68 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_play_bg" translatesAutoresizingMaskIntoConstraints="NO" id="O9a-U3-kP6">
                                 <rect key="frame" x="16" y="200" width="382" height="224"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjw-v6-eZD">
-                                <rect key="frame" x="151" y="288" width="112" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjw-v6-eZD">
+                                <rect key="frame" x="174" y="288" width="66" height="48"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="ic_play"/>
+                                <state key="normal" image="ic_play"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWX-Lh-4IC">
-                                <rect key="frame" x="42" y="496" width="330" height="64"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CWX-Lh-4IC">
+                                <rect key="frame" x="147" y="496" width="120" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbN-1g-hqk">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="64"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKe-74-UPn">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="ic_twitter"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEn-Ju-bpB">
-                                        <rect key="frame" x="110" y="0.0" width="110" height="64"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="ic_facebook"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKe-74-UPn">
-                                        <rect key="frame" x="220" y="0.0" width="110" height="64"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="ic_gift"/>
+                                        <state key="normal" image="ic_gift"/>
                                         <connections>
                                             <action selector="giftAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NIk-6D-K7h"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUJ-Oq-RqU" customClass="GiftButton" customModule="EnvoySDK">
+                                        <rect key="frame" x="80" y="0.0" width="40" height="64"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Lego"/>
+                                        <connections>
+                                            <action selector="giftAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cRd-7W-bkz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0Wa-SV-Leh">
+                                <rect key="frame" x="147" y="444" width="120" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Modal"/>
+                                    <segment title="Push"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="AccentColor"/>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="0Wa-SV-Leh" firstAttribute="trailing" secondItem="CWX-Lh-4IC" secondAttribute="trailing" id="ALt-Rh-bs0"/>
                             <constraint firstItem="CWX-Lh-4IC" firstAttribute="top" secondItem="O9a-U3-kP6" secondAttribute="bottom" constant="72" id="B8x-Tm-igX"/>
                             <constraint firstItem="CWX-Lh-4IC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CYx-mS-cAx"/>
                             <constraint firstItem="O9a-U3-kP6" firstAttribute="top" secondItem="wIy-uK-PkF" secondAttribute="bottom" constant="48" id="D7M-un-Q2C"/>
                             <constraint firstItem="wIy-uK-PkF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JK9-Fc-Z8G"/>
                             <constraint firstItem="vjw-v6-eZD" firstAttribute="centerX" secondItem="O9a-U3-kP6" secondAttribute="centerX" id="Odv-PX-2I7"/>
+                            <constraint firstItem="CWX-Lh-4IC" firstAttribute="top" secondItem="0Wa-SV-Leh" secondAttribute="bottom" constant="21" id="QI7-Id-fTO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O9a-U3-kP6" secondAttribute="trailing" constant="16" id="R6U-Nh-fDc"/>
                             <constraint firstItem="O9a-U3-kP6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SlJ-uo-RaI"/>
                             <constraint firstItem="wIy-uK-PkF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="VUw-rd-iB0"/>
+                            <constraint firstItem="0Wa-SV-Leh" firstAttribute="leading" secondItem="CWX-Lh-4IC" secondAttribute="leading" id="sXX-z7-4Ql"/>
                             <constraint firstItem="vjw-v6-eZD" firstAttribute="centerY" secondItem="O9a-U3-kP6" secondAttribute="centerY" id="zjV-v3-fsV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9II-uF-4AL"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="0Wa-SV-Leh" id="gcB-Hc-0bO"/>
+                        <outlet property="stackView" destination="CWX-Lh-4IC" id="nGn-iY-TTG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="715.94202898550725" y="10.714285714285714"/>
+            <point key="canvasLocation" x="714.49275362318849" y="10.714285714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wo4-Of-Yfk">
@@ -94,11 +109,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_facebook" width="64" height="64"/>
         <image name="ic_gift" width="64" height="64"/>
         <image name="ic_logo" width="69" height="18.5"/>
         <image name="ic_play" width="66" height="48"/>
         <image name="ic_play_bg" width="343" height="224"/>
-        <image name="ic_twitter" width="64" height="64"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

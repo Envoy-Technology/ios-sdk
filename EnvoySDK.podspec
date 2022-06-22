@@ -7,9 +7,16 @@ Pod::Spec.new do |spec|
   spec.author                = { "Envoy IT Delivery" => "vk@develux.com" }
   spec.source                = { :git => "https://github.com/Envoy-Technology/ios-sdk.git", :tag => "#{spec.version}" }
   spec.source_files          = "Classes", "EnvoySDK/**/*.{h,m,swift}"
-  spec.exclude_files         = "Classes/Exclude"
+  spec.resource_bundles      = {
+    spec.name => 'EnvoySDK/**/*.{xcassets,xib}'
+  }
   spec.platform              = :ios
   spec.swift_version         = "5.0"
   spec.ios.deployment_target = "13.0"
-  spec.dependency              "Mixpanel-swift"
+
+  spec.dependency "Mixpanel-swift"
+
+  spec.test_spec 'Tests' do |test_spec|
+    test_spec.source_files = 'EnvoySDKTests/**/*.{swift}'
+  end
 end

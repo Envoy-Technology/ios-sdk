@@ -6,18 +6,18 @@ final class ShareGiftPresenter {
     weak var view: ShareGiftViewProtocol?
 
     var viewState = ShareGiftViewState()
-    let createLinkRequest: CreateLinkRequest
+    let request: CreateLinkRequest
 
     init(
         with interactor: ShareGiftInteractor,
         wireframe: ShareGiftWireframe,
         view: ShareGiftViewProtocol,
-        createLinkRequest: CreateLinkRequest
+        request: CreateLinkRequest
     ) {
         self.interactor = interactor
         self.wireframe = wireframe
         self.view = view
-        self.createLinkRequest = createLinkRequest
+        self.request = request
     }
 }
 
@@ -30,6 +30,11 @@ extension ShareGiftPresenter: ShareGiftViewDelegate {
     func shareAction() {
         startSharing()
     }
+
+    func shareCompleted(with type: UIActivity.ActivityType) {
+        guard let url = viewState.response?.url else { return }
+        interactor.trackClickChooseShareMedium(url: url, type: type.rawValue)
+    }
 }
 
 private extension ShareGiftPresenter {
@@ -39,13 +44,16 @@ private extension ShareGiftPresenter {
 
     func createLink() {
         view?.updateWith(isLoading: true)
-        interactor.createLink(
-            request: createLinkRequest
+
+        interactor.trackClickGenerateShareLink()
+        interactor.getCreateLink(
+            request: request
         ) { [weak self] response, error in
             guard let self = self else { return }
             self.view?.updateWith(isLoading: false)
             if let error = error {
                 self.viewState.error = error.message
+                self.interactor.trackViewExceededQuotaError()
             } else {
                 self.viewState.response = response
                 self.startSharing()
@@ -57,5 +65,9 @@ private extension ShareGiftPresenter {
     func startSharing() {
         guard let url = viewState.response?.url else { return }
         view?.presentShare(for: url)
+        interactor.trackViewShareDetails(
+            url: url,
+            giftsLeft: viewState.response?.userRemainingQuota ?? 0
+        )
     }
 }

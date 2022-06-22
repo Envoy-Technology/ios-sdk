@@ -7,50 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		182FBB172850840A00138D99 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FBB0F2850840A00138D99 /* Endpoints.swift */; };
-		182FBB182850840A00138D99 /* WebError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FBB102850840A00138D99 /* WebError.swift */; };
-		182FBB192850840A00138D99 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FBB112850840A00138D99 /* Result.swift */; };
-		182FBB1A2850840A00138D99 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FBB122850840A00138D99 /* Resource.swift */; };
-		182FBB1B2850840A00138D99 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FBB132850840A00138D99 /* Reachability.swift */; };
-		182FBB1C2850840A00138D99 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FBB142850840A00138D99 /* Path.swift */; };
-		182FBB1D2850840A00138D99 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FBB152850840A00138D99 /* CustomError.swift */; };
-		182FBB1E2850840A00138D99 /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FBB162850840A00138D99 /* WebClient.swift */; };
-		182FBB212850850900138D99 /* CreateLinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FBB202850850900138D99 /* CreateLinkService.swift */; };
-		182FBB232850880900138D99 /* CreateLinkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FBB222850880900138D99 /* CreateLinkRequest.swift */; };
-		182FBB252850881300138D99 /* CreateLinkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FBB242850881300138D99 /* CreateLinkResponse.swift */; };
-		182FBB27285094D900138D99 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FBB26285094D900138D99 /* Environments.swift */; };
-		18C38424284F9E1900C42A43 /* Envoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C38423284F9E1900C42A43 /* Envoy.swift */; };
-		18C38435284FB03900C42A43 /* ShareGiftViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C38429284FB03900C42A43 /* ShareGiftViewState.swift */; };
-		18C38436284FB03900C42A43 /* ShareGiftPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3842A284FB03900C42A43 /* ShareGiftPresenter.swift */; };
-		18C38437284FB03900C42A43 /* ShareGiftBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3842C284FB03900C42A43 /* ShareGiftBuilder.swift */; };
-		18C38438284FB03900C42A43 /* ShareGiftWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3842D284FB03900C42A43 /* ShareGiftWireframe.swift */; };
-		18C38439284FB03900C42A43 /* ShareGiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C3842F284FB03900C42A43 /* ShareGiftViewController.xib */; };
-		18C3843A284FB03900C42A43 /* ShareGiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C38430284FB03900C42A43 /* ShareGiftViewController.swift */; };
-		18C3843B284FB03900C42A43 /* ShareGiftProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C38432284FB03900C42A43 /* ShareGiftProtocols.swift */; };
-		18C3843C284FB03900C42A43 /* ShareGiftInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C38434284FB03900C42A43 /* ShareGiftInteractor.swift */; };
-		18C3843E284FB51700C42A43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C3843D284FB51700C42A43 /* Assets.xcassets */; };
-		18C38448284FD37000C42A43 /* EnvoySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2471B284DE8F200A2BE96 /* EnvoySDK.framework */; };
-		18C38449284FD37000C42A43 /* EnvoySDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2471B284DE8F200A2BE96 /* EnvoySDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18D24720284DE8F200A2BE96 /* EnvoySDK.docc in Sources */ = {isa = PBXBuildFile; fileRef = 18D2471F284DE8F200A2BE96 /* EnvoySDK.docc */; };
 		18D24726284DE8F300A2BE96 /* EnvoySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2471B284DE8F200A2BE96 /* EnvoySDK.framework */; };
-		18D2472B284DE8F300A2BE96 /* EnvoySDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2472A284DE8F300A2BE96 /* EnvoySDKTests.swift */; };
-		18D2472C284DE8F300A2BE96 /* EnvoySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D2471E284DE8F200A2BE96 /* EnvoySDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18D2473C284DE95B00A2BE96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2473B284DE95B00A2BE96 /* AppDelegate.swift */; };
 		18D2473E284DE95B00A2BE96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2473D284DE95B00A2BE96 /* SceneDelegate.swift */; };
 		18D24740284DE95B00A2BE96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2473F284DE95B00A2BE96 /* ViewController.swift */; };
 		18D24743284DE95B00A2BE96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D24741284DE95B00A2BE96 /* Main.storyboard */; };
 		18D24745284DE95C00A2BE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D24744284DE95C00A2BE96 /* Assets.xcassets */; };
 		18D24748284DE95C00A2BE96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D24746284DE95C00A2BE96 /* LaunchScreen.storyboard */; };
+		C25B531E6E691E5EB36D139F /* Pods_EnvoyExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9998DC082A9B623E528E050B /* Pods_EnvoyExamples.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		18C3844A284FD37000C42A43 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 18D24712284DE8F200A2BE96 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 18D2471A284DE8F200A2BE96;
-			remoteInfo = EnvoySDK;
-		};
 		18D24727284DE8F300A2BE96 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 18D24712284DE8F200A2BE96 /* Project object */;
@@ -60,48 +27,9 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		18C3844C284FD37000C42A43 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				18C38449284FD37000C42A43 /* EnvoySDK.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		182FBB0F2850840A00138D99 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
-		182FBB102850840A00138D99 /* WebError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebError.swift; sourceTree = "<group>"; };
-		182FBB112850840A00138D99 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		182FBB122850840A00138D99 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		182FBB132850840A00138D99 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		182FBB142850840A00138D99 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
-		182FBB152850840A00138D99 /* CustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
-		182FBB162850840A00138D99 /* WebClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
-		182FBB202850850900138D99 /* CreateLinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLinkService.swift; sourceTree = "<group>"; };
-		182FBB222850880900138D99 /* CreateLinkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateLinkRequest.swift; sourceTree = "<group>"; };
-		182FBB242850881300138D99 /* CreateLinkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLinkResponse.swift; sourceTree = "<group>"; };
-		182FBB26285094D900138D99 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
-		18C38423284F9E1900C42A43 /* Envoy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Envoy.swift; sourceTree = "<group>"; };
-		18C38429284FB03900C42A43 /* ShareGiftViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareGiftViewState.swift; sourceTree = "<group>"; };
-		18C3842A284FB03900C42A43 /* ShareGiftPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareGiftPresenter.swift; sourceTree = "<group>"; };
-		18C3842C284FB03900C42A43 /* ShareGiftBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareGiftBuilder.swift; sourceTree = "<group>"; };
-		18C3842D284FB03900C42A43 /* ShareGiftWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareGiftWireframe.swift; sourceTree = "<group>"; };
-		18C3842F284FB03900C42A43 /* ShareGiftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareGiftViewController.xib; sourceTree = "<group>"; };
-		18C38430284FB03900C42A43 /* ShareGiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareGiftViewController.swift; sourceTree = "<group>"; };
-		18C38432284FB03900C42A43 /* ShareGiftProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareGiftProtocols.swift; sourceTree = "<group>"; };
-		18C38434284FB03900C42A43 /* ShareGiftInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareGiftInteractor.swift; sourceTree = "<group>"; };
-		18C3843D284FB51700C42A43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18D2471B284DE8F200A2BE96 /* EnvoySDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnvoySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		18D2471E284DE8F200A2BE96 /* EnvoySDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnvoySDK.h; sourceTree = "<group>"; };
-		18D2471F284DE8F200A2BE96 /* EnvoySDK.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = EnvoySDK.docc; sourceTree = "<group>"; };
 		18D24725284DE8F300A2BE96 /* EnvoySDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnvoySDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18D2472A284DE8F300A2BE96 /* EnvoySDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvoySDKTests.swift; sourceTree = "<group>"; };
 		18D24739284DE95B00A2BE96 /* EnvoyExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnvoyExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D2473B284DE95B00A2BE96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18D2473D284DE95B00A2BE96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +38,9 @@
 		18D24744284DE95C00A2BE96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18D24747284DE95C00A2BE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18D24749284DE95C00A2BE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43849EC158AD0DF03CA2A9B0 /* Pods-EnvoyExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnvoyExamples.debug.xcconfig"; path = "Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples.debug.xcconfig"; sourceTree = "<group>"; };
+		9998DC082A9B623E528E050B /* Pods_EnvoyExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnvoyExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B24E5C3421E42BCF5770D209 /* Pods-EnvoyExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnvoyExamples.release.xcconfig"; path = "Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,97 +63,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18C38448284FD37000C42A43 /* EnvoySDK.framework in Frameworks */,
+				C25B531E6E691E5EB36D139F /* Pods_EnvoyExamples.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		182FBB0E2850840A00138D99 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				182FBB1F285084E900138D99 /* CreateLink */,
-				182FBB0F2850840A00138D99 /* Endpoints.swift */,
-				182FBB102850840A00138D99 /* WebError.swift */,
-				182FBB112850840A00138D99 /* Result.swift */,
-				182FBB122850840A00138D99 /* Resource.swift */,
-				182FBB132850840A00138D99 /* Reachability.swift */,
-				182FBB142850840A00138D99 /* Path.swift */,
-				182FBB152850840A00138D99 /* CustomError.swift */,
-				182FBB162850840A00138D99 /* WebClient.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		182FBB1F285084E900138D99 /* CreateLink */ = {
-			isa = PBXGroup;
-			children = (
-				182FBB222850880900138D99 /* CreateLinkRequest.swift */,
-				182FBB242850881300138D99 /* CreateLinkResponse.swift */,
-				182FBB202850850900138D99 /* CreateLinkService.swift */,
-			);
-			path = CreateLink;
-			sourceTree = "<group>";
-		};
-		18C38427284FB03900C42A43 /* ShareGift */ = {
-			isa = PBXGroup;
-			children = (
-				18C38428284FB03900C42A43 /* Presenter */,
-				18C3842B284FB03900C42A43 /* InputOutput */,
-				18C3842E284FB03900C42A43 /* View */,
-				18C38431284FB03900C42A43 /* Protocols */,
-				18C38433284FB03900C42A43 /* Interactor */,
-			);
-			path = ShareGift;
-			sourceTree = "<group>";
-		};
-		18C38428284FB03900C42A43 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				18C38429284FB03900C42A43 /* ShareGiftViewState.swift */,
-				18C3842A284FB03900C42A43 /* ShareGiftPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		18C3842B284FB03900C42A43 /* InputOutput */ = {
-			isa = PBXGroup;
-			children = (
-				18C3842C284FB03900C42A43 /* ShareGiftBuilder.swift */,
-				18C3842D284FB03900C42A43 /* ShareGiftWireframe.swift */,
-			);
-			path = InputOutput;
-			sourceTree = "<group>";
-		};
-		18C3842E284FB03900C42A43 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				18C38430284FB03900C42A43 /* ShareGiftViewController.swift */,
-				18C3842F284FB03900C42A43 /* ShareGiftViewController.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		18C38431284FB03900C42A43 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				18C38432284FB03900C42A43 /* ShareGiftProtocols.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		18C38433284FB03900C42A43 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				18C38434284FB03900C42A43 /* ShareGiftInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
 		18C3843F284FCADD00C42A43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9998DC082A9B623E528E050B /* Pods_EnvoyExamples.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -230,11 +81,10 @@
 		18D24711284DE8F200A2BE96 = {
 			isa = PBXGroup;
 			children = (
-				18D2471D284DE8F200A2BE96 /* EnvoySDK */,
-				18D24729284DE8F300A2BE96 /* EnvoySDKTests */,
 				18D2473A284DE95B00A2BE96 /* EnvoyExamples */,
 				18D2471C284DE8F200A2BE96 /* Products */,
 				18C3843F284FCADD00C42A43 /* Frameworks */,
+				1ED83A16014D8C25B964AEF8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -246,28 +96,6 @@
 				18D24739284DE95B00A2BE96 /* EnvoyExamples.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		18D2471D284DE8F200A2BE96 /* EnvoySDK */ = {
-			isa = PBXGroup;
-			children = (
-				182FBB0E2850840A00138D99 /* Networking */,
-				18C38427284FB03900C42A43 /* ShareGift */,
-				18D2471E284DE8F200A2BE96 /* EnvoySDK.h */,
-				18C38423284F9E1900C42A43 /* Envoy.swift */,
-				182FBB26285094D900138D99 /* Environments.swift */,
-				18C3843D284FB51700C42A43 /* Assets.xcassets */,
-				18D2471F284DE8F200A2BE96 /* EnvoySDK.docc */,
-			);
-			path = EnvoySDK;
-			sourceTree = "<group>";
-		};
-		18D24729284DE8F300A2BE96 /* EnvoySDKTests */ = {
-			isa = PBXGroup;
-			children = (
-				18D2472A284DE8F300A2BE96 /* EnvoySDKTests.swift */,
-			);
-			path = EnvoySDKTests;
 			sourceTree = "<group>";
 		};
 		18D2473A284DE95B00A2BE96 /* EnvoyExamples */ = {
@@ -284,6 +112,15 @@
 			path = EnvoyExamples;
 			sourceTree = "<group>";
 		};
+		1ED83A16014D8C25B964AEF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43849EC158AD0DF03CA2A9B0 /* Pods-EnvoyExamples.debug.xcconfig */,
+				B24E5C3421E42BCF5770D209 /* Pods-EnvoyExamples.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -291,7 +128,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D2472C284DE8F300A2BE96 /* EnvoySDK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,15 +174,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18D2474A284DE95C00A2BE96 /* Build configuration list for PBXNativeTarget "EnvoyExamples" */;
 			buildPhases = (
+				68D3D971890D7CFC1C757227 /* [CP] Check Pods Manifest.lock */,
 				18D24735284DE95B00A2BE96 /* Sources */,
 				18D24736284DE95B00A2BE96 /* Frameworks */,
 				18D24737284DE95B00A2BE96 /* Resources */,
-				18C3844C284FD37000C42A43 /* Embed Frameworks */,
+				D0A5CC8AF5793270D1B30EC7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				18C3844B284FD37000C42A43 /* PBXTargetDependency */,
 			);
 			name = EnvoyExamples;
 			productName = EnvoyExamples;
@@ -399,8 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18C3843E284FB51700C42A43 /* Assets.xcassets in Resources */,
-				18C38439284FB03900C42A43 /* ShareGiftViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,32 +257,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		68D3D971890D7CFC1C757227 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EnvoyExamples-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0A5CC8AF5793270D1B30EC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18D24717284DE8F200A2BE96 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182FBB252850881300138D99 /* CreateLinkResponse.swift in Sources */,
-				18C38436284FB03900C42A43 /* ShareGiftPresenter.swift in Sources */,
-				182FBB192850840A00138D99 /* Result.swift in Sources */,
-				182FBB1D2850840A00138D99 /* CustomError.swift in Sources */,
-				182FBB1C2850840A00138D99 /* Path.swift in Sources */,
-				18D24720284DE8F200A2BE96 /* EnvoySDK.docc in Sources */,
-				18C3843C284FB03900C42A43 /* ShareGiftInteractor.swift in Sources */,
-				18C3843A284FB03900C42A43 /* ShareGiftViewController.swift in Sources */,
-				18C38437284FB03900C42A43 /* ShareGiftBuilder.swift in Sources */,
-				182FBB232850880900138D99 /* CreateLinkRequest.swift in Sources */,
-				18C38435284FB03900C42A43 /* ShareGiftViewState.swift in Sources */,
-				18C3843B284FB03900C42A43 /* ShareGiftProtocols.swift in Sources */,
-				182FBB27285094D900138D99 /* Environments.swift in Sources */,
-				182FBB1B2850840A00138D99 /* Reachability.swift in Sources */,
-				182FBB1E2850840A00138D99 /* WebClient.swift in Sources */,
-				18C38438284FB03900C42A43 /* ShareGiftWireframe.swift in Sources */,
-				182FBB212850850900138D99 /* CreateLinkService.swift in Sources */,
-				182FBB182850840A00138D99 /* WebError.swift in Sources */,
-				18C38424284F9E1900C42A43 /* Envoy.swift in Sources */,
-				182FBB172850840A00138D99 /* Endpoints.swift in Sources */,
-				182FBB1A2850840A00138D99 /* Resource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +311,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D2472B284DE8F300A2BE96 /* EnvoySDKTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,11 +327,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		18C3844B284FD37000C42A43 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 18D2471A284DE8F200A2BE96 /* EnvoySDK */;
-			targetProxy = 18C3844A284FD37000C42A43 /* PBXContainerItemProxy */;
-		};
 		18D24728284DE8F300A2BE96 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 18D2471A284DE8F200A2BE96 /* EnvoySDK */;
@@ -684,7 +533,6 @@
 		18D24733284DE8F300A2BE96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -700,7 +548,6 @@
 		18D24734284DE8F300A2BE96 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -715,6 +562,7 @@
 		};
 		18D2474B284DE95C00A2BE96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43849EC158AD0DF03CA2A9B0 /* Pods-EnvoyExamples.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -742,6 +590,7 @@
 		};
 		18D2474C284DE95C00A2BE96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B24E5C3421E42BCF5770D209 /* Pods-EnvoyExamples.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

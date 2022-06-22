@@ -1,0 +1,29 @@
+PODS:
+  - EnvoySDK (0.0.1):
+    - Mixpanel-swift
+  - Mixpanel-swift (3.2.6):
+    - Mixpanel-swift/Complete (= 3.2.6)
+  - Mixpanel-swift/Complete (3.2.6)
+  - Wormholy (1.6.5)
+
+DEPENDENCIES:
+  - EnvoySDK (from `.`)
+  - Wormholy
+
+SPEC REPOS:
+  trunk:
+    - Mixpanel-swift
+    - Wormholy
+
+EXTERNAL SOURCES:
+  EnvoySDK:
+    :path: "."
+
+SPEC CHECKSUMS:
+  EnvoySDK: ca0759aa1d18f0d39727480ed13ef9c2c0a7832d
+  Mixpanel-swift: ce120e0d51dcb0d0bf5a25e1ee232fe89ad1136b
+  Wormholy: 3252bc3e55a1847ef9a0976c1377bd77bf3635fa
+
+PODFILE CHECKSUM: bea50729a0bb44d47433c4e9ed7ebed86697e41a
+
+COCOAPODS: 1.11.2

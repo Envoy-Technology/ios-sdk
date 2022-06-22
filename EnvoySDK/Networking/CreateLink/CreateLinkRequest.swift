@@ -5,9 +5,10 @@ public struct CreateLinkRequest: Codable {
     let contentConfig: ContentConfig
     let linkPreview: LinkPreview?
     let autoplay: Bool?
+    let extra: [String : String]?
 
     enum CodingKeys: String, CodingKey {
-        case userId, contentConfig, autoplay
+        case userId, contentConfig, autoplay, extra
         case linkPreview = "linkPreviewConf"
     }
 
@@ -15,12 +16,14 @@ public struct CreateLinkRequest: Codable {
         userId: String,
         contentConfig: ContentConfig,
         linkPreview: LinkPreview? = nil,
-        autoplay: Bool? = nil
+        autoplay: Bool? = nil,
+        extra: [String : String]? = nil
     ) {
         self.userId = userId
         self.contentConfig = contentConfig
         self.linkPreview = linkPreview
         self.autoplay = autoplay
+        self.extra = extra
     }
 }
 

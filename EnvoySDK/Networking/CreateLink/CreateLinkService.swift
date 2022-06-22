@@ -15,13 +15,14 @@ protocol CreateLinkServiceType {
 final class CreateLinkService {
 
     private let client: WebClient
-    private let authToken: String
+    private let jwtToken: String
 
-    init(client: WebClient,
-         authToken: String
+    init(
+        client: WebClient,
+        jwtToken: String
     ) {
         self.client = client
-        self.authToken = authToken
+        self.jwtToken = jwtToken
     }
 }
 
@@ -32,7 +33,7 @@ extension CreateLinkService: CreateLinkServiceType {
         completion: @escaping (CreateLinkResponse?, WebError?) -> ()
     ) -> URLSessionDataTask? {
         let path = Endpoint.createLink.rawValue
-        let headers = [MappingKeys.authorization : "Bearer \(authToken)"]
+        let headers = [MappingKeys.authorization : "Bearer \(jwtToken)"]
         let resource = Resource<CreateLinkResponse>(
             path: path,
             method: .post,
@@ -51,5 +52,10 @@ extension Encodable {
     var asJSON: [String: Any]? {
         guard let data = try? JSONEncoder().encode(self) else { return nil }
         return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
+    }
+
+    var asParameters: [String: String]? {
+        guard let data = try? JSONEncoder().encode(self) else { return nil }
+        return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String : String] }
     }
 }

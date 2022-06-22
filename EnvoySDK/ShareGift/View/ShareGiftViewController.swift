@@ -23,7 +23,7 @@ private extension ShareGiftViewController {
 
     func setupNavigationBar() {
         let closeItem = UIBarButtonItem(
-            image: UIImage(named: "ic_arrow_right", in: Bundle(for: Self.self), with: nil),
+            image: UIImage(named: "ic_arrow_right", in: Bundle.envoyBundle, with: nil),
             style: .plain,
             target: self,
             action: #selector(onBack)
@@ -70,6 +70,11 @@ extension ShareGiftViewController: ShareGiftViewProtocol {
             applicationActivities: nil
         )
         activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.completionWithItemsHandler = { [weak self] activityType, completed, _, _ in
+            if let activityType = activityType, completed {
+                self?.presenter?.shareCompleted(with: activityType)
+            }
+        }
         present(activityViewController, animated: true)
     }
 }

@@ -3,28 +3,32 @@ import UIKit
 
 final class ShareGiftBuilder {
     class func viewController(
-        authToken: String,
-        createLinkRequest: CreateLinkRequest
+        trackService: TrackServiceProtocol,
+        request: CreateLinkRequest,
+        jwtToken: String
     ) -> ShareGiftViewController {
         let webClient = WebClient(baseUrl: Environments.currentEnvironment.rawValue)
         let createLinkService = CreateLinkService(
             client: webClient,
-            authToken: authToken
+            jwtToken: jwtToken
         )
         let interactor = ShareGiftInteractor(
-            createLinkService: createLinkService
+            createLinkService: createLinkService,
+            trackService: trackService,
+            request: request,
+            jwtToken: jwtToken
         )
         let wireframe = ShareGiftWireframe()
         let nibName = String(describing: ShareGiftViewController.self)
         let viewController = ShareGiftViewController(
             nibName: nibName,
-            bundle: Bundle(for: Self.self)
+            bundle: Bundle.envoyBundle
         )
         let presenter = ShareGiftPresenter(
             with: interactor,
             wireframe: wireframe,
             view: viewController,
-            createLinkRequest: createLinkRequest
+            request: request
         )
 
         viewController.presenter = presenter
