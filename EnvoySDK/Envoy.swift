@@ -21,11 +21,10 @@ public protocol EnvoyType {
 public final class Envoy {
 
     private let jwtToken: String
-    private let trackService: TrackService
+    private let trackService = TrackService()
 
     public init(apiKey: String) {
         self.jwtToken = apiKey
-        self.trackService = TrackService(jwtToken: apiKey)
     }
 }
 

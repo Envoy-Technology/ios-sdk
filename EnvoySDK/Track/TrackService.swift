@@ -6,17 +6,10 @@ protocol TrackServiceProtocol {
 
 class TrackService: TrackServiceProtocol {
     private let trackService = Mixpanel.mainInstance()
-    private let jwtToken: String
-
-    init(jwtToken: String) {
-        self.jwtToken = jwtToken
-    }
 
     var defaultParameters: [String : String] {
-        let decoded = JWTDecode().decode(jwtToken: jwtToken)
-        let orgId = decoded["jti"] as? String ?? ""
-        return [
-            "user_id" : "\(orgId)#\(trackService.distinctId)",
+        [
+            "user_id" : trackService.distinctId,
             "user_type" : "subscriber",
             "version" : "1.0"
         ]
@@ -40,6 +33,5 @@ class TrackService: TrackServiceProtocol {
             event: event.rawValue,
             properties: parameters
         )
-        print(" event: \(event.rawValue) parameters: \(parameters)")
     }
 }
