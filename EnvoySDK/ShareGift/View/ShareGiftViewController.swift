@@ -2,6 +2,8 @@ import UIKit
 
 final class ShareGiftViewController: UIViewController {
 
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var subtitleLabel: UILabel!
     @IBOutlet private weak var statusLabel: UILabel!
     @IBOutlet private weak var activity: UIActivityIndicatorView!
     @IBOutlet private weak var shareButton: UIButton!
@@ -51,6 +53,8 @@ private extension ShareGiftViewController {
 
 extension ShareGiftViewController: ShareGiftViewProtocol {
     func updateWith(viewState: ShareGiftViewState) {
+        titleLabel.text = viewState.title
+        subtitleLabel.text = viewState.subtitle
         statusLabel.text = viewState.message
         shareButton.isHidden = !viewState.isSharePossible
     }

@@ -51,8 +51,8 @@ private extension ShareGiftPresenter {
         ) { [weak self] response, error in
             guard let self = self else { return }
             self.view?.updateWith(isLoading: false)
-            if let error = error {
-                self.viewState.error = error.message
+            if let _ = error {
+                self.viewState.isError = true
                 self.interactor.trackViewExceededQuotaError()
             } else {
                 self.viewState.response = response
