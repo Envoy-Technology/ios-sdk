@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181E8B93286C9AE1002036C0 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E8B92286C9AE1002036C0 /* Environments.swift */; };
 		18D24726284DE8F300A2BE96 /* EnvoySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2471B284DE8F200A2BE96 /* EnvoySDK.framework */; };
 		18D2473C284DE95B00A2BE96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2473B284DE95B00A2BE96 /* AppDelegate.swift */; };
 		18D2473E284DE95B00A2BE96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2473D284DE95B00A2BE96 /* SceneDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181E8B92286C9AE1002036C0 /* Environments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
 		18D2471B284DE8F200A2BE96 /* EnvoySDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EnvoySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D24725284DE8F300A2BE96 /* EnvoySDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnvoySDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D24739284DE95B00A2BE96 /* EnvoyExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnvoyExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,7 @@
 				18D2473B284DE95B00A2BE96 /* AppDelegate.swift */,
 				18D2473D284DE95B00A2BE96 /* SceneDelegate.swift */,
 				18D2473F284DE95B00A2BE96 /* ViewController.swift */,
+				181E8B92286C9AE1002036C0 /* Environments.swift */,
 				18D24741284DE95B00A2BE96 /* Main.storyboard */,
 				18D24744284DE95C00A2BE96 /* Assets.xcassets */,
 				18D24746284DE95C00A2BE96 /* LaunchScreen.storyboard */,
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D24740284DE95B00A2BE96 /* ViewController.swift in Sources */,
+				181E8B93286C9AE1002036C0 /* Environments.swift in Sources */,
 				18D2473C284DE95B00A2BE96 /* AppDelegate.swift in Sources */,
 				18D2473E284DE95B00A2BE96 /* SceneDelegate.swift in Sources */,
 			);

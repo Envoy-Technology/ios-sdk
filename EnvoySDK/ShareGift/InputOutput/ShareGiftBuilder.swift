@@ -5,9 +5,10 @@ final class ShareGiftBuilder {
     class func viewController(
         trackService: TrackServiceProtocol,
         request: CreateLinkRequest,
-        jwtToken: String
+        jwtToken: String,
+        baseURL: String
     ) -> ShareGiftViewController {
-        let webClient = WebClient(baseUrl: Environments.currentEnvironment.rawValue)
+        let webClient = WebClient(baseURL: baseURL)
         let createLinkService = CreateLinkService(
             client: webClient,
             jwtToken: jwtToken

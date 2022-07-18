@@ -3,7 +3,7 @@ import UIKit
 import Mixpanel
 
 public protocol EnvoyType {
-    static func initialize()
+    static func initialize(apiKey: String)
 
     func pushShareGift(
         in navigationController: UINavigationController,
@@ -19,18 +19,25 @@ public protocol EnvoyType {
 }
 
 public final class Envoy {
-
     private let jwtToken: String
+    private let baseURL: String
     private let trackService = TrackService()
 
-    public init(apiKey: String) {
+    public init(
+        baseURL: String,
+        apiKey: String
+    ) {
+        self.baseURL = baseURL
         self.jwtToken = apiKey
     }
 }
 
 extension Envoy: EnvoyType {
-    public static func initialize() {
-        Mixpanel.initialize(token: Environments.currentEnvironment.mixpanelToken)
+    public static func initialize(apiKey: String) {
+        let jwt = JWTDecode().decode(jwtToken: apiKey)
+        if let token = jwt["mp_token"] as? String {
+            Mixpanel.initialize(token: token)
+        }
     }
 
     public func pushShareGift(
@@ -71,7 +78,8 @@ private extension Envoy {
         let viewController = ShareGiftBuilder.viewController(
             trackService: trackService,
             request: request,
-            jwtToken: jwtToken
+            jwtToken: jwtToken,
+            baseURL: baseURL
         )
         viewController.modalPresentationStyle = .fullScreen
         return viewController

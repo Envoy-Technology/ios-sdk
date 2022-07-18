@@ -6,11 +6,14 @@ class ViewController: UIViewController {
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
     @IBOutlet private weak var stackView: UIStackView!
 
-    private lazy var envoySDK = Envoy(apiKey: apiKey)
+    private lazy var envoySDK = Envoy(
+        baseURL: Environments.baseURL,
+        apiKey: Environments.apiKey
+    )
     private lazy var giftButton = envoySDK.giftButton(request: request)
     private var request: CreateLinkRequest {
         .init(
-            userId: "4",
+            userId: "11",
             contentConfig: .init(
                 contentType: "VIDEO",
                 contentName: "Amazing content",
@@ -25,7 +28,6 @@ class ViewController: UIViewController {
             )
         )
     }
-    private let apiKey = "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NTQ2OTAwMzUsImlzcyI6IkVudm95IFBsYXRmb3JtIiwianRpIjoiYzUzOTlmNjMtZTI2Mi00YjQ0LTk3M2MtYTcwNTA3YmU5ZmNiIiwibGlua19xdW90YSI6MTAwLCJvcmdfbmFtZSI6IkRldmVsdXgiLCJzYW5kYm94X2xpbmtfcXVvdGEiOjEwMH0.RfWBPrFVJgxOrlxPR4ZgifEVhlbdNGrVENsfRJHQXuqj2GDMHRXXMfTctv5FwA5FIZjmFhRcg6CmhaRkyYaFqA"
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -60,8 +60,8 @@ class WebClient {
     
     var commonParams: JSON = [:]
     
-    init(baseUrl: String) {
-        self.baseUrl = baseUrl
+    init(baseURL: String) {
+        self.baseUrl = baseURL
     }
     
     func load<A>(
