@@ -3,6 +3,8 @@
 
 Envoy iOS SDK aimed to deliver a fast solution to share content out of the iOS Application.
 
+> **Authorization and Mixpanel usage**: For now ios-sdk has outdated in mentioned parts
+
 # Quick Start Guide
 
 ## 1. Install Envoy SDK
