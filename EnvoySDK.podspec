@@ -12,9 +12,9 @@ Pod::Spec.new do |spec|
   }
   spec.platform              = :ios
   spec.swift_version         = "5.0"
-  spec.ios.deployment_target = "13.0"
+  spec.ios.deployment_target = "15.0"
 
-  spec.dependency "Wormholy"
+  # spec.dependency "Wormholy"
 
   spec.test_spec 'Tests' do |test_spec|
     test_spec.source_files = 'EnvoySDKTests/**/*.{swift}'

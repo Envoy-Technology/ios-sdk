@@ -22,14 +22,9 @@
     "EnvoySDK": "EnvoySDK/**/*.{xcassets,xib}"
   },
   "platforms": {
-    "ios": "13.0"
+    "ios": "15.0"
   },
   "swift_versions": "5.0",
-  "dependencies": {
-    "Mixpanel-swift": [
-
-    ]
-  },
   "testspecs": [
     {
       "name": "Tests",
