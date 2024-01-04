@@ -87,8 +87,14 @@ class WebClient {
                 return
             }
             
+            print(data?.prettyPrintedJSONString)
+            
             if (200..<300) ~= response.statusCode {
-                completion(Result(value: data.flatMap(resource.parse), or: .other))
+                if let empty = EmptyResponse() as? A {
+                    completion(.success(empty))
+                } else {
+                    completion(Result(value: data.flatMap(resource.parse), or: .other))
+                }
             } else if response.statusCode == 401 {
                 completion(.failure(.unauthorized))
             } else {
@@ -99,6 +105,5 @@ class WebClient {
         task.resume()
         
         return task
-        
     }
 }

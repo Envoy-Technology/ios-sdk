@@ -28,7 +28,7 @@ struct Resource<A> {
 }
 
 extension Resource where A: Decodable {
-    init(jsonDecoder: JSONDecoder = JSONDecoder(),
+    init(jsonDecoder: JSONDecoder = JSONDecoder.defaultDecoder,
          path: String,
          method: RequestMethod = .get,
          params: JSON = [:],
@@ -36,7 +36,6 @@ extension Resource where A: Decodable {
          isAbsolutePath: Bool = false,
          parse: ((Data) -> A?)? = nil,
          parseError: ((Data) -> CustomError?)? = nil) {
-        
         var newHeaders = headers
         newHeaders["Accept"] = "application/json"
         newHeaders["Content-Type"] = "application/json"

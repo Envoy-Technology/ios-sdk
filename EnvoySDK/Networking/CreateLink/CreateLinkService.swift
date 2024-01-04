@@ -1,7 +1,7 @@
 import Foundation
 
 fileprivate struct MappingKeys {
-    static let authorization = "Authorization"
+    static let authorization = "x-api-key"
 }
 
 protocol CreateLinkServiceType {
@@ -15,14 +15,14 @@ protocol CreateLinkServiceType {
 final class CreateLinkService {
 
     private let client: WebClient
-    private let jwtToken: String
+    private let token: String
 
     init(
         client: WebClient,
-        jwtToken: String
+        token: String
     ) {
         self.client = client
-        self.jwtToken = jwtToken
+        self.token = token
     }
 }
 
@@ -32,8 +32,8 @@ extension CreateLinkService: CreateLinkServiceType {
         request: CreateLinkRequest,
         completion: @escaping (CreateLinkResponse?, WebError?) -> ()
     ) -> URLSessionDataTask? {
-        let path = Endpoint.createLink.rawValue
-        let headers = [MappingKeys.authorization : "Bearer \(jwtToken)"]
+        let path = Endpoint.createLink.path
+        let headers = [MappingKeys.authorization : "\(token)"]
         let resource = Resource<CreateLinkResponse>(
             path: path,
             method: .post,
@@ -50,12 +50,9 @@ extension CreateLinkService: CreateLinkServiceType {
 
 extension Encodable {
     var asJSON: [String: Any]? {
-        guard let data = try? JSONEncoder().encode(self) else { return nil }
+        let encoder = JSONEncoder()
+        encoder.keyEncodingStrategy = .convertToSnakeCase
+        guard let data = try? encoder.encode(self) else { return nil }
         return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
-    }
-
-    var asParameters: [String: String]? {
-        guard let data = try? JSONEncoder().encode(self) else { return nil }
-        return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String : String] }
     }
 }

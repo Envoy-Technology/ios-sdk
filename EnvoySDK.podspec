@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.swift_version         = "5.0"
   spec.ios.deployment_target = "13.0"
 
-  spec.dependency "Mixpanel-swift"
+  spec.dependency "Wormholy"
 
   spec.test_spec 'Tests' do |test_spec|
     test_spec.source_files = 'EnvoySDKTests/**/*.{swift}'
