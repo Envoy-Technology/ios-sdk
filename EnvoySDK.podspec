@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.license               = { :type => "MIT", :file => "LICENSE" }
   spec.author                = { "Envoy IT Delivery" => "vk@develux.com" }
   spec.source                = { :git => "https://github.com/Envoy-Technology/ios-sdk.git", :tag => "#{spec.version}" }
-  spec.source_files          = "Classes", "EnvoySDK/**/*.{h,m,swift}", "Extensions"
+  spec.source_files          = "Classes", "EnvoySDK/**/*.{h,m,swift}"
   spec.resource_bundles      = {
     spec.name => 'EnvoySDK/**/*.{xcassets,xib}'
   }
