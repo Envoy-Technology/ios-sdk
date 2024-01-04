@@ -32,7 +32,7 @@ extension ShareGiftPresenter: ShareGiftViewDelegate {
     }
 
     func shareCompleted(with type: UIActivity.ActivityType) {
-        guard let url = viewState.response?.url else { return }
+        guard let _ = viewState.response?.url else { return }
     }
 }
 
