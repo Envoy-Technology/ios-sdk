@@ -66,6 +66,7 @@
 		7F62EAD42B46E432000C6D92 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A63A49ACEA83306CC2D2C66F3D90FB /* UserDefaultsExtensions.swift */; };
 		7F62EAD52B46E432000C6D92 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB46633F4E8C3E7C84227F3B373B24A /* DataExtensions.swift */; };
 		7F62EAD62B46E45A000C6D92 /* Envoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA03CBE8474DF0746EE8656874EE7E4 /* Envoy.swift */; };
+		7F62EAD72B46E7F7000C6D92 /* ShareGiftPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29279960B1D11CE53F06CCC807CE901E /* ShareGiftPresenter.swift */; };
 		86685A78C3A725F696F0D31CB689F5CE /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F147623165167DB418880D9D086055F /* Keychain.swift */; };
 		93C686B59BB7286C744F0C2FB483C6C5 /* Envoy+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F0C714B8EF41EEDA8799E38A501A39 /* Envoy+Bundle.swift */; };
 		943AB6AF657311420DF19C01105AEFA3 /* ShareGiftViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FBEBB1B8F43B9F639EB67C71F6BE1B /* ShareGiftViewState.swift */; };
@@ -707,6 +708,7 @@
 				7F62EAC02B46E424000C6D92 /* UserRewardsResponse.swift in Sources */,
 				7F62EAD02B46E42F000C6D92 /* Result.swift in Sources */,
 				7F62EAC82B46E427000C6D92 /* CreateLinkService.swift in Sources */,
+				7F62EAD72B46E7F7000C6D92 /* ShareGiftPresenter.swift in Sources */,
 				7F62EAC42B46E424000C6D92 /* GetUserRewardsService.swift in Sources */,
 				7F62EAC92B46E42F000C6D92 /* EmptyResponse.swift in Sources */,
 				7F62EAD62B46E45A000C6D92 /* Envoy.swift in Sources */,
