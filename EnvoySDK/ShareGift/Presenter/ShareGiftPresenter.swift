@@ -32,8 +32,7 @@ extension ShareGiftPresenter: ShareGiftViewDelegate {
     }
 
     func shareCompleted(with type: UIActivity.ActivityType) {
-        guard let url = viewState.response?.url else { return }
-        interactor.trackClickChooseShareMedium(url: url, type: type.rawValue)
+        guard let _ = viewState.response?.url else { return }
     }
 }
 
@@ -45,7 +44,6 @@ private extension ShareGiftPresenter {
     func createLink() {
         view?.updateWith(isLoading: true)
 
-        interactor.trackClickGenerateShareLink()
         interactor.getCreateLink(
             request: request
         ) { [weak self] response, error in
@@ -53,7 +51,6 @@ private extension ShareGiftPresenter {
             self.view?.updateWith(isLoading: false)
             if let _ = error {
                 self.viewState.isError = true
-                self.interactor.trackViewExceededQuotaError()
             } else {
                 self.viewState.response = response
                 self.startSharing()
@@ -65,9 +62,5 @@ private extension ShareGiftPresenter {
     func startSharing() {
         guard let url = viewState.response?.url else { return }
         view?.presentShare(for: url)
-        interactor.trackViewShareDetails(
-            url: url,
-            giftsLeft: viewState.response?.userRemainingQuota ?? 0
-        )
     }
 }

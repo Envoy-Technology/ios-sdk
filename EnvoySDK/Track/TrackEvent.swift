@@ -1,5 +1,6 @@
 import Foundation
 
+/*
 enum TrackEvent: String {
     case loadGiftButton = "load_gift_button"
     case viewGiftButton = "view_gift_button"
@@ -120,3 +121,4 @@ struct ShareLinkTrackParameters: Codable {
         case shareLinkHash = "share_link_hash"
     }
 }
+*/

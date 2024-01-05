@@ -74,11 +74,6 @@ extension ShareGiftViewController: ShareGiftViewProtocol {
             applicationActivities: nil
         )
         activityViewController.popoverPresentationController?.sourceView = self.view
-        activityViewController.completionWithItemsHandler = { [weak self] activityType, completed, _, _ in
-            if let activityType = activityType, completed {
-                self?.presenter?.shareCompleted(with: activityType)
-            }
-        }
         present(activityViewController, animated: true)
     }
 }

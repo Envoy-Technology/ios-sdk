@@ -1,6 +1,6 @@
 import Foundation
 
-enum WebError: Error {
+public enum WebError: Error {
     case noInternetConnection
     case custom(CustomError)
     case unauthorized
