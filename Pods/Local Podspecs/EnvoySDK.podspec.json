@@ -25,12 +25,5 @@
     "ios": "15.0"
   },
   "swift_versions": "5.0",
-  "testspecs": [
-    {
-      "name": "Tests",
-      "test_type": "unit",
-      "source_files": "EnvoySDKTests/**/*.{swift}"
-    }
-  ],
   "swift_version": "5.0"
 }

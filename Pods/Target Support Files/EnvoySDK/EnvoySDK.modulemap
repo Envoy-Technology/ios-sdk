@@ -1,6 +1,0 @@
-framework module EnvoySDK {
-  umbrella header "EnvoySDK-umbrella.h"
-
-  export *
-  module * { export * }
-}

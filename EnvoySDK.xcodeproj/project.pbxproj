@@ -15,7 +15,6 @@
 		18D24743284DE95B00A2BE96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D24741284DE95B00A2BE96 /* Main.storyboard */; };
 		18D24745284DE95C00A2BE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D24744284DE95C00A2BE96 /* Assets.xcassets */; };
 		18D24748284DE95C00A2BE96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D24746284DE95C00A2BE96 /* LaunchScreen.storyboard */; };
-		C25B531E6E691E5EB36D139F /* Pods_EnvoyExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9998DC082A9B623E528E050B /* Pods_EnvoyExamples.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +39,6 @@
 		18D24744284DE95C00A2BE96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18D24747284DE95C00A2BE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18D24749284DE95C00A2BE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43849EC158AD0DF03CA2A9B0 /* Pods-EnvoyExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnvoyExamples.debug.xcconfig"; path = "Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples.debug.xcconfig"; sourceTree = "<group>"; };
-		9998DC082A9B623E528E050B /* Pods_EnvoyExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnvoyExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B24E5C3421E42BCF5770D209 /* Pods-EnvoyExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnvoyExamples.release.xcconfig"; path = "Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,27 +61,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C25B531E6E691E5EB36D139F /* Pods_EnvoyExamples.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18C3843F284FCADD00C42A43 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9998DC082A9B623E528E050B /* Pods_EnvoyExamples.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		18D24711284DE8F200A2BE96 = {
 			isa = PBXGroup;
 			children = (
 				18D2473A284DE95B00A2BE96 /* EnvoyExamples */,
 				18D2471C284DE8F200A2BE96 /* Products */,
-				18C3843F284FCADD00C42A43 /* Frameworks */,
 				1ED83A16014D8C25B964AEF8 /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -118,8 +104,6 @@
 		1ED83A16014D8C25B964AEF8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				43849EC158AD0DF03CA2A9B0 /* Pods-EnvoyExamples.debug.xcconfig */,
-				B24E5C3421E42BCF5770D209 /* Pods-EnvoyExamples.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -177,11 +161,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18D2474A284DE95C00A2BE96 /* Build configuration list for PBXNativeTarget "EnvoyExamples" */;
 			buildPhases = (
-				68D3D971890D7CFC1C757227 /* [CP] Check Pods Manifest.lock */,
 				18D24735284DE95B00A2BE96 /* Sources */,
 				18D24736284DE95B00A2BE96 /* Frameworks */,
 				18D24737284DE95B00A2BE96 /* Resources */,
-				D0A5CC8AF5793270D1B30EC7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,48 +241,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		68D3D971890D7CFC1C757227 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EnvoyExamples-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D0A5CC8AF5793270D1B30EC7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18D24717284DE8F200A2BE96 /* Sources */ = {
@@ -411,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -470,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -576,7 +516,6 @@
 		};
 		18D2474B284DE95C00A2BE96 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43849EC158AD0DF03CA2A9B0 /* Pods-EnvoyExamples.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -590,6 +529,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,7 +545,6 @@
 		};
 		18D2474C284DE95C00A2BE96 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B24E5C3421E42BCF5770D209 /* Pods-EnvoyExamples.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -619,6 +558,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
