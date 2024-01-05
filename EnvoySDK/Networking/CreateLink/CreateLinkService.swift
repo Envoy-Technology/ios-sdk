@@ -15,14 +15,14 @@ protocol CreateLinkServiceType {
 final class CreateLinkService {
 
     private let client: WebClient
-    private let token: String
+    private let apiKey: String
 
     init(
         client: WebClient,
-        token: String
+        apiKey: String
     ) {
         self.client = client
-        self.token = token
+        self.apiKey = apiKey
     }
 }
 
@@ -33,11 +33,11 @@ extension CreateLinkService: CreateLinkServiceType {
         completion: @escaping (CreateLinkResponse?, WebError?) -> ()
     ) -> URLSessionDataTask? {
         let path = Endpoint.createLink.path
-        let headers = [MappingKeys.authorization : "\(token)"]
+        let headers = [MappingKeys.authorization : "\(apiKey)"]
         let resource = Resource<CreateLinkResponse>(
             path: path,
             method: .post,
-            params: request.asJSON ?? [:],
+            params: request.asJSON(keyEncodingStrategy: .convertToSnakeCase) ?? [:],
             headers: headers
         )
         return client.load(resource: resource) { (response) in

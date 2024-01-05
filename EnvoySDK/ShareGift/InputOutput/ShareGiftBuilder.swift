@@ -4,13 +4,13 @@ import UIKit
 final class ShareGiftBuilder {
     class func viewController(
         request: CreateLinkRequest,
-        token: String,
+        apiKey: String,
         baseURL: String
     ) -> ShareGiftViewController {
         let webClient = WebClient(baseURL: baseURL)
         let createLinkService = CreateLinkService(
             client: webClient,
-            token: token
+            apiKey: apiKey
         )
         let interactor = ShareGiftInteractor(
             createLinkService: createLinkService,

@@ -1,13 +1,13 @@
 import Foundation
 
 public struct UserCurrentRewardsResponse: Decodable {
-    struct EventCount: Decodable {
-        let completed: Int
-        let leftToReward: Int
-        let percentageDone: Int
+    public struct EventCount: Decodable {
+        public let completed: Int
+        public let leftToReward: Int
+        public let percentageDone: Int
     }
     
-    let earnedThisPeriod: Int
-    let earnableLeft: Int
-    let eventCount: EventCount
+    public let earnedThisPeriod: Int
+    public let earnableLeft: Int
+    public let eventCount: EventCount
 }

@@ -1,6 +1,6 @@
 {
   "name": "EnvoySDK",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "EnvoySDK for iOS",
   "homepage": "https://dev-platform.envoy.is",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/Envoy-Technology/ios-sdk.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "source_files": [
     "Classes",

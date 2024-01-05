@@ -11,7 +11,10 @@ public struct CreateLinkRequest: Codable {
     let isSandbox: Bool?
     let labels: [Label]?
 
-    public init(autoplay: Bool?, contentSetting: ContentSetting, lifespanAfterClick: LifespanAfterClick?, openQuota: Int?, extra: String?, title: String?, sharerId: String, isSandbox: Bool?, labels: [Label]?) {
+    public init(autoplay: Bool?, contentSetting: ContentSetting,
+                lifespanAfterClick: LifespanAfterClick? = nil,
+                openQuota: Int? = nil, extra: String? = nil, title: String? = nil,
+                sharerId: String, isSandbox: Bool? = nil, labels: [Label]? = nil) {
         self.autoplay = autoplay
         self.contentSetting = contentSetting
         self.lifespanAfterClick = lifespanAfterClick
@@ -65,7 +68,11 @@ public struct CreateLinkRequest: Codable {
         let buttonText: String?
         let contentProtection: ContentProtection?
 
-        public init(contentType: String, contentName: String, contentDescription: String, common: Common, timeLimit: Int?, timeStart: Int?, availableFrom: String?, availableTo: String?, videoOrientation: Int?, previewTitle: String?, previewDescription: String?, previewImage: String?, isSandbox: Bool?, mandatoryEmail: Bool?, modalTitle: String?, buttonText: String?, contentProtection: ContentProtection?) {
+        public init(contentType: String, contentName: String, contentDescription: String, common: Common,
+                    timeLimit: Int? = nil, timeStart: Int? = nil, availableFrom: String? = nil, availableTo: String? = nil,
+                    videoOrientation: Int? = nil, previewTitle: String? = nil, previewDescription: String? = nil,
+                    previewImage: String? = nil, isSandbox: Bool? = nil, mandatoryEmail: Bool? = nil,
+                    modalTitle: String? = nil, buttonText: String? = nil, contentProtection: ContentProtection? = nil) {
             self.contentType = contentType
             self.contentName = contentName
             self.contentDescription = contentDescription
@@ -111,4 +118,3 @@ public struct CreateLinkRequest: Codable {
     }
 
 }
-

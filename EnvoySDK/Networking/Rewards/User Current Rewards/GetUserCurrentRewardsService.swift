@@ -14,11 +14,11 @@ protocol GetUserCurrentRewardsServiceType {
 final class GetUserCurrentRewardsService {
 
     private let client: WebClient
-    private let token: String
+    private let apiKey: String
 
-    init(client: WebClient, token: String) {
+    init(client: WebClient, apiKey: String) {
         self.client = client
-        self.token = token
+        self.apiKey = apiKey
     }
 }
 
@@ -28,7 +28,7 @@ extension GetUserCurrentRewardsService: GetUserCurrentRewardsServiceType {
         userId: String,
         completion: @escaping (UserCurrentRewardsResponse?, WebError?) -> ()) -> URLSessionDataTask? {
         let path = Endpoint.getUserCurrentRewards(userId: userId).path
-        let headers = [MappingKeys.authorization : "\(token)"]
+        let headers = [MappingKeys.authorization : "\(apiKey)"]
         let resource = Resource<UserCurrentRewardsResponse>(
             path: path,
             method: .get,

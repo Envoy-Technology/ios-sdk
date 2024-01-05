@@ -7,27 +7,27 @@ fileprivate struct MappingKeys {
 protocol ClaimUserRewardServiceType {
     @discardableResult
     func claimUserReward(request: ClaimUserRewardRequest,
-                         completion: @escaping (ClaimUserRewardResponse?, WebError?) -> ()) -> URLSessionDataTask?
+                         completion: @escaping (EmptyResponse?, WebError?) -> ()) -> URLSessionDataTask?
 }
 
 final class ClaimUserRewardService {
     
     private let client: WebClient
-    private let token: String
+    private let apiKey: String
     
-    init(client: WebClient, token: String) {
+    init(client: WebClient, apiKey: String) {
         self.client = client
-        self.token = token
+        self.apiKey = apiKey
     }
 }
 
 extension ClaimUserRewardService: ClaimUserRewardServiceType {
     @discardableResult
     func claimUserReward(request: ClaimUserRewardRequest,
-                         completion: @escaping (ClaimUserRewardResponse?, WebError?) -> ()) -> URLSessionDataTask? {
+                         completion: @escaping (EmptyResponse?, WebError?) -> ()) -> URLSessionDataTask? {
         let path = Endpoint.claimUserReward.path
-        let headers = [MappingKeys.authorization : "\(token)"]
-        let resource = Resource<ClaimUserRewardResponse>(
+        let headers = [MappingKeys.authorization : "\(apiKey)"]
+        let resource = Resource<EmptyResponse>(
             path: path,
             method: .post,
             params: request.asJSON(keyEncodingStrategy: .useDefaultKeys) ?? [:],

@@ -13,11 +13,11 @@ protocol LogPixelEventServiceType {
 final class LogPixelEventService {
     
     private let client: WebClient
-    private let token: String
+    private let apiKey: String
     
-    init(client: WebClient, token: String) {
+    init(client: WebClient, apiKey: String) {
         self.client = client
-        self.token = token
+        self.apiKey = apiKey
     }
 }
 
@@ -26,7 +26,7 @@ extension LogPixelEventService: LogPixelEventServiceType {
     func logPixelEvent(request: LogPixelEventRequest,
                        completion: @escaping (EmptyResponse?, WebError?) -> ()) -> URLSessionDataTask? {
         let path = Endpoint.logPixelEvent.path
-        let headers = [MappingKeys.authorization : "\(token)"]
+        let headers = [MappingKeys.authorization : "\(apiKey)"]
         let resource = Resource<EmptyResponse>(
             path: path,
             method: .post,

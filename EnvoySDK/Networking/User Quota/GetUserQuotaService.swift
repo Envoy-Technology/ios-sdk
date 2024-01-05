@@ -13,11 +13,11 @@ protocol GetUserRemainingQuotaServiceType {
 final class GetUserRemainingQuotaService {
 
     private let client: WebClient
-    private let token: String
+    private let apiKey: String
 
-    init(client: WebClient, token: String) {
+    init(client: WebClient, apiKey: String) {
         self.client = client
-        self.token = token
+        self.apiKey = apiKey
     }
 }
 
@@ -26,7 +26,7 @@ extension GetUserRemainingQuotaService: GetUserRemainingQuotaServiceType {
     func getUserQuota(userId: String,
                       completion: @escaping (UserQuotaResponse?, WebError?) -> ()) -> URLSessionDataTask? {
         let path = Endpoint.getUerRemainingQuota(userId: userId).path
-        let headers = [MappingKeys.authorization : "\(token)"]
+        let headers = [MappingKeys.authorization : "\(apiKey)"]
         let resource = Resource<UserQuotaResponse>(
             path: path,
             method: .get,
