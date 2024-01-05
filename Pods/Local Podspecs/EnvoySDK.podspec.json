@@ -22,7 +22,7 @@
     "EnvoySDK": "EnvoySDK/**/*.{xcassets,xib}"
   },
   "platforms": {
-    "ios": "15.0"
+    "ios": "13.0"
   },
   "swift_versions": "5.0",
   "swift_version": "5.0"
