@@ -30,7 +30,7 @@ extension LogPixelEventService: LogPixelEventServiceType {
         let resource = Resource<EmptyResponse>(
             path: path,
             method: .post,
-            params: request.asJSON(keyEncodingStrategy: .useDefaultKeys) ?? [:],
+            params: request.asJSON(keyEncodingStrategy: .convertToSnakeCase) ?? [:],
             headers: headers
         )
         return client.load(resource: resource) { (response) in

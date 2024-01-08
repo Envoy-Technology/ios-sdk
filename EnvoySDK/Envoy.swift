@@ -28,7 +28,7 @@ public protocol EnvoyType {
                         completion: @escaping (UserRewardsResponse?, WebError?) -> ())
     
     func claimUserReward(request: ClaimUserRewardRequest,
-                         completion: @escaping (EmptyResponse?, WebError?) -> ())
+                         completion: @escaping (ClaimUserRewardResponse?, WebError?) -> ())
     
     func getUserCurrentRewards(
         userId: String,
@@ -42,13 +42,13 @@ public final class Envoy {
     
     public static var shared: Envoy!
     
-    public static func initialize(apiKey: String, environment: EnvoyEnvironment) {
-        Envoy.shared = Envoy(apiKey: apiKey, environment: environment)
+    public static func initialize(apiKey: String) {
+        Envoy.shared = Envoy(apiKey: apiKey)
     }
     
-    private init(apiKey: String, environment: EnvoyEnvironment) {
+    private init(apiKey: String) {
         self.apiKey = apiKey
-        self.environment = environment
+        self.environment = .dev
         self.webClient = WebClient(baseURL: environment.apiUrl)
         
         if UserDefaults.standard.isFreshInstall {
@@ -114,7 +114,7 @@ extension Envoy: EnvoyType {
     }
     
     public func claimUserReward(request: ClaimUserRewardRequest,
-                                completion: @escaping (EmptyResponse?, WebError?) -> ()) {
+                                completion: @escaping (ClaimUserRewardResponse?, WebError?) -> ()) {
         ClaimUserRewardService(client: self.webClient, apiKey: self.apiKey)
             .claimUserReward(request: request, completion: completion)
     }

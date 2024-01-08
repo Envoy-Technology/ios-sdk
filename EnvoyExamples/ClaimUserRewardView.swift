@@ -38,8 +38,7 @@ struct ClaimUserRewardView: View {
     private func claimUserReward() {
         let request = ClaimUserRewardRequest(userId: "1",
                                              paypalReceiver: "bianca@wolfpack-digital.com")
-        Envoy.shared.claimUserReward(
-            request: request) { response, error in
+        Envoy.shared.claimUserReward(request: request) { response, error in
                 self.success = error == nil
                 self.error = error?.message
             }

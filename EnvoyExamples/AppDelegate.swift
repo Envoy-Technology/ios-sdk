@@ -5,7 +5,7 @@ import EnvoySDK
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Envoy.initialize(apiKey: Config.apiKey, environment: .dev)
+        Envoy.initialize(apiKey: Config.apiKey)
         return true
     }
 

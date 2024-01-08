@@ -26,25 +26,23 @@ public enum PixelEvent {
 public struct LogPixelEventRequest: Encodable {
     
     public struct Extra: Encodable {
-        let campaign: String?
-        let userType: String?
+        let title: String?
+        let type: String?
         
-        public init(campaign: String?, userType: String?) {
-            self.campaign = campaign
-            self.userType = userType
+        public init(title: String?, type: String?) {
+            self.title = title
+            self.type = type
         }
     }
     
     let eventName: String
-    let userId: String?
     let sharerUserId: String?
     let shareLinkHash: String?
     let extra: Extra?
     
-    public init(event: PixelEvent, userId: String?, sharerUserId: String? = nil,
-                shareLinkHash: String?, extra: Extra?) {
+    public init(event: PixelEvent, sharerUserId: String? = nil,
+                shareLinkHash: String? = nil, extra: Extra? = nil) {
         self.eventName = event.rawValue
-        self.userId = userId
         self.sharerUserId = sharerUserId
         self.shareLinkHash = shareLinkHash
         self.extra = extra
