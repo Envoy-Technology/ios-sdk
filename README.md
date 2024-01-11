@@ -17,13 +17,13 @@ You can install the Envoy iOS SDK - Swift library by using CocoaPods. You will n
 4. Run `pod install` in your Xcode project directory. CocoaPods should download and install the EnvoySDK library, and create a new Xcode workspace. Open up this workspace in Xcode or typing `open *.xcworkspace` in your terminal.
 
 ## 2. Initialize EnvoySDK
-To initialize the library, add `import EnvoySDK` into `AppDelegate` and call `initialize()` in [application:didFinishLaunchingWithOptions:](https://developer.apple.com/documentation/uikit/uiapplicationdelegate#//apple_ref/occ/intfm/UIApplicationDelegate/application:willFinishLaunchingWithOptions:)
+To initialize the library, add `import EnvoySDK` into `AppDelegate` and call `initialize(apiKey:)` in [application:didFinishLaunchingWithOptions:](https://developer.apple.com/documentation/uikit/uiapplicationdelegate#//apple_ref/occ/intfm/UIApplicationDelegate/application:willFinishLaunchingWithOptions:)
 ```swift
 import EnvoySDK
 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 ...
-  Envoy.initialize()
+  Envoy.initialize(apiKey: {your-api-key})
 ...
 }
 ```
@@ -33,39 +33,72 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 You need to configure `CreateLinkRequest` with content, which you wanted to be shared. Request is pretty flexible and have both required and optional values.
 
 ```swift
-struct CreateLinkRequest {
-    let userId: String
-    let contentConfig: ContentConfig
-    let linkPreview: LinkPreview?
+
+ public struct CreateLinkRequest: Codable {
     let autoplay: Bool?
-    let extra: [String : String]?
-}
+    let contentSetting: ContentSetting
+    let lifespanAfterClick: LifespanAfterClick?
+    let openQuota: Int?
+    let extra: String?
+    let title: String?
+    let sharerId: String
+    let isSandbox: Bool?
+    let labels: [Label]?
+    
+    public struct Common: Codable {
+        let source: String
+        let sourceIsRedirect: Bool?
+        let poster: String?
+    }
 
-struct ContentConfig {
-    let contentType: String
-    let contentName: String
-    let contentDescription: String
-    let contentId: String
-    let common: Common
-}
+    public struct ContentProtection: Codable {
+        let media: Common
+    }
 
-struct Common {
-    let media: Media
-}
+    public struct ContentSetting: Codable {
+        let contentType: String
+        let contentName: String
+        let contentDescription: String
+        let common: Common
+        let timeLimit: Int?
+        let timeStart: Int?
+        let availableFrom: String?
+        let availableTo: String?
+        let videoOrientation: Int?
+        let previewTitle: String?
+        let previewDescription: String?
+        let previewImage: String?
+        let isSandbox: Bool?
+        let mandatoryEmail: Bool?
+        let modalTitle: String?
+        let buttonText: String?
+        let contentProtection: ContentProtection?
+    }
 
-struct Media {
-    let source: String
-    let poster: String
-}
+    public struct LifespanAfterClick: Codable {
+        let value: Int?
+        let unit: String
+    }
 
-struct LinkPreview {
-    let title: String
-    let linkPreviewDescription: String
-    let image: String
+    public struct Label: Codable {
+        let id: Int?
+        let text: String
+        let color: String
+    }
+```
+
+## 4. Create link
+
+Create a link using the previously configured request and handle the response and potential error
+
+```swift
+Envoy.shared.createLink(request: request) { response, error in            
+    print(response)
+    print(error)
 }
 ```
 
-## 4. Add Gift Button (Optional)
+## 5. Add Gift Button (Optional)
 
 SDK gives ability to add gift button with SDK design for quick implementation.
 
@@ -75,7 +108,7 @@ buttin.addTarget(self, action: #selector(giftAction), for: .touchUpInside)
 containerView.addSubview(button)
 ```
 
-## 5. Present Share Screen
+## 6. Present Share Screen
 
 To present share screen you need to initialize instance of `Envoy` with `apiKey`. You can get your project token from [account settings](https://dev-platform.envoy.is/dashboard/account/).
 Upon tapping on share button you need to call any of these methods.
@@ -91,5 +124,87 @@ class ViewController: UIViewController {
       envoySDK.presentShareGift(from: self, request: request)
   }
   ...
+}
+```
+
+## 7. Get remaining quota
+
+Get remaining quota for a specific user
+
+```swift
+Envoy.shared.getUserRemainingQuota(userId: "1") { response, error in
+    print(response)
+    print(error)
+}
+```
+
+## 8. Log pixel event
+
+Log a pixel event
+
+Configure a LogPixelEventRequest
+
+```swift
+public struct LogPixelEventRequest: Encodable {
+    public struct Extra: Encodable {
+        let title: String?
+        let type: String?
+    }
+    
+    let eventName: String
+    let userId: String?
+    let sharerUserId: String?
+    let shareLinkHash: String?
+    let extra: Extra?
+}
+```
+
+And log the event using the request
+
+```swift
+Envoy.shared.logPixelEvent(request: request) { response, error in
+    print(response)
+    print(error)
+}
+```
+
+## 9. Get user rewards
+
+Get rewards for a specific user
+
+```swift
+Envoy.shared.getUserRewards(userId: "1") { response, error in
+    print(response)
+    print(error)
+}
+```
+
+## 10. Claim user reward
+
+Configure the ClaimUserRewardRequest
+
+```swift
+public struct ClaimUserRewardRequest: Encodable {
+    public let userId: String
+}
+```
+
+And claim a reward for a specific user
+
+```swift
+Envoy.shared.claimUserReward(request: request) { response, error in
+    print(response)
+    print(error)
+}
+```
+
+## 11. Get user current rewards
+
+Get current rewards for a specific user
+
+```swift
+Envoy.shared.getUserCurrentRewards(userId: "1") { response, error in
+    print(response)
+    print(error)
 }
 ```

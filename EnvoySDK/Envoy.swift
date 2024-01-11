@@ -16,44 +16,63 @@ public protocol EnvoyType {
     func giftButton(request: CreateLinkRequest) -> UIButton
     
     func createLink(request: CreateLinkRequest,
-                    completion: @escaping (CreateLinkResponse?, WebError?) -> ()) -> URLSessionDataTask?
+                    completion: @escaping (CreateLinkResponse?, WebError?) -> ())
     
     func getUserRemainingQuota(userId: String,
-                               completion: @escaping (UserQuotaResponse?, WebError?) -> ()) -> URLSessionDataTask?
+                               completion: @escaping (UserQuotaResponse?, WebError?) -> ())
     
     func logPixelEvent(request: LogPixelEventRequest,
-                       completion: @escaping (EmptyResponse?, WebError?) -> ()) -> URLSessionDataTask?
+                       completion: @escaping (EmptyResponse?, WebError?) -> ())
     
     func getUserRewards(userId: String,
-                        completion: @escaping (UserRewardsResponse?, WebError?) -> ()) -> URLSessionDataTask?
+                        completion: @escaping (UserRewardsResponse?, WebError?) -> ())
     
     func claimUserReward(request: ClaimUserRewardRequest,
-                         completion: @escaping (ClaimUserRewardResponse?, WebError?) -> ()) -> URLSessionDataTask?
+                         completion: @escaping (ClaimUserRewardResponse?, WebError?) -> ())
     
     func getUserCurrentRewards(
         userId: String,
-        completion: @escaping (UserCurrentRewardsResponse?, WebError?) -> ()) -> URLSessionDataTask?
+        completion: @escaping (UserCurrentRewardsResponse?, WebError?) -> ())
 }
 
 public final class Envoy {
-    private let token: String
-    private let baseURL: String
+    private enum Constants {
+        static let envoyShareLinkHash = "envoy_share_link_hash"
+        static let envoyLeadUuid = "envoy_lead_uuid"
+    }
+    
+    private let apiKey: String
+    private let environment: EnvoyEnvironment
     fileprivate let webClient: WebClient
     
-    public init(baseURL: String, token: String) {
-        self.baseURL = baseURL
-        self.token = token
-        self.webClient = WebClient(baseURL: baseURL)
+    public static var shared: Envoy!
+    
+    public static func initialize(apiKey: String) {
+        Envoy.shared = Envoy(apiKey: apiKey)
+    }
+    
+    private init(apiKey: String) {
+        self.apiKey = apiKey
+        self.environment = .dev
+        self.webClient = WebClient(baseURL: environment.apiUrl)
         
         if UserDefaults.standard.isFreshInstall {
             UserDefaults.standard.set(isFreshInstall: false)
             guard let clipboardLink = UIPasteboard.general.string,
                   let url = URL(string: clipboardLink),
-                  clipboardLink.contains("envoy") else {
+                  let components = URLComponents(url: url, resolvingAgainstBaseURL: true),
+                  let parameters = components.queryItems else {
                 return
             }
-            let linkHash = url.lastPathComponent
-            Keychain.standard.set(linkHash, forKey: .clipboardLinkHash)
+            for parameter in parameters {
+                if parameter.name == Constants.envoyShareLinkHash,
+                   let value = parameter.value {
+                    Keychain.standard.set(value, forKey: .envoyShareLinkHash)
+                } else if parameter.name == Constants.envoyLeadUuid,
+                   let value = parameter.value {
+                    Keychain.standard.set(value, forKey: .envoyLeadUuid)
+                }
+            }
         }
     }
 }
@@ -77,46 +96,46 @@ extension Envoy: EnvoyType {
     
     public func giftButton(request: CreateLinkRequest) -> UIButton {
         let button = GiftButton(type: .custom)
-        button.token = token
+        button.token = apiKey
         button.request = request
         button.initialize()
         return button
     }
     
     public func createLink(request: CreateLinkRequest,
-                           completion: @escaping (CreateLinkResponse?, WebError?) -> ()) -> URLSessionDataTask? {
-        CreateLinkService(client: self.webClient, token: self.token)
+                           completion: @escaping (CreateLinkResponse?, WebError?) -> ()) {
+        CreateLinkService(client: self.webClient, apiKey: self.apiKey)
             .createLink(request: request, completion: completion)
     }
     
     public func getUserRemainingQuota(userId: String,
-                                      completion: @escaping (UserQuotaResponse?, WebError?) -> ()) -> URLSessionDataTask? {
-        GetUserRemainingQuotaService(client: self.webClient, token: self.token)
+                                      completion: @escaping (UserQuotaResponse?, WebError?) -> ()) {
+        GetUserRemainingQuotaService(client: self.webClient, apiKey: self.apiKey)
             .getUserQuota(userId: userId, completion: completion)
     }
     
     public func logPixelEvent(request: LogPixelEventRequest,
-                              completion: @escaping (EmptyResponse?, WebError?) -> ()) -> URLSessionDataTask? {
-        LogPixelEventService(client: self.webClient, token: self.token)
+                              completion: @escaping (EmptyResponse?, WebError?) -> ()) {
+        LogPixelEventService(client: self.webClient, apiKey: self.apiKey)
             .logPixelEvent(request: request, completion: completion)
     }
     
     public func getUserRewards(userId: String,
-                               completion: @escaping (UserRewardsResponse?, WebError?) -> ()) -> URLSessionDataTask? {
-        GetUserRewardsService(client: self.webClient, token: self.token)
+                               completion: @escaping (UserRewardsResponse?, WebError?) -> ()) {
+        GetUserRewardsService(client: self.webClient, apiKey: self.apiKey)
             .getUserRewards(userId: userId, completion: completion)
     }
     
     public func claimUserReward(request: ClaimUserRewardRequest,
-                                completion: @escaping (ClaimUserRewardResponse?, WebError?) -> ()) -> URLSessionDataTask? {
-        ClaimUserRewardService(client: self.webClient, token: self.token)
+                                completion: @escaping (ClaimUserRewardResponse?, WebError?) -> ()) {
+        ClaimUserRewardService(client: self.webClient, apiKey: self.apiKey)
             .claimUserReward(request: request, completion: completion)
     }
     
     public func getUserCurrentRewards(
         userId: String,
-        completion: @escaping (UserCurrentRewardsResponse?, WebError?) -> ()) -> URLSessionDataTask? {
-            GetUserCurrentRewardsService(client: self.webClient, token: self.token)
+        completion: @escaping (UserCurrentRewardsResponse?, WebError?) -> ()) {
+            GetUserCurrentRewardsService(client: self.webClient, apiKey: self.apiKey)
                 .getUserCurrentRewards(userId: userId, completion: completion)
     }
 }
@@ -125,8 +144,8 @@ private extension Envoy {
     func shareGiftViewController(request: CreateLinkRequest) -> UIViewController {
         let viewController = ShareGiftBuilder.viewController(
             request: request,
-            token: token,
-            baseURL: baseURL)
+            apiKey: apiKey,
+            baseURL: environment.apiUrl)
         viewController.modalPresentationStyle = .fullScreen
         return viewController
     }

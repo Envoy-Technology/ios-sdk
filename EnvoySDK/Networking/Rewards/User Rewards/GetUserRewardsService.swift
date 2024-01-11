@@ -13,11 +13,11 @@ protocol GetUserRewardsServiceType {
 final class GetUserRewardsService {
 
     private let client: WebClient
-    private let token: String
+    private let apiKey: String
 
-    init(client: WebClient, token: String) {
+    init(client: WebClient, apiKey: String) {
         self.client = client
-        self.token = token
+        self.apiKey = apiKey
     }
 }
 
@@ -26,7 +26,7 @@ extension GetUserRewardsService: GetUserRewardsServiceType {
     func getUserRewards(userId: String,
                         completion: @escaping (UserRewardsResponse?, WebError?) -> ()) -> URLSessionDataTask? {
         let path = Endpoint.getUserRewards(userId: userId).path
-        let headers = [MappingKeys.authorization : "\(token)"]
+        let headers = [MappingKeys.authorization : "\(apiKey)"]
         let resource = Resource<UserRewardsResponse>(
             path: path,
             method: .get,

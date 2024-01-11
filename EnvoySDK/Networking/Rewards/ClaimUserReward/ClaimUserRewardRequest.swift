@@ -1,11 +1,9 @@
 import Foundation
 
 public struct ClaimUserRewardRequest: Encodable {
-    let userId: String
-    let paypalReceiver: String
+    public let userId: String
     
-    public init(userId: String, paypalReceiver: String) {
+    public init(userId: String) {
         self.userId = userId
-        self.paypalReceiver = paypalReceiver
     }
 }

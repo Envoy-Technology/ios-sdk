@@ -11,7 +11,10 @@ public struct CreateLinkRequest: Codable {
     let isSandbox: Bool?
     let labels: [Label]?
 
-    public init(autoplay: Bool?, contentSetting: ContentSetting, lifespanAfterClick: LifespanAfterClick?, openQuota: Int?, extra: String?, title: String?, sharerId: String, isSandbox: Bool?, labels: [Label]?) {
+    public init(autoplay: Bool?, contentSetting: ContentSetting,
+                lifespanAfterClick: LifespanAfterClick? = nil,
+                openQuota: Int? = nil, extra: String? = nil, title: String? = nil,
+                sharerId: String, isSandbox: Bool? = nil, labels: [Label]? = nil) {
         self.autoplay = autoplay
         self.contentSetting = contentSetting
         self.lifespanAfterClick = lifespanAfterClick
@@ -47,6 +50,11 @@ public struct CreateLinkRequest: Codable {
 
     // Define the ContentSetting structure
     public struct ContentSetting: Codable {
+        public enum VideoOrientation: String {
+            case horizontal
+            case vertical
+        }
+        
         let contentType: String
         let contentName: String
         let contentDescription: String
@@ -55,7 +63,7 @@ public struct CreateLinkRequest: Codable {
         let timeStart: Int?
         let availableFrom: String?
         let availableTo: String?
-        let videoOrientation: Int?
+        let videoOrientation: String?
         let previewTitle: String?
         let previewDescription: String?
         let previewImage: String?
@@ -65,7 +73,11 @@ public struct CreateLinkRequest: Codable {
         let buttonText: String?
         let contentProtection: ContentProtection?
 
-        public init(contentType: String, contentName: String, contentDescription: String, common: Common, timeLimit: Int?, timeStart: Int?, availableFrom: String?, availableTo: String?, videoOrientation: Int?, previewTitle: String?, previewDescription: String?, previewImage: String?, isSandbox: Bool?, mandatoryEmail: Bool?, modalTitle: String?, buttonText: String?, contentProtection: ContentProtection?) {
+        public init(contentType: String, contentName: String, contentDescription: String, common: Common,
+                    timeLimit: Int? = nil, timeStart: Int? = nil, availableFrom: String? = nil, availableTo: String? = nil,
+                    videoOrientation: VideoOrientation, previewTitle: String? = nil, previewDescription: String? = nil,
+                    previewImage: String? = nil, isSandbox: Bool? = nil, mandatoryEmail: Bool? = nil,
+                    modalTitle: String? = nil, buttonText: String? = nil, contentProtection: ContentProtection? = nil) {
             self.contentType = contentType
             self.contentName = contentName
             self.contentDescription = contentDescription
@@ -74,7 +86,7 @@ public struct CreateLinkRequest: Codable {
             self.timeStart = timeStart
             self.availableFrom = availableFrom
             self.availableTo = availableTo
-            self.videoOrientation = videoOrientation
+            self.videoOrientation = videoOrientation.rawValue
             self.previewTitle = previewTitle
             self.previewDescription = previewDescription
             self.previewImage = previewImage
@@ -111,4 +123,3 @@ public struct CreateLinkRequest: Codable {
     }
 
 }
-

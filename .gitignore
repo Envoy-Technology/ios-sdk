@@ -19,6 +19,9 @@ DerivedData
 *.hmap
 *.ipa
 
+Config.swift
+Environments.swift
+
 # Bundler
 .bundle
 

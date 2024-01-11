@@ -5,19 +5,22 @@ public enum WebError: Error {
     case custom(CustomError)
     case unauthorized
     case other
+    case decodingError
 }
 
 extension WebError {
-    var message: String {
+    public var message: String {
         switch self {
         case .noInternetConnection:
             return "No Internet Connection"
         case let .custom(error):
-            return error.details
+            return error.detail
         case .unauthorized:
             return "Unauthorized"
         case .other:
             return "Unexpected error"
+        case .decodingError:
+            return "Decoding error"
         }
     }
 }
