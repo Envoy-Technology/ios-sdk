@@ -14,7 +14,8 @@ import Security
 class Keychain {
     
     enum Key: String {
-        case clipboardLinkHash = "envoy.cliboard.link"
+        case envoyShareLinkHash = "envoy.share.link.hash"
+        case envoyLeadUuid = "envoy.lead.uuid"
     }
     
     static let standard = Keychain()

@@ -11,6 +11,7 @@ import EnvoySDK
 struct GetUserCurrentRewardsView: View {
     
     @State private var error: String?
+    @State private var response: UserCurrentRewardsResponse?
     
     var body: some View {
         VStack(spacing: 20) {
@@ -20,7 +21,19 @@ struct GetUserCurrentRewardsView: View {
                 Spacer()
             }
             
-            if let error = error {
+            if let response = response {
+                VStack {
+                    Text("Earnable left: \(response.earnableLeft)")
+                    Text("Earned this period: \(response.earnedThisPeriod)")
+                        .padding(.bottom, 20)
+                    
+                    Text("Event count")
+                        .fontWeight(.bold)
+                    Text("Completed: \(response.eventCount.completed)")
+                    Text("Left to reward: \(response.eventCount.leftToReward)")
+                    Text("Percentage done: \(response.eventCount.percentageDone)%")
+                }
+            } else if let error = error {
                 Text("Error: \(error)")
             }
             
@@ -33,8 +46,9 @@ struct GetUserCurrentRewardsView: View {
     }
     
     private func getUserCurrentRewards() {
-        Envoy.shared.getUserCurrentRewards(userId: "1") { response, error in
+        Envoy.shared.getUserCurrentRewards(userId: "336") { response, error in
             self.error = error?.message
+            self.response = response
         }
     }
 }

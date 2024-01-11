@@ -7,7 +7,7 @@ public enum PixelEvent {
     case paymentSuccess
     case custom(eventName: String)
     
-    var rawValue: String {
+    public var rawValue: String {
         switch self {
         case .appDownloaded:
             return "app_downloaded"
@@ -38,13 +38,14 @@ public struct LogPixelEventRequest: Encodable {
     let eventName: String
     let sharerUserId: String?
     let shareLinkHash: String?
+    let leadUuid: String?
     let extra: Extra?
     
-    public init(event: PixelEvent, sharerUserId: String? = nil,
-                shareLinkHash: String? = nil, extra: Extra? = nil) {
+    public init(event: PixelEvent, sharerUserId: String? = nil, extra: Extra? = nil) {
         self.eventName = event.rawValue
         self.sharerUserId = sharerUserId
-        self.shareLinkHash = shareLinkHash
+        self.shareLinkHash = Keychain.standard.value(forKey: .envoyShareLinkHash)
+        self.leadUuid = Keychain.standard.value(forKey: .envoyLeadUuid)
         self.extra = extra
     }
 }

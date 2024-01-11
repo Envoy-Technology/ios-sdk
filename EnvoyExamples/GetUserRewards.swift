@@ -11,6 +11,7 @@ import EnvoySDK
 struct GetUserRewardsView: View {
     
     @State private var error: String?
+    @State private var rewardAvailable: Bool?
     
     var body: some View {
         VStack(spacing: 20) {
@@ -20,7 +21,9 @@ struct GetUserRewardsView: View {
                 Spacer()
             }
             
-            if let error = error {
+            if let rewardAvailable = rewardAvailable {
+                Text("Reward available: \(rewardAvailable ? "yes" : "no")")
+            } else if let error = error {
                 Text("Error: \(error)")
             }
             
@@ -33,7 +36,8 @@ struct GetUserRewardsView: View {
     }
     
     private func getUserRewards() {
-        Envoy.shared.getUserRewards(userId: "1") { response, error in
+        Envoy.shared.getUserRewards(userId: "336") { response, error in
+            self.rewardAvailable = response?.rewardAvailable
             self.error = error?.message
         }
     }

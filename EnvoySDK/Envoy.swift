@@ -36,6 +36,11 @@ public protocol EnvoyType {
 }
 
 public final class Envoy {
+    private enum Constants {
+        static let envoyShareLinkHash = "envoy_share_link_hash"
+        static let envoyLeadUuid = "envoy_lead_uuid"
+    }
+    
     private let apiKey: String
     private let environment: EnvoyEnvironment
     fileprivate let webClient: WebClient
@@ -55,11 +60,19 @@ public final class Envoy {
             UserDefaults.standard.set(isFreshInstall: false)
             guard let clipboardLink = UIPasteboard.general.string,
                   let url = URL(string: clipboardLink),
-                  clipboardLink.contains("envoy") else {
+                  let components = URLComponents(url: url, resolvingAgainstBaseURL: true),
+                  let parameters = components.queryItems else {
                 return
             }
-            let linkHash = url.lastPathComponent
-            Keychain.standard.set(linkHash, forKey: .clipboardLinkHash)
+            for parameter in parameters {
+                if parameter.name == Constants.envoyShareLinkHash,
+                   let value = parameter.value {
+                    Keychain.standard.set(value, forKey: .envoyShareLinkHash)
+                } else if parameter.name == Constants.envoyLeadUuid,
+                   let value = parameter.value {
+                    Keychain.standard.set(value, forKey: .envoyLeadUuid)
+                }
+            }
         }
     }
 }

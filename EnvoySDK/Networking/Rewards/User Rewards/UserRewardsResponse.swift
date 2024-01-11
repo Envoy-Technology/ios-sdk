@@ -1,6 +1,6 @@
 import Foundation
 
 public struct UserRewardsResponse: Decodable {
-    let userId: String
-    let rewardAvailable: Bool
+    public let userId: String
+    public let rewardAvailable: Bool
 }

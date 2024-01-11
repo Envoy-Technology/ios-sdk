@@ -10,7 +10,7 @@ import EnvoySDK
 
 struct ClaimUserRewardView: View {
     
-    @State private var success: Bool?
+    @State private var count: Int?
     @State private var error: String?
     
     var body: some View {
@@ -21,8 +21,8 @@ struct ClaimUserRewardView: View {
                 Spacer()
             }
             
-            if success == true {
-                Text("Success!")
+            if let count = count {
+                Text("Rewards claimed: \(count)")
             } else if let error = error {
                 Text("Error: \(error)")
             }
@@ -36,12 +36,12 @@ struct ClaimUserRewardView: View {
     }
     
     private func claimUserReward() {
-        let request = ClaimUserRewardRequest(userId: "1",
-                                             paypalReceiver: "bianca@wolfpack-digital.com")
+        let request = ClaimUserRewardRequest(
+            userId: "336")
         Envoy.shared.claimUserReward(request: request) { response, error in
-                self.success = error == nil
-                self.error = error?.message
-            }
+            self.count = response?.rewardClaimed
+            self.error = error?.message
+        }
     }
 }
 

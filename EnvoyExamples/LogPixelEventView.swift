@@ -13,10 +13,12 @@ struct LogPixelEventView: View {
     @State private var success: Bool?
     @State private var error: String?
     
+    @State var event: PixelEvent
+    
     var body: some View {
         VStack(spacing: 20) {
             HStack {
-                Text("Log pixel event")
+                Text("Log pixel event: \(event.rawValue)")
                     .font(.system(size: 30))
                 Spacer()
             }
@@ -37,9 +39,7 @@ struct LogPixelEventView: View {
     
     private func logPixelEvent() {
         let request = LogPixelEventRequest(
-            event: .appDownloaded,
-            shareLinkHash: "dDBU9q")
-           // extra: LogPixelEventRequest.Extra(title: "Campaign", type: "user type"))
+            event: event)
         
         Envoy.shared.logPixelEvent(request: request) { response, error in
             self.success = error == nil
@@ -49,5 +49,5 @@ struct LogPixelEventView: View {
 }
 
 #Preview {
-    LogPixelEventView()
+    LogPixelEventView(event: .appDownloaded)
 }

@@ -14,7 +14,7 @@ extension WebError {
         case .noInternetConnection:
             return "No Internet Connection"
         case let .custom(error):
-            return error.details
+            return error.detail
         case .unauthorized:
             return "Unauthorized"
         case .other:

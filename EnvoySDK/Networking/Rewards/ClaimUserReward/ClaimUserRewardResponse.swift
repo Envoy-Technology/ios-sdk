@@ -8,5 +8,5 @@
 import Foundation
 
 public struct ClaimUserRewardResponse: Decodable {
-    public let rewardIdentifier: String
+    public let rewardClaimed: Int
 }

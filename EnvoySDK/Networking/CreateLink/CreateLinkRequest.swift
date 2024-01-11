@@ -50,6 +50,11 @@ public struct CreateLinkRequest: Codable {
 
     // Define the ContentSetting structure
     public struct ContentSetting: Codable {
+        public enum VideoOrientation: String {
+            case horizontal
+            case vertical
+        }
+        
         let contentType: String
         let contentName: String
         let contentDescription: String
@@ -58,7 +63,7 @@ public struct CreateLinkRequest: Codable {
         let timeStart: Int?
         let availableFrom: String?
         let availableTo: String?
-        let videoOrientation: Int?
+        let videoOrientation: String?
         let previewTitle: String?
         let previewDescription: String?
         let previewImage: String?
@@ -70,7 +75,7 @@ public struct CreateLinkRequest: Codable {
 
         public init(contentType: String, contentName: String, contentDescription: String, common: Common,
                     timeLimit: Int? = nil, timeStart: Int? = nil, availableFrom: String? = nil, availableTo: String? = nil,
-                    videoOrientation: Int? = nil, previewTitle: String? = nil, previewDescription: String? = nil,
+                    videoOrientation: VideoOrientation, previewTitle: String? = nil, previewDescription: String? = nil,
                     previewImage: String? = nil, isSandbox: Bool? = nil, mandatoryEmail: Bool? = nil,
                     modalTitle: String? = nil, buttonText: String? = nil, contentProtection: ContentProtection? = nil) {
             self.contentType = contentType
@@ -81,7 +86,7 @@ public struct CreateLinkRequest: Codable {
             self.timeStart = timeStart
             self.availableFrom = availableFrom
             self.availableTo = availableTo
-            self.videoOrientation = videoOrientation
+            self.videoOrientation = videoOrientation.rawValue
             self.previewTitle = previewTitle
             self.previewDescription = previewDescription
             self.previewImage = previewImage

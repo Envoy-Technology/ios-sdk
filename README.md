@@ -186,8 +186,6 @@ Configure the ClaimUserRewardRequest
 ```swift
 public struct ClaimUserRewardRequest: Encodable {
     public let userId: String
-    /// paypalReceiver should be a valid email
-    public let paypalReceiver: String
 }
 ```
 
