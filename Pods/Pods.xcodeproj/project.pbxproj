@@ -32,7 +32,47 @@
 		744D5767BA59A778087D9609801DA192 /* GetUserRewardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9F9B2D4A6AFEFB840FDBC1C49B2C2 /* GetUserRewardsService.swift */; };
 		7D3A0841CDDFD866EC05F9DA686B4F28 /* ShareGiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40141B083E8ED06A29ECE4D252838F9 /* ShareGiftViewController.swift */; };
 		7EA443AC36C537F3C4170B7B5D787251 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		7F5E244C2B5152760070DFBD /* Envoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA03CBE8474DF0746EE8656874EE7E4 /* Envoy.swift */; };
+		7F5E24512B51570C0070DFBD /* CreateLinkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E7693E4808A00F9BEDD96EBB06F711 /* CreateLinkRequest.swift */; };
+		7F5E24522B5157130070DFBD /* UserQuotaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1644461BE1122696B6F51D603FEC0D5 /* UserQuotaResponse.swift */; };
+		7F5E24552B5157280070DFBD /* CreateLinkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83712C52431A0B39664E121243AE3C /* CreateLinkResponse.swift */; };
+		7F5E24562B51572C0070DFBD /* UserCurrentRewardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02AB155C356699DE7B989592B922BE1 /* UserCurrentRewardsResponse.swift */; };
+		7F5E24572B51573A0070DFBD /* LogPixelEventRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1076A8F70B82FF32DD48CAF24D7636DF /* LogPixelEventRequest.swift */; };
+		7F5E24582B51573A0070DFBD /* ClaimUserRewardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8AD0B4C7C42E8AD6956603F317352 /* ClaimUserRewardService.swift */; };
+		7F5E24592B51573A0070DFBD /* ClaimUserRewardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6BB2842B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift */; };
+		7F5E245A2B51573A0070DFBD /* UserRewardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE2E69836B5D48C76789764841BB36 /* UserRewardsResponse.swift */; };
+		7F5E245B2B51573A0070DFBD /* GetUserQuotaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26A52C4AF2169C0A151368057FEBCE /* GetUserQuotaService.swift */; };
+		7F5E245C2B51573A0070DFBD /* CreateLinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117DBACCF3351C942D46ACC6EF6F1AB4 /* CreateLinkService.swift */; };
+		7F5E245D2B51573A0070DFBD /* GetUserCurrentRewardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC2D1929079E705E30EFAC514190B3 /* GetUserCurrentRewardsService.swift */; };
+		7F5E245E2B51573A0070DFBD /* LogPixelEventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019589BE762D5E286401518BC94CFBB3 /* LogPixelEventService.swift */; };
+		7F5E245F2B51573A0070DFBD /* GetUserRewardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9F9B2D4A6AFEFB840FDBC1C49B2C2 /* GetUserRewardsService.swift */; };
+		7F5E24602B51573A0070DFBD /* ClaimUserRewardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD696F6A66404BC0ED1B6864A6478D5 /* ClaimUserRewardRequest.swift */; };
+		7F5E24622B51574B0070DFBD /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F147623165167DB418880D9D086055F /* Keychain.swift */; };
+		7F5E24632B51574B0070DFBD /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F147623165167DB418880D9D086055F /* Keychain.swift */; };
+		7F5E246C2B5157B90070DFBD /* ShareGiftBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE1AE8A3D8EB4108B792C4F11D224B /* ShareGiftBuilder.swift */; };
+		7F5E24712B5157CD0070DFBD /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A63A49ACEA83306CC2D2C66F3D90FB /* UserDefaultsExtensions.swift */; };
+		7F5E24722B5157CD0070DFBD /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB46633F4E8C3E7C84227F3B373B24A /* DataExtensions.swift */; };
+		7F5E24732B5157CD0070DFBD /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB042D564B546DE6A66586078E27DA01 /* CustomError.swift */; };
+		7F5E24742B5157CD0070DFBD /* WebError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278CA9388B8CE4A34FBF340EF0D55A1 /* WebError.swift */; };
+		7F5E24752B5157CD0070DFBD /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E73D1B8FA665C7DA86199198FB1695F /* Endpoints.swift */; };
+		7F5E24762B5157CD0070DFBD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89F08396EC512571F1F7977E889BCAB /* Result.swift */; };
+		7F5E24772B5157CD0070DFBD /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528D9E974E4884FE7CE1EC82386C3E9 /* Resource.swift */; };
+		7F5E24782B5157CD0070DFBD /* JSONDecoderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64163D6BD67EA8A9620EAA74CE8863 /* JSONDecoderExtensions.swift */; };
+		7F5E24792B5157CD0070DFBD /* GiftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9F082D61E3B0EEE4FEABE827BB667F /* GiftButton.swift */; };
+		7F5E247A2B5157CD0070DFBD /* Envoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA03CBE8474DF0746EE8656874EE7E4 /* Envoy.swift */; };
+		7F5E247B2B5157CD0070DFBD /* Envoy+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F0C714B8EF41EEDA8799E38A501A39 /* Envoy+Bundle.swift */; };
+		7F5E247C2B5157CD0070DFBD /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C1DFBA7AE78F036FBFF6CC47244FCA /* EmptyResponse.swift */; };
+		7F5E247D2B5157CD0070DFBD /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0AB8521BA28DFC9267490410258D3C /* Path.swift */; };
+		7F5E247E2B5157CD0070DFBD /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81229BDCC61496DD5231E4F841BB14DE /* EncodableExtensions.swift */; };
+		7F5E247F2B5157CD0070DFBD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49099C48D2D22CDAEE31BD321E092425 /* Reachability.swift */; };
+		7F5E24802B5157CD0070DFBD /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0BE32017A8FE4216F25523F296A56 /* WebClient.swift */; };
+		7F5E24812B5157EC0070DFBD /* ShareGiftPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29279960B1D11CE53F06CCC807CE901E /* ShareGiftPresenter.swift */; };
+		7F5E24822B5157EC0070DFBD /* ShareGiftProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE10ED7BF1F6BCF4E7B564F85481793 /* ShareGiftProtocols.swift */; };
+		7F5E24832B5157EC0070DFBD /* ShareGiftViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FBEBB1B8F43B9F639EB67C71F6BE1B /* ShareGiftViewState.swift */; };
+		7F5E24842B5157EC0070DFBD /* ShareGiftInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB865229CA92CAF75F5C3AA8C97E279 /* ShareGiftInteractor.swift */; };
+		7F5E24852B5157EC0070DFBD /* ShareGiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40141B083E8ED06A29ECE4D252838F9 /* ShareGiftViewController.swift */; };
+		7F5E24862B5157EC0070DFBD /* ShareGiftWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0FD6B071BC27DB288747BC94828B73 /* ShareGiftWireframe.swift */; };
+		7F5E24872B5157F10070DFBD /* TrackEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25BA3737548050CAB1997E1DB01598 /* TrackEvent.swift */; };
+		7F5E24882B5157F10070DFBD /* TrackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF54E0E7C5CB48EC2B6158CDA3B04BE1 /* TrackService.swift */; };
 		7F6BB2852B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6BB2842B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift */; };
 		827DABB42E4A15907353B14398682F09 /* EnvoySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BCA66D8358679E6A1C3765E16B63DBE /* EnvoySDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DC0A0CF41615DF1E31F94D6C19C6E89 /* ShareGiftPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29279960B1D11CE53F06CCC807CE901E /* ShareGiftPresenter.swift */; };
@@ -41,7 +81,6 @@
 		94E79CD57D3E35ADD84AE591EF821206 /* WebError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278CA9388B8CE4A34FBF340EF0D55A1 /* WebError.swift */; };
 		9AB607BB7CDEE71120E2854E73ABA8C5 /* UserQuotaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1644461BE1122696B6F51D603FEC0D5 /* UserQuotaResponse.swift */; };
 		A61C21EC1D1C7BBEDB146B9E0FA28D33 /* TrackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF54E0E7C5CB48EC2B6158CDA3B04BE1 /* TrackService.swift */; };
-		AC04743170FE55679E81F4BC2333CC30 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F147623165167DB418880D9D086055F /* Keychain.swift */; };
 		AE77F9C2FF1D54E5D17CD105109235BA /* JSONDecoderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64163D6BD67EA8A9620EAA74CE8863 /* JSONDecoderExtensions.swift */; };
 		AEF8FB571DC81A56AC04F14C31948036 /* GetUserCurrentRewardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC2D1929079E705E30EFAC514190B3 /* GetUserCurrentRewardsService.swift */; };
 		B22FB8E8F9F8D2839ACCDB14CB0FFE4F /* ShareGiftProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE10ED7BF1F6BCF4E7B564F85481793 /* ShareGiftProtocols.swift */; };
@@ -630,7 +669,6 @@
 				744D5767BA59A778087D9609801DA192 /* GetUserRewardsService.swift in Sources */,
 				E16F5893C51A4582245A5182659F1E16 /* GiftButton.swift in Sources */,
 				AE77F9C2FF1D54E5D17CD105109235BA /* JSONDecoderExtensions.swift in Sources */,
-				AC04743170FE55679E81F4BC2333CC30 /* Keychain.swift in Sources */,
 				F80CD51CC5B96390F63BD8F7425E26CB /* LogPixelEventRequest.swift in Sources */,
 				1B637D2244A070A51EEAD8AD9C6618B6 /* LogPixelEventService.swift in Sources */,
 				BCFB5CDFA591A33E585BDC4F0399E80B /* Path.swift in Sources */,
@@ -653,6 +691,7 @@
 				D2153A7E2D609DEF977601ED58B9AD34 /* WebClient.swift in Sources */,
 				94E79CD57D3E35ADD84AE591EF821206 /* WebError.swift in Sources */,
 				7F6BB2852B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift in Sources */,
+				7F5E24632B51574B0070DFBD /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,7 +699,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F5E244C2B5152760070DFBD /* Envoy.swift in Sources */,
+				7F5E245A2B51573A0070DFBD /* UserRewardsResponse.swift in Sources */,
+				7F5E24742B5157CD0070DFBD /* WebError.swift in Sources */,
+				7F5E245E2B51573A0070DFBD /* LogPixelEventService.swift in Sources */,
+				7F5E24592B51573A0070DFBD /* ClaimUserRewardResponse.swift in Sources */,
+				7F5E24582B51573A0070DFBD /* ClaimUserRewardService.swift in Sources */,
+				7F5E24832B5157EC0070DFBD /* ShareGiftViewState.swift in Sources */,
+				7F5E247D2B5157CD0070DFBD /* Path.swift in Sources */,
+				7F5E24602B51573A0070DFBD /* ClaimUserRewardRequest.swift in Sources */,
+				7F5E24802B5157CD0070DFBD /* WebClient.swift in Sources */,
+				7F5E24722B5157CD0070DFBD /* DataExtensions.swift in Sources */,
+				7F5E245C2B51573A0070DFBD /* CreateLinkService.swift in Sources */,
+				7F5E247C2B5157CD0070DFBD /* EmptyResponse.swift in Sources */,
+				7F5E24772B5157CD0070DFBD /* Resource.swift in Sources */,
+				7F5E24732B5157CD0070DFBD /* CustomError.swift in Sources */,
+				7F5E24512B51570C0070DFBD /* CreateLinkRequest.swift in Sources */,
+				7F5E24762B5157CD0070DFBD /* Result.swift in Sources */,
+				7F5E24752B5157CD0070DFBD /* Endpoints.swift in Sources */,
+				7F5E24572B51573A0070DFBD /* LogPixelEventRequest.swift in Sources */,
+				7F5E247B2B5157CD0070DFBD /* Envoy+Bundle.swift in Sources */,
+				7F5E24882B5157F10070DFBD /* TrackService.swift in Sources */,
+				7F5E24622B51574B0070DFBD /* Keychain.swift in Sources */,
+				7F5E24842B5157EC0070DFBD /* ShareGiftInteractor.swift in Sources */,
+				7F5E247F2B5157CD0070DFBD /* Reachability.swift in Sources */,
+				7F5E24862B5157EC0070DFBD /* ShareGiftWireframe.swift in Sources */,
+				7F5E24552B5157280070DFBD /* CreateLinkResponse.swift in Sources */,
+				7F5E247E2B5157CD0070DFBD /* EncodableExtensions.swift in Sources */,
+				7F5E246C2B5157B90070DFBD /* ShareGiftBuilder.swift in Sources */,
+				7F5E24712B5157CD0070DFBD /* UserDefaultsExtensions.swift in Sources */,
+				7F5E24812B5157EC0070DFBD /* ShareGiftPresenter.swift in Sources */,
+				7F5E245D2B51573A0070DFBD /* GetUserCurrentRewardsService.swift in Sources */,
+				7F5E24792B5157CD0070DFBD /* GiftButton.swift in Sources */,
+				7F5E24522B5157130070DFBD /* UserQuotaResponse.swift in Sources */,
+				7F5E245B2B51573A0070DFBD /* GetUserQuotaService.swift in Sources */,
+				7F5E24872B5157F10070DFBD /* TrackEvent.swift in Sources */,
+				7F5E24822B5157EC0070DFBD /* ShareGiftProtocols.swift in Sources */,
+				7F5E245F2B51573A0070DFBD /* GetUserRewardsService.swift in Sources */,
+				7F5E24782B5157CD0070DFBD /* JSONDecoderExtensions.swift in Sources */,
+				7F5E24562B51572C0070DFBD /* UserCurrentRewardsResponse.swift in Sources */,
+				7F5E24852B5157EC0070DFBD /* ShareGiftViewController.swift in Sources */,
+				7F5E247A2B5157CD0070DFBD /* Envoy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
