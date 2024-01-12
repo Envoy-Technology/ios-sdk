@@ -32,6 +32,8 @@
 		744D5767BA59A778087D9609801DA192 /* GetUserRewardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9F9B2D4A6AFEFB840FDBC1C49B2C2 /* GetUserRewardsService.swift */; };
 		7D3A0841CDDFD866EC05F9DA686B4F28 /* ShareGiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40141B083E8ED06A29ECE4D252838F9 /* ShareGiftViewController.swift */; };
 		7EA443AC36C537F3C4170B7B5D787251 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		7F5E244B2B51525B0070DFBD /* EnvoyEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6BB2822B4830F7004FC2AF /* EnvoyEnvironment.swift */; };
+		7F5E244C2B5152760070DFBD /* Envoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA03CBE8474DF0746EE8656874EE7E4 /* Envoy.swift */; };
 		7F6BB2832B4830F7004FC2AF /* EnvoyEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6BB2822B4830F7004FC2AF /* EnvoyEnvironment.swift */; };
 		7F6BB2852B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6BB2842B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift */; };
 		827DABB42E4A15907353B14398682F09 /* EnvoySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BCA66D8358679E6A1C3765E16B63DBE /* EnvoySDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -663,6 +665,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F5E244B2B51525B0070DFBD /* EnvoyEnvironment.swift in Sources */,
+				7F5E244C2B5152760070DFBD /* Envoy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum EnvoyEnvironment {
+enum EnvoyEnvironment {
     case dev
     case prod
     
