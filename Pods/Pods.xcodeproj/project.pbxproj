@@ -32,9 +32,9 @@
 		744D5767BA59A778087D9609801DA192 /* GetUserRewardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9F9B2D4A6AFEFB840FDBC1C49B2C2 /* GetUserRewardsService.swift */; };
 		7D3A0841CDDFD866EC05F9DA686B4F28 /* ShareGiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40141B083E8ED06A29ECE4D252838F9 /* ShareGiftViewController.swift */; };
 		7EA443AC36C537F3C4170B7B5D787251 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		7F5E244B2B51525B0070DFBD /* EnvoyEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6BB2822B4830F7004FC2AF /* EnvoyEnvironment.swift */; };
 		7F5E244C2B5152760070DFBD /* Envoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA03CBE8474DF0746EE8656874EE7E4 /* Envoy.swift */; };
-		7F6BB2832B4830F7004FC2AF /* EnvoyEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6BB2822B4830F7004FC2AF /* EnvoyEnvironment.swift */; };
+		7F5E244E2B51538A0070DFBD /* EnvoyEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E244D2B51538A0070DFBD /* EnvoyEnvironment.swift */; };
+		7F5E24502B5153A20070DFBD /* EnvoyEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E244D2B51538A0070DFBD /* EnvoyEnvironment.swift */; };
 		7F6BB2852B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6BB2842B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift */; };
 		827DABB42E4A15907353B14398682F09 /* EnvoySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BCA66D8358679E6A1C3765E16B63DBE /* EnvoySDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DC0A0CF41615DF1E31F94D6C19C6E89 /* ShareGiftPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29279960B1D11CE53F06CCC807CE901E /* ShareGiftPresenter.swift */; };
@@ -108,7 +108,7 @@
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7BCA66D8358679E6A1C3765E16B63DBE /* EnvoySDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EnvoySDK.h; path = EnvoySDK/EnvoySDK.h; sourceTree = "<group>"; };
 		7F0AB8521BA28DFC9267490410258D3C /* Path.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
-		7F6BB2822B4830F7004FC2AF /* EnvoyEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvoyEnvironment.swift; sourceTree = "<group>"; };
+		7F5E244D2B51538A0070DFBD /* EnvoyEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvoyEnvironment.swift; sourceTree = "<group>"; };
 		7F6BB2842B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimUserRewardResponse.swift; sourceTree = "<group>"; };
 		81229BDCC61496DD5231E4F841BB14DE /* EncodableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EncodableExtensions.swift; sourceTree = "<group>"; };
 		83F0C714B8EF41EEDA8799E38A501A39 /* Envoy+Bundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Envoy+Bundle.swift"; path = "EnvoySDK/Envoy+Bundle.swift"; sourceTree = "<group>"; };
@@ -353,12 +353,12 @@
 		A09DBBC3F1ECFE1F3F473F5231E0BFA4 /* EnvoySDK */ = {
 			isa = PBXGroup;
 			children = (
-				7F6BB2822B4830F7004FC2AF /* EnvoyEnvironment.swift */,
 				DA0BA025BBEA1BA3087ADF98D7A5FAB5 /* Assets.xcassets */,
 				5CA03CBE8474DF0746EE8656874EE7E4 /* Envoy.swift */,
 				83F0C714B8EF41EEDA8799E38A501A39 /* Envoy+Bundle.swift */,
 				7BCA66D8358679E6A1C3765E16B63DBE /* EnvoySDK.h */,
 				EB9F082D61E3B0EEE4FEABE827BB667F /* GiftButton.swift */,
+				7F5E244D2B51538A0070DFBD /* EnvoyEnvironment.swift */,
 				8F07833E755E21F9FD6C8DFCBBACBD52 /* Extensions */,
 				1FC8054C6205B146AF73229A043E9796 /* Networking */,
 				E4E0F630753A0AD1DE318B7EF24BCF86 /* Pod */,
@@ -637,7 +637,6 @@
 				AC04743170FE55679E81F4BC2333CC30 /* Keychain.swift in Sources */,
 				F80CD51CC5B96390F63BD8F7425E26CB /* LogPixelEventRequest.swift in Sources */,
 				1B637D2244A070A51EEAD8AD9C6618B6 /* LogPixelEventService.swift in Sources */,
-				7F6BB2832B4830F7004FC2AF /* EnvoyEnvironment.swift in Sources */,
 				BCFB5CDFA591A33E585BDC4F0399E80B /* Path.swift in Sources */,
 				08B86DA64108AA0D7D5600FF1ECFE8BE /* Reachability.swift in Sources */,
 				EB2D89E3F0F2282FD3E447ADD74B0855 /* Resource.swift in Sources */,
@@ -646,6 +645,7 @@
 				7004F5BAC00AC583D9327A78E5CF68D0 /* ShareGiftInteractor.swift in Sources */,
 				8DC0A0CF41615DF1E31F94D6C19C6E89 /* ShareGiftPresenter.swift in Sources */,
 				B22FB8E8F9F8D2839ACCDB14CB0FFE4F /* ShareGiftProtocols.swift in Sources */,
+				7F5E244E2B51538A0070DFBD /* EnvoyEnvironment.swift in Sources */,
 				7D3A0841CDDFD866EC05F9DA686B4F28 /* ShareGiftViewController.swift in Sources */,
 				3DA39961EF96B78C1F176F696046D08E /* ShareGiftViewState.swift in Sources */,
 				5621AF3CA8F96B05AE82FDECE46EBC22 /* ShareGiftWireframe.swift in Sources */,
@@ -665,8 +665,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F5E244B2B51525B0070DFBD /* EnvoyEnvironment.swift in Sources */,
 				7F5E244C2B5152760070DFBD /* Envoy.swift in Sources */,
+				7F5E24502B5153A20070DFBD /* EnvoyEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
