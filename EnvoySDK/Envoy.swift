@@ -42,7 +42,7 @@ public final class Envoy {
     }
     
     private let apiKey: String
-    private let environment: EnvoyEnvironment
+    private let apiUrl: String
     fileprivate let webClient: WebClient
     
     public static var shared: Envoy!
@@ -53,8 +53,8 @@ public final class Envoy {
     
     private init(apiKey: String) {
         self.apiKey = apiKey
-        self.environment = .dev
-        self.webClient = WebClient(baseURL: environment.apiUrl)
+        self.apiUrl = "https://api.envoy.is/partner/"
+        self.webClient = WebClient(baseURL: self.apiUrl)
         
         if UserDefaults.standard.isFreshInstall {
             UserDefaults.standard.set(isFreshInstall: false)
@@ -145,7 +145,7 @@ private extension Envoy {
         let viewController = ShareGiftBuilder.viewController(
             request: request,
             apiKey: apiKey,
-            baseURL: environment.apiUrl)
+            baseURL: self.apiUrl)
         viewController.modalPresentationStyle = .fullScreen
         return viewController
     }
