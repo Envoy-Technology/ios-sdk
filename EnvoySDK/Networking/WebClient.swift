@@ -86,9 +86,7 @@ class WebClient {
                 completion(.failure(.other))
                 return
             }
-            
-            print(data?.prettyPrintedJSONString)
-            
+                        
             if (200..<300) ~= response.statusCode {
                 if let empty = EmptyResponse() as? A {
                     completion(.success(empty))
