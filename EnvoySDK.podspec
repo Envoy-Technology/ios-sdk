@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                  = "EnvoySDK"
-  spec.version               = "0.0.6"
+  spec.version               = "0.0.7"
   spec.summary               = "EnvoySDK for iOS"
   spec.homepage              = "https://dev-platform.envoy.is"
   spec.license               = { :type => "MIT", :file => "LICENSE" }
