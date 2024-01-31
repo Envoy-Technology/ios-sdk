@@ -195,12 +195,11 @@ struct ContentView: View {
             contentName: "Content name",
             contentDescription: "content description",
             common: common,
-            videoOrientation: .vertical,
-            isSandbox: true)
+            videoOrientation: .vertical)
         
         return CreateLinkRequest(autoplay: false,
                                  contentSetting: contentSetting,
-                                 sharerId: "336",
+                                 sharerId: "412",
                                  isSandbox: true)
     }
 }

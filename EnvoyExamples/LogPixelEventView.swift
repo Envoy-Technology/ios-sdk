@@ -40,7 +40,7 @@ struct LogPixelEventView: View {
     private func logPixelEvent() {
         let request = LogPixelEventRequest(
             event: event,
-            sharerUserId: "336")
+            sharerUserId: "412")
         
         Envoy.shared.logPixelEvent(request: request) { response, error in
             self.success = error == nil

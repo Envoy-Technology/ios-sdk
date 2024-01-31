@@ -53,6 +53,7 @@ public final class Envoy {
     
     private init(apiKey: String) {
         self.apiKey = apiKey
+        //self.apiUrl = "https://dev-api.envoy.is/partner/"
         self.apiUrl = "https://api.envoy.is/partner/"
         self.webClient = WebClient(baseURL: self.apiUrl)
         
