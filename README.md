@@ -40,7 +40,6 @@ You need to configure `CreateLinkRequest` with content, which you wanted to be s
     let lifespanAfterClick: LifespanAfterClick?
     let openQuota: Int?
     let extra: String?
-    let title: String?
     let sharerId: String
     let isSandbox: Bool?
     let labels: [Label]?
@@ -68,7 +67,6 @@ You need to configure `CreateLinkRequest` with content, which you wanted to be s
         let previewTitle: String?
         let previewDescription: String?
         let previewImage: String?
-        let isSandbox: Bool?
         let mandatoryEmail: Bool?
         let modalTitle: String?
         let buttonText: String?
