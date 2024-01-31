@@ -36,7 +36,7 @@ struct GetUserRewardsView: View {
     }
     
     private func getUserRewards() {
-        Envoy.shared.getUserRewards(userId: "336") { response, error in
+        Envoy.shared.getUserRewards(userId: "412") { response, error in
             self.rewardAvailable = response?.rewardAvailable
             self.error = error?.message
         }

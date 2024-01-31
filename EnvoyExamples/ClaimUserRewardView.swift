@@ -37,7 +37,7 @@ struct ClaimUserRewardView: View {
     
     private func claimUserReward() {
         let request = ClaimUserRewardRequest(
-            userId: "336")
+            userId: "412")
         Envoy.shared.claimUserReward(request: request) { response, error in
             self.count = response?.rewardsClaimed
             self.error = error?.message

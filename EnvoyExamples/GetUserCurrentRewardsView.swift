@@ -46,7 +46,7 @@ struct GetUserCurrentRewardsView: View {
     }
     
     private func getUserCurrentRewards() {
-        Envoy.shared.getUserCurrentRewards(userId: "336") { response, error in
+        Envoy.shared.getUserCurrentRewards(userId: "412") { response, error in
             self.error = error?.message
             self.response = response
         }
