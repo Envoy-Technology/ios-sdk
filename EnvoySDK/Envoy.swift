@@ -39,24 +39,30 @@ public final class Envoy {
     private enum Constants {
         static let envoyShareLinkHash = "envoy_share_link_hash"
         static let envoyLeadUuid = "envoy_lead_uuid"
+        static let devEnvironment = "https://dev-api.envoy.is/partner/"
+        static let prodEnvironment = "https://api.envoy.is/partner/"
     }
     
     private let apiKey: String
     private let apiUrl: String
+
     fileprivate let webClient: WebClient
-    
+    fileprivate var notificationObserver: NSObjectProtocol?
+
     public static var shared: Envoy!
-    
-    public static func initialize(apiKey: String) {
-        Envoy.shared = Envoy(apiKey: apiKey)
+    private let delegate: EnvoyProtocol
+
+
+    public static func initialize(config: EnvoyConfigSDK, delegate: EnvoyProtocol) {
+        Envoy.shared = Envoy(config: config, delegate: delegate)
     }
-    
-    private init(apiKey: String) {
-        self.apiKey = apiKey
-        //self.apiUrl = "https://dev-api.envoy.is/partner/"
-        self.apiUrl = "https://api.envoy.is/partner/"
+
+    private init(config: EnvoyConfigSDK, delegate: EnvoyProtocol) {
+        self.delegate = delegate
+        self.apiKey = config.apiKey
+        self.apiUrl = Constants.devEnvironment
         self.webClient = WebClient(baseURL: self.apiUrl)
-        
+        setupScreenshotNotification(config: config)
         if UserDefaults.standard.isFreshInstall {
             UserDefaults.standard.set(isFreshInstall: false)
             guard let clipboardLink = UIPasteboard.general.string,
@@ -76,6 +82,19 @@ public final class Envoy {
             }
         }
     }
+
+    func setupScreenshotNotification(config: EnvoyConfigSDK) {
+        UserDefaults.standard.set(notifyScreenShot: config.notifyWhenScreenshotTaken)
+        notificationObserver = NotificationCenter.default.addObserver(forName: UIApplication.userDidTakeScreenshotNotification,
+                                                                      object: nil,
+                                                                      queue: .main) { [weak self] _ in
+            guard let self = self else { return }
+            if UserDefaults.standard.notifyScreenShot {
+                self.delegate.userDidTakeScreenshot()
+            }
+        }
+    }
+
 }
 
 extension Envoy: EnvoyType {
@@ -150,4 +169,19 @@ private extension Envoy {
         viewController.modalPresentationStyle = .fullScreen
         return viewController
     }
+}
+
+public struct EnvoyConfigSDK {
+    let apiKey: String
+    let notifyWhenScreenshotTaken: Bool
+
+    public init(apiKey: String,
+                notifyWhenScreenshotTaken: Bool = false) {
+        self.apiKey = apiKey
+        self.notifyWhenScreenshotTaken = notifyWhenScreenshotTaken
+    }
+}
+
+public protocol EnvoyProtocol {
+    func userDidTakeScreenshot()
 }

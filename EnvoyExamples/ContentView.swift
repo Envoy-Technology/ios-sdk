@@ -8,8 +8,12 @@
 import SwiftUI
 import EnvoySDK
 
-struct ContentView: View {
-    
+protocol EnvoyEventProtocol {
+    func createLink()
+}
+
+struct ContentView: View, EnvoyEventProtocol {
+
     let navigation: UINavigationController
     
     var body: some View {
@@ -138,10 +142,10 @@ struct ContentView: View {
         }
     }
     
-    private func createLink() {
+    internal func createLink() {
         let request = self.mockedLinkRequest()
-        Envoy.shared.pushShareGift(
-            in: self.navigation, request: request)
+        Envoy.shared.pushShareGift(in: self.navigation,
+                                   request: request)
     }
     
     private func claimUserReward() {
