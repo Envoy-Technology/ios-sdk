@@ -8,8 +8,13 @@
 import SwiftUI
 import EnvoySDK
 
-struct ContentView: View {
-    
+protocol EnvoyEventProtocol {
+    func createLink()
+    func createLinkWithImage(image: UIImage)
+}
+
+struct ContentView: View, EnvoyEventProtocol {
+
     let navigation: UINavigationController
     
     var body: some View {
@@ -138,12 +143,16 @@ struct ContentView: View {
         }
     }
     
-    private func createLink() {
+    internal func createLink() {
         let request = self.mockedLinkRequest()
-        Envoy.shared.pushShareGift(
-            in: self.navigation, request: request)
+        Envoy.shared.pushShareGift(in: self.navigation, request: request)
     }
-    
+
+    internal func createLinkWithImage(image: UIImage) {
+        let request = self.mockedScreenshotLinkRequest(image: image)
+        Envoy.shared.pushShareGift(in: self.navigation, request: request)
+    }
+
     private func claimUserReward() {
         self.navigation.pushViewController(UIHostingController(
             rootView: ClaimUserRewardView()), animated: true)
@@ -202,6 +211,21 @@ struct ContentView: View {
                                  sharerId: "412",
                                  isSandbox: true)
     }
+
+    private func mockedScreenshotLinkRequest(image: UIImage) -> CreateLinkRequest {
+        let imageBase64 = image.base64
+        let contentSetting = CreateLinkRequest.ContentSetting(
+            contentType: "SCREENSHOT",
+            contentName: "Test screenshot Base64",
+            contentDescription: "Content description Base64",
+            base64_file: imageBase64)
+
+        return CreateLinkRequest(autoplay: nil,
+                                 contentSetting: contentSetting,
+                                 sharerId: "test12345",
+                                 isSandbox: true)
+    }
+
 }
 
 #Preview {

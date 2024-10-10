@@ -1,5 +1,11 @@
 import Foundation
+import Combine
+import Photos
 import UIKit
+
+public protocol EnvoyProtocol {
+    func userDidTookScreenshot(_ image: UIImage?)
+}
 
 public protocol EnvoyType {
     
@@ -35,28 +41,34 @@ public protocol EnvoyType {
         completion: @escaping (UserCurrentRewardsResponse?, WebError?) -> ())
 }
 
-public final class Envoy {
+public final class Envoy: ObservableObject {
     private enum Constants {
         static let envoyShareLinkHash = "envoy_share_link_hash"
         static let envoyLeadUuid = "envoy_lead_uuid"
+        static let devEnvironment = "https://dev-api.envoy.is/partner/"
+        static let prodEnvironment = "https://api.envoy.is/partner/"
     }
     
     private let apiKey: String
     private let apiUrl: String
+
     fileprivate let webClient: WebClient
-    
+    fileprivate var notificationObserver: NSObjectProtocol?
+
     public static var shared: Envoy!
-    
+    public var delegate: EnvoyProtocol?
+
     public static func initialize(apiKey: String) {
         Envoy.shared = Envoy(apiKey: apiKey)
     }
-    
+
     private init(apiKey: String) {
         self.apiKey = apiKey
-        //self.apiUrl = "https://dev-api.envoy.is/partner/"
-        self.apiUrl = "https://api.envoy.is/partner/"
+//        self.apiUrl = Constants.devEnvironment
+        self.apiUrl = Constants.prodEnvironment
+
         self.webClient = WebClient(baseURL: self.apiUrl)
-        
+        self.setupScreenshotNotification()
         if UserDefaults.standard.isFreshInstall {
             UserDefaults.standard.set(isFreshInstall: false)
             guard let clipboardLink = UIPasteboard.general.string,
@@ -74,6 +86,37 @@ public final class Envoy {
                     Keychain.standard.set(value, forKey: .envoyLeadUuid)
                 }
             }
+        }
+    }
+
+    // MARK: Delegate
+    func setupScreenshotNotification() {
+        notificationObserver = NotificationCenter.default.addObserver(forName: UIApplication.userDidTakeScreenshotNotification,
+                                                                      object: nil,
+                                                                      queue: .main) { [weak self] _ in
+            guard let self = self else { return }
+            self.getMostRecentPhoto { image in
+                self.delegate?.userDidTookScreenshot(image)
+            }
+        }
+    }
+
+    func getMostRecentPhoto(completion: @escaping (UIImage?) -> Void) {
+        let options = PHFetchOptions()
+        options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        let fetchResult = PHAsset.fetchAssets(with: .image, options: options)
+
+        if let asset = fetchResult.firstObject {
+            let manager = PHImageManager.default()
+            let requestOptions = PHImageRequestOptions()
+            requestOptions.isSynchronous = false
+            requestOptions.deliveryMode = .highQualityFormat
+
+            manager.requestImage(for: asset, targetSize: PHImageManagerMaximumSize, contentMode: .aspectFit, options: requestOptions) { image, _ in
+                completion(image)
+            }
+        } else {
+            completion(nil)
         }
     }
 }
