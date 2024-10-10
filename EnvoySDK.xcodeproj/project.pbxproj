@@ -12,6 +12,7 @@
 		18D2473E284DE95B00A2BE96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2473D284DE95B00A2BE96 /* SceneDelegate.swift */; };
 		18D24745284DE95C00A2BE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D24744284DE95C00A2BE96 /* Assets.xcassets */; };
 		18D24748284DE95C00A2BE96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D24746284DE95C00A2BE96 /* LaunchScreen.storyboard */; };
+		60ABB0772CB887AF008B5873 /* UIApplication+rootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ABB0752CB887AC008B5873 /* UIApplication+rootView.swift */; };
 		7065B4E6A08F9FCF5389D173 /* Pods_EnvoyExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58281A2989B5530793066B24 /* Pods_EnvoyExamples.framework */; };
 		7F6BB26C2B47FBB6004FC2AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6BB26B2B47FBB6004FC2AF /* ContentView.swift */; };
 		7F6BB2702B47FD82004FC2AF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6BB26F2B47FD82004FC2AF /* Config.swift */; };
@@ -43,6 +44,7 @@
 		18D24749284DE95C00A2BE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CA44054EB56734FF0286102 /* Pods-EnvoyExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnvoyExamples.release.xcconfig"; path = "Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples.release.xcconfig"; sourceTree = "<group>"; };
 		58281A2989B5530793066B24 /* Pods_EnvoyExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnvoyExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60ABB0752CB887AC008B5873 /* UIApplication+rootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+rootView.swift"; sourceTree = "<group>"; };
 		7F6BB26B2B47FBB6004FC2AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7F6BB26F2B47FD82004FC2AF /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		7F6BB2732B480AD4004FC2AF /* ClaimUserRewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimUserRewardView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		18D2473A284DE95B00A2BE96 /* EnvoyExamples */ = {
 			isa = PBXGroup;
 			children = (
+				60ABB0782CB887C8008B5873 /* Helpers */,
 				18D2473B284DE95B00A2BE96 /* AppDelegate.swift */,
 				18D2473D284DE95B00A2BE96 /* SceneDelegate.swift */,
 				18D24744284DE95C00A2BE96 /* Assets.xcassets */,
@@ -134,6 +137,14 @@
 				4CA44054EB56734FF0286102 /* Pods-EnvoyExamples.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		60ABB0782CB887C8008B5873 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				60ABB0752CB887AC008B5873 /* UIApplication+rootView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +349,7 @@
 				7F6BB27C2B4814D9004FC2AF /* GetUserQuotaView.swift in Sources */,
 				7F6BB2702B47FD82004FC2AF /* Config.swift in Sources */,
 				7F6BB26C2B47FBB6004FC2AF /* ContentView.swift in Sources */,
+				60ABB0772CB887AF008B5873 /* UIApplication+rootView.swift in Sources */,
 				7F6BB27E2B481585004FC2AF /* LogPixelEventView.swift in Sources */,
 				18D2473E284DE95B00A2BE96 /* SceneDelegate.swift in Sources */,
 				7F6BB2782B481395004FC2AF /* GetUserCurrentRewardsView.swift in Sources */,
