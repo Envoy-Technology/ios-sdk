@@ -20,17 +20,8 @@ extension UserDefaults {
         return stored ?? true
     }
 
-    // MARK:
-    var notifyScreenShot: Bool {
-        let stored = value(forKey: Keys.notifyScreenShot) as? Bool
-        return stored ?? false
-    }
-
     func set(isFreshInstall: Bool) {
         set(isFreshInstall, forKey: Keys.isFreshInstall)
     }
 
-    func set(notifyScreenShot: Bool) {
-        set(notifyScreenShot, forKey: Keys.notifyScreenShot)
-    }
 }

@@ -1,8 +1,9 @@
 import Foundation
+import Combine
+import Photos
 import UIKit
 
 public protocol EnvoyType {
-    
     func pushShareGift(
         in navigationController: UINavigationController,
         request: CreateLinkRequest
@@ -33,9 +34,11 @@ public protocol EnvoyType {
     func getUserCurrentRewards(
         userId: String,
         completion: @escaping (UserCurrentRewardsResponse?, WebError?) -> ())
+
+    func userDidTakeScreenshot() -> AnyPublisher<UIImage?, Never>
 }
 
-public final class Envoy {
+public final class Envoy: ObservableObject {
     private enum Constants {
         static let envoyShareLinkHash = "envoy_share_link_hash"
         static let envoyLeadUuid = "envoy_lead_uuid"
@@ -48,21 +51,20 @@ public final class Envoy {
 
     fileprivate let webClient: WebClient
     fileprivate var notificationObserver: NSObjectProtocol?
+    fileprivate var cancellables = Set<AnyCancellable>()
 
     public static var shared: Envoy!
-    private let delegate: EnvoyProtocol
 
-
-    public static func initialize(config: EnvoyConfigSDK, delegate: EnvoyProtocol) {
-        Envoy.shared = Envoy(config: config, delegate: delegate)
+    public static func initialize(apiKey: String) {
+        Envoy.shared = Envoy(apiKey: apiKey)
     }
 
-    private init(config: EnvoyConfigSDK, delegate: EnvoyProtocol) {
-        self.delegate = delegate
-        self.apiKey = config.apiKey
+    private init(apiKey: String) {
+        self.apiKey = apiKey
         self.apiUrl = Constants.devEnvironment
+//        self.apiUrl = Constants.prodEnvironment
+
         self.webClient = WebClient(baseURL: self.apiUrl)
-        setupScreenshotNotification(config: config)
         if UserDefaults.standard.isFreshInstall {
             UserDefaults.standard.set(isFreshInstall: false)
             guard let clipboardLink = UIPasteboard.general.string,
@@ -83,18 +85,48 @@ public final class Envoy {
         }
     }
 
-    func setupScreenshotNotification(config: EnvoyConfigSDK) {
-        UserDefaults.standard.set(notifyScreenShot: config.notifyWhenScreenshotTaken)
-        notificationObserver = NotificationCenter.default.addObserver(forName: UIApplication.userDidTakeScreenshotNotification,
-                                                                      object: nil,
-                                                                      queue: .main) { [weak self] _ in
-            guard let self = self else { return }
-            if UserDefaults.standard.notifyScreenShot {
-                self.delegate.userDidTakeScreenshot()
+    public func userDidTakeScreenshot() -> AnyPublisher<UIImage?, Never> {
+            let screenshotNotification = NotificationCenter.default
+                .publisher(for: UIApplication.userDidTakeScreenshotNotification)
+
+            return screenshotNotification
+            .flatMap { _ in self.fetchScreenshotData() }
+                .handleEvents(receiveCompletion: { completion in
+                    switch completion {
+                    case .finished:
+                        print("Finished fetching screenshot data.")
+                    case let .failure(error):
+                        print("Failed to fetch screenshot data with error: \(error)")
+                    }
+                })
+                .eraseToAnyPublisher()
+        }
+
+    private func fetchScreenshotData() -> AnyPublisher<UIImage?, Never> {
+        return Future<UIImage?, Never> { promise in
+            let options = PHFetchOptions()
+            options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+            let fetchResult = PHAsset.fetchAssets(with: .image, options: options)
+
+            if let asset = fetchResult.firstObject {
+                let manager = PHImageManager.default()
+                let requestOptions = PHImageRequestOptions()
+                requestOptions.isSynchronous = false
+                requestOptions.deliveryMode = .highQualityFormat
+
+                manager.requestImage(for: asset,
+                                     targetSize: PHImageManagerMaximumSize,
+                                     contentMode: .aspectFit,
+                                     options: requestOptions) { image, _ in
+                    promise(.success(image))
+                }
+            } else {
+                promise(.success(nil))
             }
         }
+        .map { $0 ?? nil }
+        .eraseToAnyPublisher()
     }
-
 }
 
 extension Envoy: EnvoyType {
@@ -169,19 +201,4 @@ private extension Envoy {
         viewController.modalPresentationStyle = .fullScreen
         return viewController
     }
-}
-
-public struct EnvoyConfigSDK {
-    let apiKey: String
-    let notifyWhenScreenshotTaken: Bool
-
-    public init(apiKey: String,
-                notifyWhenScreenshotTaken: Bool = false) {
-        self.apiKey = apiKey
-        self.notifyWhenScreenshotTaken = notifyWhenScreenshotTaken
-    }
-}
-
-public protocol EnvoyProtocol {
-    func userDidTakeScreenshot()
 }

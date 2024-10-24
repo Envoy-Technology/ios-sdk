@@ -10,6 +10,7 @@ import EnvoySDK
 
 protocol EnvoyEventProtocol {
     func createLink()
+    func createLinkWithImage(image: UIImage)
 }
 
 struct ContentView: View, EnvoyEventProtocol {
@@ -144,10 +145,14 @@ struct ContentView: View, EnvoyEventProtocol {
     
     internal func createLink() {
         let request = self.mockedLinkRequest()
-        Envoy.shared.pushShareGift(in: self.navigation,
-                                   request: request)
+        Envoy.shared.pushShareGift(in: self.navigation, request: request)
     }
-    
+
+    internal func createLinkWithImage(image: UIImage) {
+        let request = self.mockedScreenshotLinkRequest(image: image)
+        Envoy.shared.pushShareGift(in: self.navigation, request: request)
+    }
+
     private func claimUserReward() {
         self.navigation.pushViewController(UIHostingController(
             rootView: ClaimUserRewardView()), animated: true)
@@ -206,6 +211,21 @@ struct ContentView: View, EnvoyEventProtocol {
                                  sharerId: "412",
                                  isSandbox: true)
     }
+
+    private func mockedScreenshotLinkRequest(image: UIImage) -> CreateLinkRequest {
+        let imageBase64 = image.base64
+        let contentSetting = CreateLinkRequest.ContentSetting(
+            contentType: "SCREENSHOT",
+            contentName: "Test Content Base64",
+            contentDescription: "This is a description Base64",
+            base64_file: imageBase64)
+
+        return CreateLinkRequest(autoplay: nil,
+                                 contentSetting: contentSetting,
+                                 sharerId: "test12345",
+                                 isSandbox: true)
+    }
+
 }
 
 #Preview {
