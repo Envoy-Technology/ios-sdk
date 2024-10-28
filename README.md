@@ -28,6 +28,28 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
+## 2.1 Initialize EnvoySDK with delegate (optional)
+To get inform when user did took screenshot add delegate right after SDK initialization and add EnvoyProtocol AppDelegate extension. 
+
+```swift
+import EnvoySDK
+
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+...
+  Envoy.initialize(apiKey: {your-api-key})
+  Envoy.shared.delegate = self
+...
+}
+
+extension AppDelegate: EnvoyProtocol {
+    func userDidTookScreenshot(_ image: UIImage?) { }
+}
+
+```    
+To also capture user screenshots, add information about intentions and purpose of this action to info.plis application for key
+```NSPhotoLibraryUsageDescription``` 
+
+
 ## 3. Configure `CreateLinkRequest`
 
 You need to configure `CreateLinkRequest` with content, which you wanted to be shared. Request is pretty flexible and have both required and optional values.
@@ -58,7 +80,8 @@ You need to configure `CreateLinkRequest` with content, which you wanted to be s
         let contentType: String
         let contentName: String
         let contentDescription: String
-        let common: Common
+        let common: Common?
+        let base64_file: String?
         let timeLimit: Int?
         let timeStart: Int?
         let availableFrom: String?
@@ -94,6 +117,26 @@ Envoy.shared.createLink(request: request) { response, error in
     print(response)
     print(error)
 }
+```
+
+## 4.1 Create a link based on image
+CreateLink function also supports base64 images generated from screenshots taken by the user. 
+
+Example of how to create request with image for CreateLink function.
+```swift
+    private func mockedScreenshotLinkRequest(image: UIImage) -> CreateLinkRequest {
+        let imageBase64 = image.base64
+        let contentSetting = CreateLinkRequest.ContentSetting(
+            contentType: "SCREENSHOT",
+            contentName: "Test screenshot Base64",
+            contentDescription: "Content description Base64",
+            base64_file: imageBase64)
+
+        return CreateLinkRequest(autoplay: nil,
+                                 contentSetting: contentSetting,
+                                 sharerId: "ID",
+                                 isSandbox: true)
+    }
 ```
 
 ## 5. Add Gift Button (Optional)
