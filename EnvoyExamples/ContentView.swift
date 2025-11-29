@@ -10,6 +10,7 @@ import EnvoySDK
 
 protocol EnvoyEventProtocol {
     func createLink()
+    func prepLink()
     func createLinkWithImage(image: UIImage)
 }
 
@@ -33,6 +34,18 @@ struct ContentView: View, EnvoyEventProtocol {
                     self.createLink()
                 } label: {
                     Text("Create link")
+                }
+                .foregroundColor(.black)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .foregroundColor(.blue)
+                )
+                
+                Button {
+                    self.prepLink()
+                } label: {
+                    Text("Prep link")
                 }
                 .foregroundColor(.black)
                 .padding()
@@ -147,6 +160,14 @@ struct ContentView: View, EnvoyEventProtocol {
         let request = self.mockedLinkRequest()
         Envoy.shared.pushShareGift(in: self.navigation, request: request)
     }
+    
+    internal func prepLink() {
+        let request = self.mockedPrepLinkRequest()
+        Envoy.shared.prepLink(request: request) { response, error in
+            print(response)
+            print(error)
+        }
+    }
 
     internal func createLinkWithImage(image: UIImage) {
         let request = self.mockedScreenshotLinkRequest(image: image)
@@ -191,6 +212,10 @@ struct ContentView: View, EnvoyEventProtocol {
     private func getUserQuota() {
         self.navigation.pushViewController(UIHostingController(
             rootView: GetUserQuotaView()), animated: true)
+    }
+    
+    private func mockedPrepLinkRequest() -> PrepLinkRequest {
+        return PrepLinkRequest(url: "https://grokipedia.com/page/Elon_Musk")
     }
     
     private func mockedLinkRequest() -> CreateLinkRequest {

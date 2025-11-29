@@ -2,6 +2,7 @@ import Foundation
 
 enum Endpoint {
     case createLink
+    case prepLink
     case getUerRemainingQuota(userId: String)
     case logPixelEvent
     case getUserRewards(userId: String)
@@ -10,6 +11,8 @@ enum Endpoint {
     
     var path: String {
         switch self {
+        case .prepLink:
+            return "prep-link"
         case .createLink:
             return "create-link"
         case .getUerRemainingQuota(let userId):

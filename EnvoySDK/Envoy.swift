@@ -24,6 +24,9 @@ public protocol EnvoyType {
     func createLink(request: CreateLinkRequest,
                     completion: @escaping (CreateLinkResponse?, WebError?) -> ())
     
+    func prepLink(request: PrepLinkRequest,
+                    completion: @escaping (PrepLinkResponse?, WebError?) -> ())
+    
     func getUserRemainingQuota(userId: String,
                                completion: @escaping (UserQuotaResponse?, WebError?) -> ())
     
@@ -150,6 +153,12 @@ extension Envoy: EnvoyType {
                            completion: @escaping (CreateLinkResponse?, WebError?) -> ()) {
         CreateLinkService(client: self.webClient, apiKey: self.apiKey)
             .createLink(request: request, completion: completion)
+    }
+    
+    public func prepLink(request: PrepLinkRequest,
+                           completion: @escaping (PrepLinkResponse?, WebError?) -> ()) {
+        PrepLinkService(client: self.webClient, apiKey: self.apiKey)
+            .prepLink(request: request, completion: completion)
     }
     
     public func getUserRemainingQuota(userId: String,
