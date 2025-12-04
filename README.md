@@ -249,3 +249,13 @@ Envoy.shared.getUserCurrentRewards(userId: "1") { response, error in
     print(error)
 }
 ```
+## 12. Prepare link
+
+Prepare link's content before it's gifted. Function specific for SCREENSHOT types of links.
+
+```swift
+Envoy.shared.prepLink(request: request) { response, error in
+    print(response)
+    print(error)
+}
+```
