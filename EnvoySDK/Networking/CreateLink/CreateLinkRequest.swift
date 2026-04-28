@@ -9,11 +9,14 @@ public struct CreateLinkRequest: Codable {
     let sharerId: String
     let isSandbox: Bool?
     let labels: [Label]?
+    let isCarousel: Bool?
+    let isCarouselLink: Bool?
 
     public init(autoplay: Bool?, contentSetting: ContentSetting,
                 lifespanAfterClick: LifespanAfterClick? = nil,
                 openQuota: Int? = nil, extra: String? = nil,
-                sharerId: String, isSandbox: Bool? = nil, labels: [Label]? = nil) {
+                sharerId: String, isSandbox: Bool? = nil, labels: [Label]? = nil,
+                isCarousel: Bool? = nil, isCarouselLink: Bool? = nil) {
         self.autoplay = autoplay
         self.contentSetting = contentSetting
         self.lifespanAfterClick = lifespanAfterClick
@@ -22,6 +25,8 @@ public struct CreateLinkRequest: Codable {
         self.sharerId = sharerId
         self.isSandbox = isSandbox
         self.labels = labels
+        self.isCarousel = isCarousel
+        self.isCarouselLink = isCarouselLink
     }
     
     // Define the Common structure
