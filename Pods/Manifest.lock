@@ -1,5 +1,5 @@
 PODS:
-  - EnvoySDK (0.0.2)
+  - EnvoySDK (0.0.15)
 
 DEPENDENCIES:
   - EnvoySDK (from `.`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "."
 
 SPEC CHECKSUMS:
-  EnvoySDK: 9dc76024c09c62a4a60d0df57cf0df5daced6a45
+  EnvoySDK: e7ccfe82adc9146683f81d5e563d67db7adedf27
 
 PODFILE CHECKSUM: 4964bddf632216dabebec1df3b14cad22d38725b
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.16.2

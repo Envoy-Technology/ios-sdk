@@ -7,213 +7,201 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0716CCE7297DCFB7AEE084088EF4753C /* Envoy+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F0C714B8EF41EEDA8799E38A501A39 /* Envoy+Bundle.swift */; };
-		08B86DA64108AA0D7D5600FF1ECFE8BE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49099C48D2D22CDAEE31BD321E092425 /* Reachability.swift */; };
-		144556860CB74390888ADD4B2C6E47A1 /* GetUserQuotaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26A52C4AF2169C0A151368057FEBCE /* GetUserQuotaService.swift */; };
-		1941817AD794C78859862402DAD863C8 /* EnvoySDK-EnvoySDK in Resources */ = {isa = PBXBuildFile; fileRef = 7177A594A884E83878F7E8AEBC7BC4B5 /* EnvoySDK-EnvoySDK */; };
-		1B637D2244A070A51EEAD8AD9C6618B6 /* LogPixelEventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019589BE762D5E286401518BC94CFBB3 /* LogPixelEventService.swift */; };
-		1F8054A7AC7C731589032A0DBA6F93A9 /* CreateLinkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E7693E4808A00F9BEDD96EBB06F711 /* CreateLinkRequest.swift */; };
-		265744B6CACD3EC3B41D8BA87E98E145 /* Pods-EnvoyExamples-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6865E2D972202CDA8E0203115712CC91 /* Pods-EnvoyExamples-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29B8E2510493BD52FB188D43325678C3 /* Pods-EnvoyExamples-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51B42444F3C2CFC1C780524882E372 /* Pods-EnvoyExamples-dummy.m */; };
-		2BD34D38A8D00E2E5FDAA637BA44C93D /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C1DFBA7AE78F036FBFF6CC47244FCA /* EmptyResponse.swift */; };
-		3DA39961EF96B78C1F176F696046D08E /* ShareGiftViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FBEBB1B8F43B9F639EB67C71F6BE1B /* ShareGiftViewState.swift */; };
-		403A8A06B6CAA388D8A065CC22D76FC9 /* ShareGiftBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE1AE8A3D8EB4108B792C4F11D224B /* ShareGiftBuilder.swift */; };
-		493ED74FD7F2172A3027497884CCD247 /* ClaimUserRewardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8AD0B4C7C42E8AD6956603F317352 /* ClaimUserRewardService.swift */; };
-		513889253F3F05CDDF19E9B4031BDBE7 /* ShareGiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84776D657E88F1FF37B582533C0CA90A /* ShareGiftViewController.xib */; };
-		5621AF3CA8F96B05AE82FDECE46EBC22 /* ShareGiftWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0FD6B071BC27DB288747BC94828B73 /* ShareGiftWireframe.swift */; };
-		596070035F8003378B8FB7C8A9111BF7 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E73D1B8FA665C7DA86199198FB1695F /* Endpoints.swift */; };
-		5B178F65BCCD33CAE01608CDE810F815 /* TrackEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25BA3737548050CAB1997E1DB01598 /* TrackEvent.swift */; };
-		5DD7D622CC628F1CC3DCAE3887CE967C /* UserRewardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE2E69836B5D48C76789764841BB36 /* UserRewardsResponse.swift */; };
-		60759CF02036132247398A4E65E78E2A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89F08396EC512571F1F7977E889BCAB /* Result.swift */; };
-		626A5AE71C56E4196503ADEDA6468D0F /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB46633F4E8C3E7C84227F3B373B24A /* DataExtensions.swift */; };
-		68DA130578D860B3FB52258E49BC1543 /* EnvoySDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CC92307888E913242C4D46D824D08 /* EnvoySDK-dummy.m */; };
-		69A54885F5A2369DB01396882476CB30 /* EnvoySDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EDBD9C72E9858EFF4F8973E000C64956 /* EnvoySDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7004F5BAC00AC583D9327A78E5CF68D0 /* ShareGiftInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB865229CA92CAF75F5C3AA8C97E279 /* ShareGiftInteractor.swift */; };
-		744D5767BA59A778087D9609801DA192 /* GetUserRewardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9F9B2D4A6AFEFB840FDBC1C49B2C2 /* GetUserRewardsService.swift */; };
-		7D3A0841CDDFD866EC05F9DA686B4F28 /* ShareGiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40141B083E8ED06A29ECE4D252838F9 /* ShareGiftViewController.swift */; };
-		7EA443AC36C537F3C4170B7B5D787251 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		7F5E24512B51570C0070DFBD /* CreateLinkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E7693E4808A00F9BEDD96EBB06F711 /* CreateLinkRequest.swift */; };
-		7F5E24522B5157130070DFBD /* UserQuotaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1644461BE1122696B6F51D603FEC0D5 /* UserQuotaResponse.swift */; };
-		7F5E24552B5157280070DFBD /* CreateLinkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83712C52431A0B39664E121243AE3C /* CreateLinkResponse.swift */; };
-		7F5E24562B51572C0070DFBD /* UserCurrentRewardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02AB155C356699DE7B989592B922BE1 /* UserCurrentRewardsResponse.swift */; };
-		7F5E24572B51573A0070DFBD /* LogPixelEventRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1076A8F70B82FF32DD48CAF24D7636DF /* LogPixelEventRequest.swift */; };
-		7F5E24582B51573A0070DFBD /* ClaimUserRewardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F8AD0B4C7C42E8AD6956603F317352 /* ClaimUserRewardService.swift */; };
-		7F5E24592B51573A0070DFBD /* ClaimUserRewardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6BB2842B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift */; };
-		7F5E245A2B51573A0070DFBD /* UserRewardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EE2E69836B5D48C76789764841BB36 /* UserRewardsResponse.swift */; };
-		7F5E245B2B51573A0070DFBD /* GetUserQuotaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26A52C4AF2169C0A151368057FEBCE /* GetUserQuotaService.swift */; };
-		7F5E245C2B51573A0070DFBD /* CreateLinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117DBACCF3351C942D46ACC6EF6F1AB4 /* CreateLinkService.swift */; };
-		7F5E245D2B51573A0070DFBD /* GetUserCurrentRewardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC2D1929079E705E30EFAC514190B3 /* GetUserCurrentRewardsService.swift */; };
-		7F5E245E2B51573A0070DFBD /* LogPixelEventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019589BE762D5E286401518BC94CFBB3 /* LogPixelEventService.swift */; };
-		7F5E245F2B51573A0070DFBD /* GetUserRewardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9F9B2D4A6AFEFB840FDBC1C49B2C2 /* GetUserRewardsService.swift */; };
-		7F5E24602B51573A0070DFBD /* ClaimUserRewardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD696F6A66404BC0ED1B6864A6478D5 /* ClaimUserRewardRequest.swift */; };
-		7F5E24622B51574B0070DFBD /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F147623165167DB418880D9D086055F /* Keychain.swift */; };
-		7F5E24632B51574B0070DFBD /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F147623165167DB418880D9D086055F /* Keychain.swift */; };
-		7F5E246C2B5157B90070DFBD /* ShareGiftBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE1AE8A3D8EB4108B792C4F11D224B /* ShareGiftBuilder.swift */; };
-		7F5E24712B5157CD0070DFBD /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A63A49ACEA83306CC2D2C66F3D90FB /* UserDefaultsExtensions.swift */; };
-		7F5E24722B5157CD0070DFBD /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB46633F4E8C3E7C84227F3B373B24A /* DataExtensions.swift */; };
-		7F5E24732B5157CD0070DFBD /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB042D564B546DE6A66586078E27DA01 /* CustomError.swift */; };
-		7F5E24742B5157CD0070DFBD /* WebError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278CA9388B8CE4A34FBF340EF0D55A1 /* WebError.swift */; };
-		7F5E24752B5157CD0070DFBD /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E73D1B8FA665C7DA86199198FB1695F /* Endpoints.swift */; };
-		7F5E24762B5157CD0070DFBD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89F08396EC512571F1F7977E889BCAB /* Result.swift */; };
-		7F5E24772B5157CD0070DFBD /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528D9E974E4884FE7CE1EC82386C3E9 /* Resource.swift */; };
-		7F5E24782B5157CD0070DFBD /* JSONDecoderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64163D6BD67EA8A9620EAA74CE8863 /* JSONDecoderExtensions.swift */; };
-		7F5E24792B5157CD0070DFBD /* GiftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9F082D61E3B0EEE4FEABE827BB667F /* GiftButton.swift */; };
-		7F5E247A2B5157CD0070DFBD /* Envoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA03CBE8474DF0746EE8656874EE7E4 /* Envoy.swift */; };
-		7F5E247B2B5157CD0070DFBD /* Envoy+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F0C714B8EF41EEDA8799E38A501A39 /* Envoy+Bundle.swift */; };
-		7F5E247C2B5157CD0070DFBD /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C1DFBA7AE78F036FBFF6CC47244FCA /* EmptyResponse.swift */; };
-		7F5E247D2B5157CD0070DFBD /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0AB8521BA28DFC9267490410258D3C /* Path.swift */; };
-		7F5E247E2B5157CD0070DFBD /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81229BDCC61496DD5231E4F841BB14DE /* EncodableExtensions.swift */; };
-		7F5E247F2B5157CD0070DFBD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49099C48D2D22CDAEE31BD321E092425 /* Reachability.swift */; };
-		7F5E24802B5157CD0070DFBD /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0BE32017A8FE4216F25523F296A56 /* WebClient.swift */; };
-		7F5E24812B5157EC0070DFBD /* ShareGiftPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29279960B1D11CE53F06CCC807CE901E /* ShareGiftPresenter.swift */; };
-		7F5E24822B5157EC0070DFBD /* ShareGiftProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE10ED7BF1F6BCF4E7B564F85481793 /* ShareGiftProtocols.swift */; };
-		7F5E24832B5157EC0070DFBD /* ShareGiftViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FBEBB1B8F43B9F639EB67C71F6BE1B /* ShareGiftViewState.swift */; };
-		7F5E24842B5157EC0070DFBD /* ShareGiftInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB865229CA92CAF75F5C3AA8C97E279 /* ShareGiftInteractor.swift */; };
-		7F5E24852B5157EC0070DFBD /* ShareGiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40141B083E8ED06A29ECE4D252838F9 /* ShareGiftViewController.swift */; };
-		7F5E24862B5157EC0070DFBD /* ShareGiftWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0FD6B071BC27DB288747BC94828B73 /* ShareGiftWireframe.swift */; };
-		7F5E24872B5157F10070DFBD /* TrackEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25BA3737548050CAB1997E1DB01598 /* TrackEvent.swift */; };
-		7F5E24882B5157F10070DFBD /* TrackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF54E0E7C5CB48EC2B6158CDA3B04BE1 /* TrackService.swift */; };
-		7F6BB2852B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6BB2842B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift */; };
-		827DABB42E4A15907353B14398682F09 /* EnvoySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BCA66D8358679E6A1C3765E16B63DBE /* EnvoySDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8DC0A0CF41615DF1E31F94D6C19C6E89 /* ShareGiftPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29279960B1D11CE53F06CCC807CE901E /* ShareGiftPresenter.swift */; };
-		902866BB11D1CC339C2F66E3C2A2AE4F /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A63A49ACEA83306CC2D2C66F3D90FB /* UserDefaultsExtensions.swift */; };
-		93D68F87F8FFAC3FA3293EA03E665683 /* UserCurrentRewardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02AB155C356699DE7B989592B922BE1 /* UserCurrentRewardsResponse.swift */; };
-		94E79CD57D3E35ADD84AE591EF821206 /* WebError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278CA9388B8CE4A34FBF340EF0D55A1 /* WebError.swift */; };
-		9AB607BB7CDEE71120E2854E73ABA8C5 /* UserQuotaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1644461BE1122696B6F51D603FEC0D5 /* UserQuotaResponse.swift */; };
-		A61C21EC1D1C7BBEDB146B9E0FA28D33 /* TrackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF54E0E7C5CB48EC2B6158CDA3B04BE1 /* TrackService.swift */; };
-		AE77F9C2FF1D54E5D17CD105109235BA /* JSONDecoderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64163D6BD67EA8A9620EAA74CE8863 /* JSONDecoderExtensions.swift */; };
-		AEF8FB571DC81A56AC04F14C31948036 /* GetUserCurrentRewardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC2D1929079E705E30EFAC514190B3 /* GetUserCurrentRewardsService.swift */; };
-		B22FB8E8F9F8D2839ACCDB14CB0FFE4F /* ShareGiftProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE10ED7BF1F6BCF4E7B564F85481793 /* ShareGiftProtocols.swift */; };
-		B35ED62C0282204620DA567066346DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0BA025BBEA1BA3087ADF98D7A5FAB5 /* Assets.xcassets */; };
-		B82490436BEFE469C6F9DD6E2D09EA96 /* Envoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA03CBE8474DF0746EE8656874EE7E4 /* Envoy.swift */; };
-		BCFB5CDFA591A33E585BDC4F0399E80B /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0AB8521BA28DFC9267490410258D3C /* Path.swift */; };
-		C1273557E5718B8ED827371A818571F2 /* CreateLinkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83712C52431A0B39664E121243AE3C /* CreateLinkResponse.swift */; };
-		C984583EA4F8306BEF1FC41B483C346F /* ClaimUserRewardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD696F6A66404BC0ED1B6864A6478D5 /* ClaimUserRewardRequest.swift */; };
-		CCB85EA095F225F534029C7F98FAE5D7 /* CreateLinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117DBACCF3351C942D46ACC6EF6F1AB4 /* CreateLinkService.swift */; };
-		D2153A7E2D609DEF977601ED58B9AD34 /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0BE32017A8FE4216F25523F296A56 /* WebClient.swift */; };
-		D41B054067E9FAC4C2EC23C91435994F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		E16F5893C51A4582245A5182659F1E16 /* GiftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9F082D61E3B0EEE4FEABE827BB667F /* GiftButton.swift */; };
-		EB2D89E3F0F2282FD3E447ADD74B0855 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528D9E974E4884FE7CE1EC82386C3E9 /* Resource.swift */; };
-		F12732F9ED2AAF53CF2746839081D6B1 /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81229BDCC61496DD5231E4F841BB14DE /* EncodableExtensions.swift */; };
-		F80CD51CC5B96390F63BD8F7425E26CB /* LogPixelEventRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1076A8F70B82FF32DD48CAF24D7636DF /* LogPixelEventRequest.swift */; };
-		FEFDB0C5B0D58610B52F3A6EEFBC36A1 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB042D564B546DE6A66586078E27DA01 /* CustomError.swift */; };
+		020E41E9ECD9A77B4A156FDC766A7DAD /* TrackEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC307A47B97D06248C392DDF270BFF7 /* TrackEvent.swift */; };
+		04622CB6696E6EEE03FA77D14B0BEC7C /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EDCF5D9A0D29E8E4DF1A1D881D5452 /* UserDefaultsExtensions.swift */; };
+		12F8D329E517A43CCB6EF4A5DF10C4FA /* ShareGiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6056F58DA46BBAE16A5E65E1E6EFAA0F /* ShareGiftViewController.xib */; };
+		158DFEE0B8C2BE1E4A5D5DDD20996820 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FC892CBB0F590B1FF1981DD219A91F /* Resource.swift */; };
+		179D02A5101277426F87556462F97841 /* ShareGiftViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF86587B69B8B7186E450A03C0CA6FE /* ShareGiftViewState.swift */; };
+		2A9AF010F24963ECAE25DB69972FBD75 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628587FC076BDF5417BAB76FC2EE5D6E /* Endpoints.swift */; };
+		304D3591E34465AEDA1C2817727D0D55 /* CreateLinkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D41DAEBED379F671907138E00353B5A /* CreateLinkResponse.swift */; };
+		324D529AB6E7CE36D6A7019DF0C14F7B /* PrepareLinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96250E42750F29D5A26559EF516A9F1A /* PrepareLinkService.swift */; };
+		3856CC83E50C4E3ABA786DB2D816DB31 /* Envoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D657C22201D25AA62C3D952485A104A /* Envoy.swift */; };
+		3CD6C192312FEA510B3C61F3DCAFF774 /* CreateLinkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F225D1D3BA9CE084DCDDEFD1B9F4DB08 /* CreateLinkRequest.swift */; };
+		41511A30C8C3D395BBAF76BDAAAB7167 /* ClaimUserRewardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878C2B6464F157D2ED1ACD3BD6B1F96 /* ClaimUserRewardResponse.swift */; };
+		41F5A57562A0DDFA78DCC67A35F87206 /* EnvoySDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC7BA89C0142B90C4C4A277E50E01CB3 /* EnvoySDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A95F368BAC2EB00A8F6377690D1F84D /* GetUserRewardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A855311C7BBBA5A55D902AFC587D708 /* GetUserRewardsService.swift */; };
+		4BEBFF7950E6DB8651AB203ED5C103A0 /* EnvoySDK-EnvoySDK in Resources */ = {isa = PBXBuildFile; fileRef = 7177A594A884E83878F7E8AEBC7BC4B5 /* EnvoySDK-EnvoySDK */; };
+		4BF2CF867A29C1662FE1184E3016DCB7 /* GetUserCurrentRewardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682DDDC4CC0F705A2617800A1D7E57ED /* GetUserCurrentRewardsService.swift */; };
+		4DDD5C329F7476601CE07DC2F69DAE86 /* Pods-EnvoyExamples-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51B42444F3C2CFC1C780524882E372 /* Pods-EnvoyExamples-dummy.m */; };
+		5118402B6B736512A44E1AF6B9CE71F1 /* GetUserQuotaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EDDBE7553FABE2DC11E401D0E6171 /* GetUserQuotaService.swift */; };
+		515505D04C988EB63DED7E9F9D540022 /* EnvoySDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE7AFF3835A4ED3046023330E60E924 /* EnvoySDK-dummy.m */; };
+		5F15A49D4A125FE0FC767AAE7D4BD21E /* ShareGiftBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AC5A58FB322332E33F89D686DFA7AA /* ShareGiftBuilder.swift */; };
+		611949260266E6A747183CDE1E045391 /* EnvoySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 335B287D444B847ED60824241838BC2A /* EnvoySDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62DE75B7890C3384A4D722FFEFC77D7A /* ShareGiftInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4F8D05062ABE37C49A94B2575A0968 /* ShareGiftInteractor.swift */; };
+		63E1702A911FB2C166B010E9FCB57EED /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A180AF8744397505EB42A814C81C17 /* CustomError.swift */; };
+		64B1EA2F2FF1E8CA7E2326A2F3C9183E /* UserQuotaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C90AD4D1FD4FAF5A9A3F9AAF5E7940 /* UserQuotaResponse.swift */; };
+		6708998F4FDBAF250E0DB25DA3D1F611 /* Pods-EnvoyExamples-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6865E2D972202CDA8E0203115712CC91 /* Pods-EnvoyExamples-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72109A1AD03D4423301C9206352DD3DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		788EF6FA297080B1C8ADFD23DA2BC103 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072DF66AF33FAAAEC6F9B81D2BE44D9 /* Keychain.swift */; };
+		7CC5F9F270AB1DEDA4780DD2CEFC6540 /* GiftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6191D5C72C73587565B4DFA67BFC82 /* GiftButton.swift */; };
+		7F4806053361D386F24563DCFBE25C48 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94166E70D5B7EE85E30D371DD502DEC9 /* Path.swift */; };
+		7F6326ABB7141AA3EE85A892F8108DFD /* ManageLinksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFF2CF500022B2A16C1C17AA47B03A9 /* ManageLinksResponse.swift */; };
+		8C07512C2577E2D9528BDCC898B3C4E1 /* LogPixelEventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB7D1562DF7CB7A414DBE212E8EB4F1 /* LogPixelEventService.swift */; };
+		8F7D3DCD0F882872B7D16477B3A7E72E /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E727548720CCF8233BE3AFE29E72 /* Reachability.swift */; };
+		96642ACD08CA2C6F9559315E50070C5F /* Envoy+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFD3EF13EA02CA325F3B64EF7FDC483 /* Envoy+Bundle.swift */; };
+		9E3B3BBD9FEE99063F431C69C2219359 /* CreateLinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4D81D4B18859B3A69AAFAAD1582FCD /* CreateLinkService.swift */; };
+		9E8FD7488ACC1CFB73ACDF89C2138B05 /* PrepareLinkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281350B9DA40F8D66AEC5EF053E6BC78 /* PrepareLinkResponse.swift */; };
+		A2E178C9A2DB71AE587D3647A8536AB3 /* UserCurrentRewardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D0B31C31C574A5A94CCF019DC2C8C8 /* UserCurrentRewardsResponse.swift */; };
+		A40BD2DA6B63F71DA72DEC52906418FA /* LogPixelEventRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC9666F6F9EAD2A39AFB99F8D4CB664 /* LogPixelEventRequest.swift */; };
+		A9A24CF590FC80D3A151BEF7EF1F619F /* ShareGiftProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A77D542AAFAB628E3F7515972795CA /* ShareGiftProtocols.swift */; };
+		B1F91EAD9D364549553D449262F5F258 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		B5928D3166B6B44D0E0075F14C2BB26D /* JSONDecoderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081406CDBB6A80CE7FBD7BA246FD48A2 /* JSONDecoderExtensions.swift */; };
+		B6648366DDEA481126D428B9DE16C0B5 /* UserRewardsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16286FB47D86882441451212AC993DB4 /* UserRewardsResponse.swift */; };
+		B73284A5FF85E3082542D0A96ADA544E /* ShareGiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DFB52ED018C1EEA4E5FCD3120F7CDD /* ShareGiftViewController.swift */; };
+		B75FC9693559FA0ADEF195A02D602199 /* ClearManagedLinksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369422742F1D505B0A812B9AAC440DFE /* ClearManagedLinksResponse.swift */; };
+		B7C6C2D0ABBE71BAD7DE6B3F892B206E /* PrepareLinkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0163A8D8EFB69FA827C0C9DDED582D81 /* PrepareLinkRequest.swift */; };
+		BC00542B772405E48568E9D145F8BE95 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F7A19E04FDB436A524FA7C4B9C9EC9 /* EmptyResponse.swift */; };
+		BE19C54F9460F94FBC9082AE57EB64D4 /* ClearManagedLinksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB6ADD52184ECAE53D4D7AC3DE355B0 /* ClearManagedLinksService.swift */; };
+		D4A773329F538D3159D2C500652E4889 /* ManageLinksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B176F3C852A251A112FF6FD18B09132F /* ManageLinksRequest.swift */; };
+		D9DEF825F6D174DFEA8EBAA5D6AD5FDF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49B9E08913BDA08C41CD95099302340 /* Result.swift */; };
+		EF3E61DF35D645DA44971F963490E28F /* ClaimUserRewardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC54D8D8C4283833D0B09FA9C216512 /* ClaimUserRewardRequest.swift */; };
+		F0563710B5E850E2AD0260F7BC54BF6E /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BBD291399F8E610FD992D478260CA9 /* DataExtensions.swift */; };
+		F25DE219D6D67C7C2FA99038B58C0E15 /* ManageLinksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A4EF339EF10118DE155325C4393A0C /* ManageLinksService.swift */; };
+		F7A85370CEBF32932050885EA7BD6812 /* TrackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6EC6E190E29D9D568D944422FE2A79 /* TrackService.swift */; };
+		F959A8797D4DE5EB4EF625FC143894D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A02B63904D28C919DA4A92457719D321 /* Assets.xcassets */; };
+		F97D614A221633E10F1C3A16D0277285 /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C71D9A40BEBFF3C6CDDE4A7A05DA4F /* WebClient.swift */; };
+		FA36DDB36383623B1AD37DD20085644D /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72592BB8FFBCBC3B7C8B97B708AD4F82 /* EncodableExtensions.swift */; };
+		FC39F4DC64001D488D155CE64E16C0B6 /* ShareGiftWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C26BB2A139CD489193BB88A1537CC /* ShareGiftWireframe.swift */; };
+		FC7D03E616E30F6260397F51788317B3 /* WebError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C0B402D84D32DBF5BE166E3015D0E9 /* WebError.swift */; };
+		FED3D5680AD1D3A982323C3C710198A1 /* ClaimUserRewardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6052BBD06304863BFC7A5B2C48B1C0D1 /* ClaimUserRewardService.swift */; };
+		FFEB71DBEA197350FB52F992A5FCF5C5 /* ShareGiftPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0231235C05782C93C0DF66D22C6AC60C /* ShareGiftPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3CAE3BD04D2BA627BDD4EA3DE2CEE3E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1B1DE2FFC49949E793315C8C18F4DFC1;
-			remoteInfo = EnvoySDK;
-		};
-		6D5F950F87942BC97942D85BBD8F2B77 /* PBXContainerItemProxy */ = {
+		CDC822CAA898CA21EA0FAB3EBE71EB44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AD62FE3BB77AD2E6074F76BE8174D65A;
 			remoteInfo = "EnvoySDK-EnvoySDK";
 		};
+		CFFEDCEF9D4D61B403C644262DABD0DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B1DE2FFC49949E793315C8C18F4DFC1;
+			remoteInfo = EnvoySDK;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		019589BE762D5E286401518BC94CFBB3 /* LogPixelEventService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogPixelEventService.swift; sourceTree = "<group>"; };
-		0215DC81EB75FA420F39151925272E43 /* EnvoySDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EnvoySDK.debug.xcconfig; sourceTree = "<group>"; };
-		02FC2D1929079E705E30EFAC514190B3 /* GetUserCurrentRewardsService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetUserCurrentRewardsService.swift; sourceTree = "<group>"; };
-		03BD2CBE549EC3F24993EE1A29B3E3D8 /* EnvoySDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EnvoySDK-Info.plist"; sourceTree = "<group>"; };
-		04DCF954E85D40BF2CC26142F960EF73 /* EnvoySDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EnvoySDK.modulemap; sourceTree = "<group>"; };
-		0F64163D6BD67EA8A9620EAA74CE8863 /* JSONDecoderExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSONDecoderExtensions.swift; sourceTree = "<group>"; };
-		1076A8F70B82FF32DD48CAF24D7636DF /* LogPixelEventRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogPixelEventRequest.swift; sourceTree = "<group>"; };
-		117DBACCF3351C942D46ACC6EF6F1AB4 /* CreateLinkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreateLinkService.swift; sourceTree = "<group>"; };
+		0163A8D8EFB69FA827C0C9DDED582D81 /* PrepareLinkRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrepareLinkRequest.swift; sourceTree = "<group>"; };
+		0231235C05782C93C0DF66D22C6AC60C /* ShareGiftPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareGiftPresenter.swift; sourceTree = "<group>"; };
+		04EDCF5D9A0D29E8E4DF1A1D881D5452 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
+		066F64D9219D713ADC9EE297766595EF /* EnvoySDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EnvoySDK.debug.xcconfig; sourceTree = "<group>"; };
+		06DEBF9743D0004A02C208F0679E2EC0 /* EnvoySDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EnvoySDK-prefix.pch"; sourceTree = "<group>"; };
+		081406CDBB6A80CE7FBD7BA246FD48A2 /* JSONDecoderExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSONDecoderExtensions.swift; sourceTree = "<group>"; };
+		11C71D9A40BEBFF3C6CDDE4A7A05DA4F /* WebClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
 		121342395987B407F9D11C85116AFAB8 /* Pods-EnvoyExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EnvoyExamples.debug.xcconfig"; sourceTree = "<group>"; };
-		13E7693E4808A00F9BEDD96EBB06F711 /* CreateLinkRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreateLinkRequest.swift; sourceTree = "<group>"; };
-		1AB1949E4C8892FD46DE7F97F98956CB /* ResourceBundle-EnvoySDK-EnvoySDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-EnvoySDK-EnvoySDK-Info.plist"; sourceTree = "<group>"; };
-		28EE1AE8A3D8EB4108B792C4F11D224B /* ShareGiftBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareGiftBuilder.swift; sourceTree = "<group>"; };
-		29279960B1D11CE53F06CCC807CE901E /* ShareGiftPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareGiftPresenter.swift; sourceTree = "<group>"; };
-		3528D9E974E4884FE7CE1EC82386C3E9 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		139AE046D071287C3094C4041E2D43C0 /* EnvoySDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EnvoySDK.release.xcconfig; sourceTree = "<group>"; };
+		14ABA815198C52C25D342205AF3F5308 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		15BBD291399F8E610FD992D478260CA9 /* DataExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		16286FB47D86882441451212AC993DB4 /* UserRewardsResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserRewardsResponse.swift; sourceTree = "<group>"; };
+		1CC54D8D8C4283833D0B09FA9C216512 /* ClaimUserRewardRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClaimUserRewardRequest.swift; sourceTree = "<group>"; };
+		281350B9DA40F8D66AEC5EF053E6BC78 /* PrepareLinkResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrepareLinkResponse.swift; sourceTree = "<group>"; };
+		318EDDBE7553FABE2DC11E401D0E6171 /* GetUserQuotaService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetUserQuotaService.swift; sourceTree = "<group>"; };
+		32D1E727548720CCF8233BE3AFE29E72 /* Reachability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		335B287D444B847ED60824241838BC2A /* EnvoySDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EnvoySDK.h; path = EnvoySDK/EnvoySDK.h; sourceTree = "<group>"; };
+		369422742F1D505B0A812B9AAC440DFE /* ClearManagedLinksResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClearManagedLinksResponse.swift; sourceTree = "<group>"; };
+		36DFB52ED018C1EEA4E5FCD3120F7CDD /* ShareGiftViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareGiftViewController.swift; sourceTree = "<group>"; };
+		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		38D0B31C31C574A5A94CCF019DC2C8C8 /* UserCurrentRewardsResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserCurrentRewardsResponse.swift; sourceTree = "<group>"; };
+		3A855311C7BBBA5A55D902AFC587D708 /* GetUserRewardsService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetUserRewardsService.swift; sourceTree = "<group>"; };
+		3CB6ADD52184ECAE53D4D7AC3DE355B0 /* ClearManagedLinksService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClearManagedLinksService.swift; sourceTree = "<group>"; };
 		3CD83554CE1F923E45E833D93515DC94 /* Pods-EnvoyExamples-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EnvoyExamples-frameworks.sh"; sourceTree = "<group>"; };
-		409CC92307888E913242C4D46D824D08 /* EnvoySDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EnvoySDK-dummy.m"; sourceTree = "<group>"; };
 		458E5528F402C13F691923936F7A0330 /* Pods-EnvoyExamples-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EnvoyExamples-Info.plist"; sourceTree = "<group>"; };
-		49099C48D2D22CDAEE31BD321E092425 /* Reachability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		4AB46633F4E8C3E7C84227F3B373B24A /* DataExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
-		4E73D1B8FA665C7DA86199198FB1695F /* Endpoints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
-		510F928715AE434B86FAC53526459098 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5278CA9388B8CE4A34FBF340EF0D55A1 /* WebError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebError.swift; sourceTree = "<group>"; };
-		5CA03CBE8474DF0746EE8656874EE7E4 /* Envoy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Envoy.swift; path = EnvoySDK/Envoy.swift; sourceTree = "<group>"; };
+		46A180AF8744397505EB42A814C81C17 /* CustomError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		4FC9666F6F9EAD2A39AFB99F8D4CB664 /* LogPixelEventRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogPixelEventRequest.swift; sourceTree = "<group>"; };
+		4FFD3EF13EA02CA325F3B64EF7FDC483 /* Envoy+Bundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Envoy+Bundle.swift"; path = "EnvoySDK/Envoy+Bundle.swift"; sourceTree = "<group>"; };
+		515F65FAA3E85132EF6A17207696E46C /* ResourceBundle-EnvoySDK-EnvoySDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-EnvoySDK-EnvoySDK-Info.plist"; sourceTree = "<group>"; };
+		5D657C22201D25AA62C3D952485A104A /* Envoy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Envoy.swift; path = EnvoySDK/Envoy.swift; sourceTree = "<group>"; };
+		6052BBD06304863BFC7A5B2C48B1C0D1 /* ClaimUserRewardService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClaimUserRewardService.swift; sourceTree = "<group>"; };
+		6056F58DA46BBAE16A5E65E1E6EFAA0F /* ShareGiftViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ShareGiftViewController.xib; sourceTree = "<group>"; };
+		628587FC076BDF5417BAB76FC2EE5D6E /* Endpoints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		62C0B402D84D32DBF5BE166E3015D0E9 /* WebError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebError.swift; sourceTree = "<group>"; };
+		63A77D542AAFAB628E3F7515972795CA /* ShareGiftProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareGiftProtocols.swift; sourceTree = "<group>"; };
+		682DDDC4CC0F705A2617800A1D7E57ED /* GetUserCurrentRewardsService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetUserCurrentRewardsService.swift; sourceTree = "<group>"; };
 		6865E2D972202CDA8E0203115712CC91 /* Pods-EnvoyExamples-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EnvoyExamples-umbrella.h"; sourceTree = "<group>"; };
+		69A4EF339EF10118DE155325C4393A0C /* ManageLinksService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ManageLinksService.swift; sourceTree = "<group>"; };
+		6AFF2CF500022B2A16C1C17AA47B03A9 /* ManageLinksResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ManageLinksResponse.swift; sourceTree = "<group>"; };
+		7072DF66AF33FAAAEC6F9B81D2BE44D9 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		7177A594A884E83878F7E8AEBC7BC4B5 /* EnvoySDK-EnvoySDK */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "EnvoySDK-EnvoySDK"; path = EnvoySDK.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7BCA66D8358679E6A1C3765E16B63DBE /* EnvoySDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EnvoySDK.h; path = EnvoySDK/EnvoySDK.h; sourceTree = "<group>"; };
-		7F0AB8521BA28DFC9267490410258D3C /* Path.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
-		7F6BB2842B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimUserRewardResponse.swift; sourceTree = "<group>"; };
-		81229BDCC61496DD5231E4F841BB14DE /* EncodableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EncodableExtensions.swift; sourceTree = "<group>"; };
-		83F0C714B8EF41EEDA8799E38A501A39 /* Envoy+Bundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Envoy+Bundle.swift"; path = "EnvoySDK/Envoy+Bundle.swift"; sourceTree = "<group>"; };
-		84776D657E88F1FF37B582533C0CA90A /* ShareGiftViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ShareGiftViewController.xib; sourceTree = "<group>"; };
-		8AB0BE32017A8FE4216F25523F296A56 /* WebClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
-		8F147623165167DB418880D9D086055F /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
-		9AB865229CA92CAF75F5C3AA8C97E279 /* ShareGiftInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareGiftInteractor.swift; sourceTree = "<group>"; };
-		9C83712C52431A0B39664E121243AE3C /* CreateLinkResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreateLinkResponse.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A5A63A49ACEA83306CC2D2C66F3D90FB /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
+		72592BB8FFBCBC3B7C8B97B708AD4F82 /* EncodableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EncodableExtensions.swift; sourceTree = "<group>"; };
+		77D9D13D6EC1FE7F3E4F0A19C8C28C70 /* EnvoySDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EnvoySDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7A6C26BB2A139CD489193BB88A1537CC /* ShareGiftWireframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareGiftWireframe.swift; sourceTree = "<group>"; };
+		7D41DAEBED379F671907138E00353B5A /* CreateLinkResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreateLinkResponse.swift; sourceTree = "<group>"; };
+		8F4F8D05062ABE37C49A94B2575A0968 /* ShareGiftInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareGiftInteractor.swift; sourceTree = "<group>"; };
+		90E5C5090773484C6F934314DAA14D9E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		94166E70D5B7EE85E30D371DD502DEC9 /* Path.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		94C90AD4D1FD4FAF5A9A3F9AAF5E7940 /* UserQuotaResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserQuotaResponse.swift; sourceTree = "<group>"; };
+		96250E42750F29D5A26559EF516A9F1A /* PrepareLinkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrepareLinkService.swift; sourceTree = "<group>"; };
+		9878C2B6464F157D2ED1ACD3BD6B1F96 /* ClaimUserRewardResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClaimUserRewardResponse.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FAA370394F2B73849427B7FF4090B5B /* 2026-04-26-manage-links-and-carousel-flag.md */ = {isa = PBXFileReference; includeInIndex = 1; name = "2026-04-26-manage-links-and-carousel-flag.md"; path = "docs/plans/2026-04-26-manage-links-and-carousel-flag.md"; sourceTree = "<group>"; };
+		A02B63904D28C919DA4A92457719D321 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = EnvoySDK/Assets.xcassets; sourceTree = "<group>"; };
 		A8990C7C497445C890CE74D5210EC5F6 /* Pods-EnvoyExamples-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EnvoyExamples-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A89F08396EC512571F1F7977E889BCAB /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		A8FC892CBB0F590B1FF1981DD219A91F /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		ABDDCEFEA76E37243E9B9AD741D59A32 /* Pods-EnvoyExamples.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EnvoyExamples.modulemap"; sourceTree = "<group>"; };
-		AC26A52C4AF2169C0A151368057FEBCE /* GetUserQuotaService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetUserQuotaService.swift; sourceTree = "<group>"; };
-		B30B5588D5D0407EEDF0BADB0F8A2706 /* EnvoySDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = EnvoySDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B40141B083E8ED06A29ECE4D252838F9 /* ShareGiftViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareGiftViewController.swift; sourceTree = "<group>"; };
-		BB042D564B546DE6A66586078E27DA01 /* CustomError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
-		BC0FD6B071BC27DB288747BC94828B73 /* ShareGiftWireframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareGiftWireframe.swift; sourceTree = "<group>"; };
-		C1644461BE1122696B6F51D603FEC0D5 /* UserQuotaResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserQuotaResponse.swift; sourceTree = "<group>"; };
-		C2EE2E69836B5D48C76789764841BB36 /* UserRewardsResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserRewardsResponse.swift; sourceTree = "<group>"; };
-		C3F8AD0B4C7C42E8AD6956603F317352 /* ClaimUserRewardService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClaimUserRewardService.swift; sourceTree = "<group>"; };
-		C9C1DFBA7AE78F036FBFF6CC47244FCA /* EmptyResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		B176F3C852A251A112FF6FD18B09132F /* ManageLinksRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ManageLinksRequest.swift; sourceTree = "<group>"; };
+		B49B9E08913BDA08C41CD95099302340 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		BAF86587B69B8B7186E450A03C0CA6FE /* ShareGiftViewState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareGiftViewState.swift; sourceTree = "<group>"; };
+		BC7BA89C0142B90C4C4A277E50E01CB3 /* EnvoySDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EnvoySDK-umbrella.h"; sourceTree = "<group>"; };
+		C3F7A19E04FDB436A524FA7C4B9C9EC9 /* EmptyResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		CA19034296590174FA4B3F8B64A59BE7 /* EnvoySDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EnvoySDK.modulemap; sourceTree = "<group>"; };
 		CB51B42444F3C2CFC1C780524882E372 /* Pods-EnvoyExamples-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EnvoyExamples-dummy.m"; sourceTree = "<group>"; };
 		CC959FC91AD2EC4656E5EE443F56863B /* Pods-EnvoyExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EnvoyExamples.release.xcconfig"; sourceTree = "<group>"; };
-		D2E9F9B2D4A6AFEFB840FDBC1C49B2C2 /* GetUserRewardsService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetUserRewardsService.swift; sourceTree = "<group>"; };
-		D9FBEBB1B8F43B9F639EB67C71F6BE1B /* ShareGiftViewState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareGiftViewState.swift; sourceTree = "<group>"; };
-		DA0BA025BBEA1BA3087ADF98D7A5FAB5 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = EnvoySDK/Assets.xcassets; sourceTree = "<group>"; };
-		DAE10ED7BF1F6BCF4E7B564F85481793 /* ShareGiftProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareGiftProtocols.swift; sourceTree = "<group>"; };
-		DF54E0E7C5CB48EC2B6158CDA3B04BE1 /* TrackService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackService.swift; sourceTree = "<group>"; };
-		E02AB155C356699DE7B989592B922BE1 /* UserCurrentRewardsResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserCurrentRewardsResponse.swift; sourceTree = "<group>"; };
-		E4DCCBF6B990CC880368040053FD4D3A /* EnvoySDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EnvoySDK-prefix.pch"; sourceTree = "<group>"; };
+		D3AC5A58FB322332E33F89D686DFA7AA /* ShareGiftBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareGiftBuilder.swift; sourceTree = "<group>"; };
+		DAC307A47B97D06248C392DDF270BFF7 /* TrackEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackEvent.swift; sourceTree = "<group>"; };
+		DBE7AFF3835A4ED3046023330E60E924 /* EnvoySDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EnvoySDK-dummy.m"; sourceTree = "<group>"; };
+		DD4D81D4B18859B3A69AAFAAD1582FCD /* CreateLinkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreateLinkService.swift; sourceTree = "<group>"; };
+		DF6191D5C72C73587565B4DFA67BFC82 /* GiftButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GiftButton.swift; path = EnvoySDK/GiftButton.swift; sourceTree = "<group>"; };
 		E64626284B93D1455D4ED276ACD01E02 /* EnvoySDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EnvoySDK; path = EnvoySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB9F082D61E3B0EEE4FEABE827BB667F /* GiftButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GiftButton.swift; path = EnvoySDK/GiftButton.swift; sourceTree = "<group>"; };
-		EDBD9C72E9858EFF4F8973E000C64956 /* EnvoySDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EnvoySDK-umbrella.h"; sourceTree = "<group>"; };
-		EE29D2E2D8176FD133293366AEE91470 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		EFD696F6A66404BC0ED1B6864A6478D5 /* ClaimUserRewardRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClaimUserRewardRequest.swift; sourceTree = "<group>"; };
+		ECB7D1562DF7CB7A414DBE212E8EB4F1 /* LogPixelEventService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogPixelEventService.swift; sourceTree = "<group>"; };
+		F225D1D3BA9CE084DCDDEFD1B9F4DB08 /* CreateLinkRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreateLinkRequest.swift; sourceTree = "<group>"; };
 		F32EF3570219879F0F4E99FDF71634EB /* Pods-EnvoyExamples */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-EnvoyExamples"; path = Pods_EnvoyExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56CE2A370815C13FF48163DF56AAC15 /* Pods-EnvoyExamples-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EnvoyExamples-acknowledgements.plist"; sourceTree = "<group>"; };
-		FC25BA3737548050CAB1997E1DB01598 /* TrackEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackEvent.swift; sourceTree = "<group>"; };
-		FFB1F400FD30A96C7F5CA30B3A20FB87 /* EnvoySDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EnvoySDK.release.xcconfig; sourceTree = "<group>"; };
+		F7209ADC5247FB0026F6DB2B0916D852 /* EnvoySDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EnvoySDK-Info.plist"; sourceTree = "<group>"; };
+		FD6EC6E190E29D9D568D944422FE2A79 /* TrackService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0214F3785C5EF4F38A6C92CBDD19EABD /* Frameworks */ = {
+		35A86946F748F43A2B27A09CFE4B7085 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EA443AC36C537F3C4170B7B5D787251 /* Foundation.framework in Frameworks */,
+				72109A1AD03D4423301C9206352DD3DC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4FA0DF1A0499F53D3435DCC18001C2C4 /* Frameworks */ = {
+		9644E7E291E571ED4C48C9C2C83B883F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC96AC46AC64C71F716BBD3A9BC7AFEE /* Frameworks */ = {
+		CCE2BE89E598AA6CD31F3A1504190691 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D41B054067E9FAC4C2EC23C91435994F /* Foundation.framework in Frameworks */,
+				B1F91EAD9D364549553D449262F5F258 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		023F2D2A81A38DEDD4160EE03F1F7701 /* CreateLink */ = {
+			isa = PBXGroup;
+			children = (
+				F225D1D3BA9CE084DCDDEFD1B9F4DB08 /* CreateLinkRequest.swift */,
+				7D41DAEBED379F671907138E00353B5A /* CreateLinkResponse.swift */,
+				DD4D81D4B18859B3A69AAFAAD1582FCD /* CreateLinkService.swift */,
+			);
+			name = CreateLink;
+			path = CreateLink;
+			sourceTree = "<group>";
+		};
 		0240D3E7DF08EEF127B2FE357840C6DD /* Pods-EnvoyExamples */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,22 +219,13 @@
 			path = "Target Support Files/Pods-EnvoyExamples";
 			sourceTree = "<group>";
 		};
-		09E33DB7517D07176340321BE98DEFCF /* View */ = {
+		13FE1D3E65D4D361506D12F7F7506640 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				B40141B083E8ED06A29ECE4D252838F9 /* ShareGiftViewController.swift */,
-				84776D657E88F1FF37B582533C0CA90A /* ShareGiftViewController.xib */,
+				7072DF66AF33FAAAEC6F9B81D2BE44D9 /* Keychain.swift */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		12FAE42CFFE81C59A68F66E959BD2F81 /* User Rewards */ = {
-			isa = PBXGroup;
-			children = (
-				D2E9F9B2D4A6AFEFB840FDBC1C49B2C2 /* GetUserRewardsService.swift */,
-				C2EE2E69836B5D48C76789764841BB36 /* UserRewardsResponse.swift */,
-			);
-			path = "User Rewards";
+			name = Utils;
+			path = EnvoySDK/Utils;
 			sourceTree = "<group>";
 		};
 		1AAC8C9CF8C74FB806B688DEF539E518 /* Products */ = {
@@ -259,35 +238,97 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1FC8054C6205B146AF73229A043E9796 /* Networking */ = {
+		1C36B2225ED4423D2DD4A3C5415C8860 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BB042D564B546DE6A66586078E27DA01 /* CustomError.swift */,
-				C9C1DFBA7AE78F036FBFF6CC47244FCA /* EmptyResponse.swift */,
-				4E73D1B8FA665C7DA86199198FB1695F /* Endpoints.swift */,
-				7F0AB8521BA28DFC9267490410258D3C /* Path.swift */,
-				49099C48D2D22CDAEE31BD321E092425 /* Reachability.swift */,
-				3528D9E974E4884FE7CE1EC82386C3E9 /* Resource.swift */,
-				A89F08396EC512571F1F7977E889BCAB /* Result.swift */,
-				8AB0BE32017A8FE4216F25523F296A56 /* WebClient.swift */,
-				5278CA9388B8CE4A34FBF340EF0D55A1 /* WebError.swift */,
-				F565EEB75D9A4122147EB633CC16B7B5 /* CreateLink */,
-				D3FAF9A71372FB48FF3A0171271140A2 /* Rewards */,
-				756BD5144425A5C1AC548B7C808CFE88 /* Tracking */,
-				E560ABB6DC40F2EC243A638C33F47C33 /* User Quota */,
+				36DFB52ED018C1EEA4E5FCD3120F7CDD /* ShareGiftViewController.swift */,
+				6056F58DA46BBAE16A5E65E1E6EFAA0F /* ShareGiftViewController.xib */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		21B2B8212FE9EB7D31D163D0B89326B0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				46A180AF8744397505EB42A814C81C17 /* CustomError.swift */,
+				C3F7A19E04FDB436A524FA7C4B9C9EC9 /* EmptyResponse.swift */,
+				628587FC076BDF5417BAB76FC2EE5D6E /* Endpoints.swift */,
+				94166E70D5B7EE85E30D371DD502DEC9 /* Path.swift */,
+				32D1E727548720CCF8233BE3AFE29E72 /* Reachability.swift */,
+				A8FC892CBB0F590B1FF1981DD219A91F /* Resource.swift */,
+				B49B9E08913BDA08C41CD95099302340 /* Result.swift */,
+				11C71D9A40BEBFF3C6CDDE4A7A05DA4F /* WebClient.swift */,
+				62C0B402D84D32DBF5BE166E3015D0E9 /* WebError.swift */,
+				AC89A89C0159AD59D4FDDC8977FCB637 /* ClearManagedLinks */,
+				023F2D2A81A38DEDD4160EE03F1F7701 /* CreateLink */,
+				75D92ECC8471D569FB569B493D189868 /* ManageLinks */,
+				29AF0CC043F46131184B38E69333F559 /* PrepareLink */,
+				39BAB0857D58A838F55F8CF7EBDC8D8F /* Rewards */,
+				DEBDFF44BDA39CA5FF2CE039AF50DF66 /* Tracking */,
+				7C1BA7E2FC0CE428664BEE4C670F5D17 /* User Quota */,
 			);
 			name = Networking;
 			path = EnvoySDK/Networking;
 			sourceTree = "<group>";
 		};
-		2B941C09A3AE4A2AED6B3F1514D18D9C /* Track */ = {
+		29AF0CC043F46131184B38E69333F559 /* PrepareLink */ = {
 			isa = PBXGroup;
 			children = (
-				FC25BA3737548050CAB1997E1DB01598 /* TrackEvent.swift */,
-				DF54E0E7C5CB48EC2B6158CDA3B04BE1 /* TrackService.swift */,
+				0163A8D8EFB69FA827C0C9DDED582D81 /* PrepareLinkRequest.swift */,
+				281350B9DA40F8D66AEC5EF053E6BC78 /* PrepareLinkResponse.swift */,
+				96250E42750F29D5A26559EF516A9F1A /* PrepareLinkService.swift */,
 			);
-			name = Track;
-			path = EnvoySDK/Track;
+			name = PrepareLink;
+			path = PrepareLink;
+			sourceTree = "<group>";
+		};
+		3354DB5BC9354F7ECFD5A1E2ADB808FF /* InputOutput */ = {
+			isa = PBXGroup;
+			children = (
+				D3AC5A58FB322332E33F89D686DFA7AA /* ShareGiftBuilder.swift */,
+				7A6C26BB2A139CD489193BB88A1537CC /* ShareGiftWireframe.swift */,
+			);
+			name = InputOutput;
+			path = InputOutput;
+			sourceTree = "<group>";
+		};
+		36F40324E33817061877D29B56754412 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA19034296590174FA4B3F8B64A59BE7 /* EnvoySDK.modulemap */,
+				DBE7AFF3835A4ED3046023330E60E924 /* EnvoySDK-dummy.m */,
+				F7209ADC5247FB0026F6DB2B0916D852 /* EnvoySDK-Info.plist */,
+				06DEBF9743D0004A02C208F0679E2EC0 /* EnvoySDK-prefix.pch */,
+				BC7BA89C0142B90C4C4A277E50E01CB3 /* EnvoySDK-umbrella.h */,
+				066F64D9219D713ADC9EE297766595EF /* EnvoySDK.debug.xcconfig */,
+				139AE046D071287C3094C4041E2D43C0 /* EnvoySDK.release.xcconfig */,
+				515F65FAA3E85132EF6A17207696E46C /* ResourceBundle-EnvoySDK-EnvoySDK-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Pods/Target Support Files/EnvoySDK";
+			sourceTree = "<group>";
+		};
+		37118A8EC5B199828537CF1EBB3FC4B5 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				9FAA370394F2B73849427B7FF4090B5B /* 2026-04-26-manage-links-and-carousel-flag.md */,
+				77D9D13D6EC1FE7F3E4F0A19C8C28C70 /* EnvoySDK.podspec */,
+				14ABA815198C52C25D342205AF3F5308 /* LICENSE */,
+				90E5C5090773484C6F934314DAA14D9E /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		39BAB0857D58A838F55F8CF7EBDC8D8F /* Rewards */ = {
+			isa = PBXGroup;
+			children = (
+				55A69BB23CA88891869CD57CDCCC4D7B /* ClaimUserReward */,
+				99FFF9BBF193B1AB193F34C0E7CADD2D /* User Current Rewards */,
+				CDFD6F5B29758CB28B94488C62B8A451 /* User Rewards */,
+			);
+			name = Rewards;
+			path = Rewards;
 			sourceTree = "<group>";
 		};
 		3C9A899ABFE6345B66D147FC860A80CA /* Targets Support Files */ = {
@@ -298,131 +339,137 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		51809C842111141E0231A31C571297EC /* Support Files */ = {
+		3E2BF6DA6AE31821C4B9AFD790050ACC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				04DCF954E85D40BF2CC26142F960EF73 /* EnvoySDK.modulemap */,
-				409CC92307888E913242C4D46D824D08 /* EnvoySDK-dummy.m */,
-				03BD2CBE549EC3F24993EE1A29B3E3D8 /* EnvoySDK-Info.plist */,
-				E4DCCBF6B990CC880368040053FD4D3A /* EnvoySDK-prefix.pch */,
-				EDBD9C72E9858EFF4F8973E000C64956 /* EnvoySDK-umbrella.h */,
-				0215DC81EB75FA420F39151925272E43 /* EnvoySDK.debug.xcconfig */,
-				FFB1F400FD30A96C7F5CA30B3A20FB87 /* EnvoySDK.release.xcconfig */,
-				1AB1949E4C8892FD46DE7F97F98956CB /* ResourceBundle-EnvoySDK-EnvoySDK-Info.plist */,
+				0231235C05782C93C0DF66D22C6AC60C /* ShareGiftPresenter.swift */,
+				BAF86587B69B8B7186E450A03C0CA6FE /* ShareGiftViewState.swift */,
 			);
-			name = "Support Files";
-			path = "Pods/Target Support Files/EnvoySDK";
-			sourceTree = "<group>";
-		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		58FE6B757E6446B97B3249018D4850B8 /* User Current Rewards */ = {
-			isa = PBXGroup;
-			children = (
-				02FC2D1929079E705E30EFAC514190B3 /* GetUserCurrentRewardsService.swift */,
-				E02AB155C356699DE7B989592B922BE1 /* UserCurrentRewardsResponse.swift */,
-			);
-			path = "User Current Rewards";
-			sourceTree = "<group>";
-		};
-		6BC05B2AC2F442924702F1C2D87D9BE5 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				29279960B1D11CE53F06CCC807CE901E /* ShareGiftPresenter.swift */,
-				D9FBEBB1B8F43B9F639EB67C71F6BE1B /* ShareGiftViewState.swift */,
-			);
+			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		756BD5144425A5C1AC548B7C808CFE88 /* Tracking */ = {
+		55A69BB23CA88891869CD57CDCCC4D7B /* ClaimUserReward */ = {
 			isa = PBXGroup;
 			children = (
-				1076A8F70B82FF32DD48CAF24D7636DF /* LogPixelEventRequest.swift */,
-				019589BE762D5E286401518BC94CFBB3 /* LogPixelEventService.swift */,
+				1CC54D8D8C4283833D0B09FA9C216512 /* ClaimUserRewardRequest.swift */,
+				9878C2B6464F157D2ED1ACD3BD6B1F96 /* ClaimUserRewardResponse.swift */,
+				6052BBD06304863BFC7A5B2C48B1C0D1 /* ClaimUserRewardService.swift */,
 			);
-			path = Tracking;
+			name = ClaimUserReward;
+			path = ClaimUserReward;
 			sourceTree = "<group>";
 		};
-		7971366F36DF231C866CA638E702C2A4 /* InputOutput */ = {
+		6F4E325779D0821FA5092F3AB1025113 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				28EE1AE8A3D8EB4108B792C4F11D224B /* ShareGiftBuilder.swift */,
-				BC0FD6B071BC27DB288747BC94828B73 /* ShareGiftWireframe.swift */,
+				63A77D542AAFAB628E3F7515972795CA /* ShareGiftProtocols.swift */,
 			);
-			path = InputOutput;
+			name = Protocols;
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		75D92ECC8471D569FB569B493D189868 /* ManageLinks */ = {
+			isa = PBXGroup;
+			children = (
+				B176F3C852A251A112FF6FD18B09132F /* ManageLinksRequest.swift */,
+				6AFF2CF500022B2A16C1C17AA47B03A9 /* ManageLinksResponse.swift */,
+				69A4EF339EF10118DE155325C4393A0C /* ManageLinksService.swift */,
+			);
+			name = ManageLinks;
+			path = ManageLinks;
+			sourceTree = "<group>";
+		};
+		7666634F341F214A98629EB7F83BABD7 /* ShareGift */ = {
+			isa = PBXGroup;
+			children = (
+				3354DB5BC9354F7ECFD5A1E2ADB808FF /* InputOutput */,
+				7CF4EE40EC30637CEBF197A97413EF87 /* Interactor */,
+				3E2BF6DA6AE31821C4B9AFD790050ACC /* Presenter */,
+				6F4E325779D0821FA5092F3AB1025113 /* Protocols */,
+				1C36B2225ED4423D2DD4A3C5415C8860 /* View */,
+			);
+			name = ShareGift;
+			path = EnvoySDK/ShareGift;
+			sourceTree = "<group>";
+		};
+		7C1BA7E2FC0CE428664BEE4C670F5D17 /* User Quota */ = {
+			isa = PBXGroup;
+			children = (
+				318EDDBE7553FABE2DC11E401D0E6171 /* GetUserQuotaService.swift */,
+				94C90AD4D1FD4FAF5A9A3F9AAF5E7940 /* UserQuotaResponse.swift */,
+			);
+			name = "User Quota";
+			path = "User Quota";
+			sourceTree = "<group>";
+		};
+		7CF4EE40EC30637CEBF197A97413EF87 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8F4F8D05062ABE37C49A94B2575A0968 /* ShareGiftInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		83B26C7B109EEA0000E42218CED4E0ED /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A09DBBC3F1ECFE1F3F473F5231E0BFA4 /* EnvoySDK */,
+				D419AD1173DAD30D8390E84834883EA7 /* EnvoySDK */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		8F07833E755E21F9FD6C8DFCBBACBD52 /* Extensions */ = {
+		873E05F6A624C683745EBD6A5DD0DC07 /* Track */ = {
 			isa = PBXGroup;
 			children = (
-				4AB46633F4E8C3E7C84227F3B373B24A /* DataExtensions.swift */,
-				81229BDCC61496DD5231E4F841BB14DE /* EncodableExtensions.swift */,
-				0F64163D6BD67EA8A9620EAA74CE8863 /* JSONDecoderExtensions.swift */,
-				A5A63A49ACEA83306CC2D2C66F3D90FB /* UserDefaultsExtensions.swift */,
+				DAC307A47B97D06248C392DDF270BFF7 /* TrackEvent.swift */,
+				FD6EC6E190E29D9D568D944422FE2A79 /* TrackService.swift */,
+			);
+			name = Track;
+			path = EnvoySDK/Track;
+			sourceTree = "<group>";
+		};
+		8A6083C76515A835881410B2DBF7C49D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				15BBD291399F8E610FD992D478260CA9 /* DataExtensions.swift */,
+				72592BB8FFBCBC3B7C8B97B708AD4F82 /* EncodableExtensions.swift */,
+				081406CDBB6A80CE7FBD7BA246FD48A2 /* JSONDecoderExtensions.swift */,
+				04EDCF5D9A0D29E8E4DF1A1D881D5452 /* UserDefaultsExtensions.swift */,
 			);
 			name = Extensions;
 			path = EnvoySDK/Extensions;
 			sourceTree = "<group>";
 		};
-		9613D4C138948D0D01A0A06D77216B75 /* Protocols */ = {
+		99FFF9BBF193B1AB193F34C0E7CADD2D /* User Current Rewards */ = {
 			isa = PBXGroup;
 			children = (
-				DAE10ED7BF1F6BCF4E7B564F85481793 /* ShareGiftProtocols.swift */,
+				682DDDC4CC0F705A2617800A1D7E57ED /* GetUserCurrentRewardsService.swift */,
+				38D0B31C31C574A5A94CCF019DC2C8C8 /* UserCurrentRewardsResponse.swift */,
 			);
-			path = Protocols;
+			name = "User Current Rewards";
+			path = "User Current Rewards";
 			sourceTree = "<group>";
 		};
-		A09DBBC3F1ECFE1F3F473F5231E0BFA4 /* EnvoySDK */ = {
+		AC89A89C0159AD59D4FDDC8977FCB637 /* ClearManagedLinks */ = {
 			isa = PBXGroup;
 			children = (
-				DA0BA025BBEA1BA3087ADF98D7A5FAB5 /* Assets.xcassets */,
-				5CA03CBE8474DF0746EE8656874EE7E4 /* Envoy.swift */,
-				83F0C714B8EF41EEDA8799E38A501A39 /* Envoy+Bundle.swift */,
-				7BCA66D8358679E6A1C3765E16B63DBE /* EnvoySDK.h */,
-				EB9F082D61E3B0EEE4FEABE827BB667F /* GiftButton.swift */,
-				8F07833E755E21F9FD6C8DFCBBACBD52 /* Extensions */,
-				1FC8054C6205B146AF73229A043E9796 /* Networking */,
-				E4E0F630753A0AD1DE318B7EF24BCF86 /* Pod */,
-				D3C0D2767DD97451CBC9BF65D498110E /* ShareGift */,
-				51809C842111141E0231A31C571297EC /* Support Files */,
-				2B941C09A3AE4A2AED6B3F1514D18D9C /* Track */,
-				BC299AEDAEA6E2F402753048CFDC0E5B /* Utils */,
+				369422742F1D505B0A812B9AAC440DFE /* ClearManagedLinksResponse.swift */,
+				3CB6ADD52184ECAE53D4D7AC3DE355B0 /* ClearManagedLinksService.swift */,
 			);
-			name = EnvoySDK;
-			path = ..;
+			name = ClearManagedLinks;
+			path = ClearManagedLinks;
 			sourceTree = "<group>";
 		};
-		AB35F3209F3587FD2389C3D6E0F7B9BB /* ClaimUserReward */ = {
+		CDFD6F5B29758CB28B94488C62B8A451 /* User Rewards */ = {
 			isa = PBXGroup;
 			children = (
-				EFD696F6A66404BC0ED1B6864A6478D5 /* ClaimUserRewardRequest.swift */,
-				C3F8AD0B4C7C42E8AD6956603F317352 /* ClaimUserRewardService.swift */,
-				7F6BB2842B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift */,
+				3A855311C7BBBA5A55D902AFC587D708 /* GetUserRewardsService.swift */,
+				16286FB47D86882441451212AC993DB4 /* UserRewardsResponse.swift */,
 			);
-			path = ClaimUserReward;
-			sourceTree = "<group>";
-		};
-		BC299AEDAEA6E2F402753048CFDC0E5B /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				8F147623165167DB418880D9D086055F /* Keychain.swift */,
-			);
-			name = Utils;
-			path = EnvoySDK/Utils;
+			name = "User Rewards";
+			path = "User Rewards";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -439,88 +486,66 @@
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D3C0D2767DD97451CBC9BF65D498110E /* ShareGift */ = {
+		D419AD1173DAD30D8390E84834883EA7 /* EnvoySDK */ = {
 			isa = PBXGroup;
 			children = (
-				7971366F36DF231C866CA638E702C2A4 /* InputOutput */,
-				F278494FE759B5B13E7F57CC23B61357 /* Interactor */,
-				6BC05B2AC2F442924702F1C2D87D9BE5 /* Presenter */,
-				9613D4C138948D0D01A0A06D77216B75 /* Protocols */,
-				09E33DB7517D07176340321BE98DEFCF /* View */,
+				A02B63904D28C919DA4A92457719D321 /* Assets.xcassets */,
+				5D657C22201D25AA62C3D952485A104A /* Envoy.swift */,
+				4FFD3EF13EA02CA325F3B64EF7FDC483 /* Envoy+Bundle.swift */,
+				335B287D444B847ED60824241838BC2A /* EnvoySDK.h */,
+				DF6191D5C72C73587565B4DFA67BFC82 /* GiftButton.swift */,
+				8A6083C76515A835881410B2DBF7C49D /* Extensions */,
+				21B2B8212FE9EB7D31D163D0B89326B0 /* Networking */,
+				37118A8EC5B199828537CF1EBB3FC4B5 /* Pod */,
+				7666634F341F214A98629EB7F83BABD7 /* ShareGift */,
+				36F40324E33817061877D29B56754412 /* Support Files */,
+				873E05F6A624C683745EBD6A5DD0DC07 /* Track */,
+				13FE1D3E65D4D361506D12F7F7506640 /* Utils */,
 			);
-			name = ShareGift;
-			path = EnvoySDK/ShareGift;
+			name = EnvoySDK;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		D3FAF9A71372FB48FF3A0171271140A2 /* Rewards */ = {
+		DEBDFF44BDA39CA5FF2CE039AF50DF66 /* Tracking */ = {
 			isa = PBXGroup;
 			children = (
-				AB35F3209F3587FD2389C3D6E0F7B9BB /* ClaimUserReward */,
-				58FE6B757E6446B97B3249018D4850B8 /* User Current Rewards */,
-				12FAE42CFFE81C59A68F66E959BD2F81 /* User Rewards */,
+				4FC9666F6F9EAD2A39AFB99F8D4CB664 /* LogPixelEventRequest.swift */,
+				ECB7D1562DF7CB7A414DBE212E8EB4F1 /* LogPixelEventService.swift */,
 			);
-			path = Rewards;
+			name = Tracking;
+			path = Tracking;
 			sourceTree = "<group>";
 		};
-		E4E0F630753A0AD1DE318B7EF24BCF86 /* Pod */ = {
+		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B30B5588D5D0407EEDF0BADB0F8A2706 /* EnvoySDK.podspec */,
-				510F928715AE434B86FAC53526459098 /* LICENSE */,
-				EE29D2E2D8176FD133293366AEE91470 /* README.md */,
+				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
 			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		E560ABB6DC40F2EC243A638C33F47C33 /* User Quota */ = {
-			isa = PBXGroup;
-			children = (
-				AC26A52C4AF2169C0A151368057FEBCE /* GetUserQuotaService.swift */,
-				C1644461BE1122696B6F51D603FEC0D5 /* UserQuotaResponse.swift */,
-			);
-			path = "User Quota";
-			sourceTree = "<group>";
-		};
-		F278494FE759B5B13E7F57CC23B61357 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				9AB865229CA92CAF75F5C3AA8C97E279 /* ShareGiftInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		F565EEB75D9A4122147EB633CC16B7B5 /* CreateLink */ = {
-			isa = PBXGroup;
-			children = (
-				13E7693E4808A00F9BEDD96EBB06F711 /* CreateLinkRequest.swift */,
-				9C83712C52431A0B39664E121243AE3C /* CreateLinkResponse.swift */,
-				117DBACCF3351C942D46ACC6EF6F1AB4 /* CreateLinkService.swift */,
-			);
-			path = CreateLink;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2EBD250F09C69FA57E89D2F78F1F86FF /* Headers */ = {
+		8EB6BE26AECB5CD1354C84A09CC48D94 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				827DABB42E4A15907353B14398682F09 /* EnvoySDK.h in Headers */,
-				69A54885F5A2369DB01396882476CB30 /* EnvoySDK-umbrella.h in Headers */,
+				6708998F4FDBAF250E0DB25DA3D1F611 /* Pods-EnvoyExamples-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BA07140A136D3132FCDDD2F913F23A4 /* Headers */ = {
+		DEF24AAAF17D686980E60EE9F8A1C128 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				265744B6CACD3EC3B41D8BA87E98E145 /* Pods-EnvoyExamples-umbrella.h in Headers */,
+				611949260266E6A747183CDE1E045391 /* EnvoySDK.h in Headers */,
+				41F5A57562A0DDFA78DCC67A35F87206 /* EnvoySDK-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,17 +554,17 @@
 /* Begin PBXNativeTarget section */
 		1B1DE2FFC49949E793315C8C18F4DFC1 /* EnvoySDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 012FFD1D41E6551288D9F97BBCA78ED5 /* Build configuration list for PBXNativeTarget "EnvoySDK" */;
+			buildConfigurationList = D7252DAD1CD8D0623A9031430F6C4247 /* Build configuration list for PBXNativeTarget "EnvoySDK" */;
 			buildPhases = (
-				2EBD250F09C69FA57E89D2F78F1F86FF /* Headers */,
-				9B332EB1C205F53421371B02917C921A /* Sources */,
-				0214F3785C5EF4F38A6C92CBDD19EABD /* Frameworks */,
-				237CEF3DE90F4860503E55CA4AC96C53 /* Resources */,
+				DEF24AAAF17D686980E60EE9F8A1C128 /* Headers */,
+				FED630FF01F571AE47B3492E5D49349A /* Sources */,
+				35A86946F748F43A2B27A09CFE4B7085 /* Frameworks */,
+				22DD5E76AA3AD5158B770FD11E460F14 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B028BB103732CCC029303B06786476B4 /* PBXTargetDependency */,
+				943DADC55468DFEC7F8F7F2EC4B1D101 /* PBXTargetDependency */,
 			);
 			name = EnvoySDK;
 			productName = EnvoySDK;
@@ -548,17 +573,17 @@
 		};
 		2837C23E06AF1CA05C50F056E0C983CA /* Pods-EnvoyExamples */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BC2FD3E3DA268E1146F49092F740DC7 /* Build configuration list for PBXNativeTarget "Pods-EnvoyExamples" */;
+			buildConfigurationList = 495CFC2340C2A441F480A2ABF5444B03 /* Build configuration list for PBXNativeTarget "Pods-EnvoyExamples" */;
 			buildPhases = (
-				9BA07140A136D3132FCDDD2F913F23A4 /* Headers */,
-				14EF11BE7B1CAD03E61FDD5ABACCF97B /* Sources */,
-				DC96AC46AC64C71F716BBD3A9BC7AFEE /* Frameworks */,
-				54321EE127D34E41DE7D30FCA9CD3E02 /* Resources */,
+				8EB6BE26AECB5CD1354C84A09CC48D94 /* Headers */,
+				4627BEECF12CE570A34F4C0D5EDC1A0F /* Sources */,
+				CCE2BE89E598AA6CD31F3A1504190691 /* Frameworks */,
+				78E8B2107F61A915BC16736227D1B2B7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				04F39D612879FE3E15AB2BD5D4FB28AC /* PBXTargetDependency */,
+				2BE2BA77581168471EE68A8615D062D7 /* PBXTargetDependency */,
 			);
 			name = "Pods-EnvoyExamples";
 			productName = Pods_EnvoyExamples;
@@ -567,11 +592,11 @@
 		};
 		AD62FE3BB77AD2E6074F76BE8174D65A /* EnvoySDK-EnvoySDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFADA4EDBBB9B1485506EA4F304CE024 /* Build configuration list for PBXNativeTarget "EnvoySDK-EnvoySDK" */;
+			buildConfigurationList = 735C24D170C27A34E1E3E8384E8FC6BE /* Build configuration list for PBXNativeTarget "EnvoySDK-EnvoySDK" */;
 			buildPhases = (
-				C6EE3C148433AF70C18088F1E6E57674 /* Sources */,
-				4FA0DF1A0499F53D3435DCC18001C2C4 /* Frameworks */,
-				92AD56AC899A43914C08C22A87BE6646 /* Resources */,
+				D21BC5085C30640A6121BD516522458C /* Sources */,
+				9644E7E291E571ED4C48C9C2C83B883F /* Frameworks */,
+				618218B1F7ABB8D1A59655CE2A68AE05 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -588,8 +613,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -600,6 +625,8 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 1AAC8C9CF8C74FB806B688DEF539E518 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -612,208 +639,123 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		237CEF3DE90F4860503E55CA4AC96C53 /* Resources */ = {
+		22DD5E76AA3AD5158B770FD11E460F14 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1941817AD794C78859862402DAD863C8 /* EnvoySDK-EnvoySDK in Resources */,
+				4BEBFF7950E6DB8651AB203ED5C103A0 /* EnvoySDK-EnvoySDK in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		54321EE127D34E41DE7D30FCA9CD3E02 /* Resources */ = {
+		618218B1F7ABB8D1A59655CE2A68AE05 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F959A8797D4DE5EB4EF625FC143894D0 /* Assets.xcassets in Resources */,
+				12F8D329E517A43CCB6EF4A5DF10C4FA /* ShareGiftViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92AD56AC899A43914C08C22A87BE6646 /* Resources */ = {
+		78E8B2107F61A915BC16736227D1B2B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B35ED62C0282204620DA567066346DD6 /* Assets.xcassets in Resources */,
-				513889253F3F05CDDF19E9B4031BDBE7 /* ShareGiftViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		14EF11BE7B1CAD03E61FDD5ABACCF97B /* Sources */ = {
+		4627BEECF12CE570A34F4C0D5EDC1A0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29B8E2510493BD52FB188D43325678C3 /* Pods-EnvoyExamples-dummy.m in Sources */,
+				4DDD5C329F7476601CE07DC2F69DAE86 /* Pods-EnvoyExamples-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B332EB1C205F53421371B02917C921A /* Sources */ = {
+		D21BC5085C30640A6121BD516522458C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C984583EA4F8306BEF1FC41B483C346F /* ClaimUserRewardRequest.swift in Sources */,
-				493ED74FD7F2172A3027497884CCD247 /* ClaimUserRewardService.swift in Sources */,
-				1F8054A7AC7C731589032A0DBA6F93A9 /* CreateLinkRequest.swift in Sources */,
-				C1273557E5718B8ED827371A818571F2 /* CreateLinkResponse.swift in Sources */,
-				CCB85EA095F225F534029C7F98FAE5D7 /* CreateLinkService.swift in Sources */,
-				FEFDB0C5B0D58610B52F3A6EEFBC36A1 /* CustomError.swift in Sources */,
-				626A5AE71C56E4196503ADEDA6468D0F /* DataExtensions.swift in Sources */,
-				2BD34D38A8D00E2E5FDAA637BA44C93D /* EmptyResponse.swift in Sources */,
-				F12732F9ED2AAF53CF2746839081D6B1 /* EncodableExtensions.swift in Sources */,
-				596070035F8003378B8FB7C8A9111BF7 /* Endpoints.swift in Sources */,
-				B82490436BEFE469C6F9DD6E2D09EA96 /* Envoy.swift in Sources */,
-				0716CCE7297DCFB7AEE084088EF4753C /* Envoy+Bundle.swift in Sources */,
-				68DA130578D860B3FB52258E49BC1543 /* EnvoySDK-dummy.m in Sources */,
-				AEF8FB571DC81A56AC04F14C31948036 /* GetUserCurrentRewardsService.swift in Sources */,
-				144556860CB74390888ADD4B2C6E47A1 /* GetUserQuotaService.swift in Sources */,
-				744D5767BA59A778087D9609801DA192 /* GetUserRewardsService.swift in Sources */,
-				E16F5893C51A4582245A5182659F1E16 /* GiftButton.swift in Sources */,
-				AE77F9C2FF1D54E5D17CD105109235BA /* JSONDecoderExtensions.swift in Sources */,
-				F80CD51CC5B96390F63BD8F7425E26CB /* LogPixelEventRequest.swift in Sources */,
-				1B637D2244A070A51EEAD8AD9C6618B6 /* LogPixelEventService.swift in Sources */,
-				BCFB5CDFA591A33E585BDC4F0399E80B /* Path.swift in Sources */,
-				08B86DA64108AA0D7D5600FF1ECFE8BE /* Reachability.swift in Sources */,
-				EB2D89E3F0F2282FD3E447ADD74B0855 /* Resource.swift in Sources */,
-				60759CF02036132247398A4E65E78E2A /* Result.swift in Sources */,
-				403A8A06B6CAA388D8A065CC22D76FC9 /* ShareGiftBuilder.swift in Sources */,
-				7004F5BAC00AC583D9327A78E5CF68D0 /* ShareGiftInteractor.swift in Sources */,
-				8DC0A0CF41615DF1E31F94D6C19C6E89 /* ShareGiftPresenter.swift in Sources */,
-				B22FB8E8F9F8D2839ACCDB14CB0FFE4F /* ShareGiftProtocols.swift in Sources */,
-				7D3A0841CDDFD866EC05F9DA686B4F28 /* ShareGiftViewController.swift in Sources */,
-				3DA39961EF96B78C1F176F696046D08E /* ShareGiftViewState.swift in Sources */,
-				5621AF3CA8F96B05AE82FDECE46EBC22 /* ShareGiftWireframe.swift in Sources */,
-				5B178F65BCCD33CAE01608CDE810F815 /* TrackEvent.swift in Sources */,
-				A61C21EC1D1C7BBEDB146B9E0FA28D33 /* TrackService.swift in Sources */,
-				93D68F87F8FFAC3FA3293EA03E665683 /* UserCurrentRewardsResponse.swift in Sources */,
-				902866BB11D1CC339C2F66E3C2A2AE4F /* UserDefaultsExtensions.swift in Sources */,
-				9AB607BB7CDEE71120E2854E73ABA8C5 /* UserQuotaResponse.swift in Sources */,
-				5DD7D622CC628F1CC3DCAE3887CE967C /* UserRewardsResponse.swift in Sources */,
-				D2153A7E2D609DEF977601ED58B9AD34 /* WebClient.swift in Sources */,
-				94E79CD57D3E35ADD84AE591EF821206 /* WebError.swift in Sources */,
-				7F6BB2852B4BDB0A004FC2AF /* ClaimUserRewardResponse.swift in Sources */,
-				7F5E24632B51574B0070DFBD /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6EE3C148433AF70C18088F1E6E57674 /* Sources */ = {
+		FED630FF01F571AE47B3492E5D49349A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F5E245A2B51573A0070DFBD /* UserRewardsResponse.swift in Sources */,
-				7F5E24742B5157CD0070DFBD /* WebError.swift in Sources */,
-				7F5E245E2B51573A0070DFBD /* LogPixelEventService.swift in Sources */,
-				7F5E24592B51573A0070DFBD /* ClaimUserRewardResponse.swift in Sources */,
-				7F5E24582B51573A0070DFBD /* ClaimUserRewardService.swift in Sources */,
-				7F5E24832B5157EC0070DFBD /* ShareGiftViewState.swift in Sources */,
-				7F5E247D2B5157CD0070DFBD /* Path.swift in Sources */,
-				7F5E24602B51573A0070DFBD /* ClaimUserRewardRequest.swift in Sources */,
-				7F5E24802B5157CD0070DFBD /* WebClient.swift in Sources */,
-				7F5E24722B5157CD0070DFBD /* DataExtensions.swift in Sources */,
-				7F5E245C2B51573A0070DFBD /* CreateLinkService.swift in Sources */,
-				7F5E247C2B5157CD0070DFBD /* EmptyResponse.swift in Sources */,
-				7F5E24772B5157CD0070DFBD /* Resource.swift in Sources */,
-				7F5E24732B5157CD0070DFBD /* CustomError.swift in Sources */,
-				7F5E24512B51570C0070DFBD /* CreateLinkRequest.swift in Sources */,
-				7F5E24762B5157CD0070DFBD /* Result.swift in Sources */,
-				7F5E24752B5157CD0070DFBD /* Endpoints.swift in Sources */,
-				7F5E24572B51573A0070DFBD /* LogPixelEventRequest.swift in Sources */,
-				7F5E247B2B5157CD0070DFBD /* Envoy+Bundle.swift in Sources */,
-				7F5E24882B5157F10070DFBD /* TrackService.swift in Sources */,
-				7F5E24622B51574B0070DFBD /* Keychain.swift in Sources */,
-				7F5E24842B5157EC0070DFBD /* ShareGiftInteractor.swift in Sources */,
-				7F5E247F2B5157CD0070DFBD /* Reachability.swift in Sources */,
-				7F5E24862B5157EC0070DFBD /* ShareGiftWireframe.swift in Sources */,
-				7F5E24552B5157280070DFBD /* CreateLinkResponse.swift in Sources */,
-				7F5E247E2B5157CD0070DFBD /* EncodableExtensions.swift in Sources */,
-				7F5E246C2B5157B90070DFBD /* ShareGiftBuilder.swift in Sources */,
-				7F5E24712B5157CD0070DFBD /* UserDefaultsExtensions.swift in Sources */,
-				7F5E24812B5157EC0070DFBD /* ShareGiftPresenter.swift in Sources */,
-				7F5E245D2B51573A0070DFBD /* GetUserCurrentRewardsService.swift in Sources */,
-				7F5E24792B5157CD0070DFBD /* GiftButton.swift in Sources */,
-				7F5E24522B5157130070DFBD /* UserQuotaResponse.swift in Sources */,
-				7F5E245B2B51573A0070DFBD /* GetUserQuotaService.swift in Sources */,
-				7F5E24872B5157F10070DFBD /* TrackEvent.swift in Sources */,
-				7F5E24822B5157EC0070DFBD /* ShareGiftProtocols.swift in Sources */,
-				7F5E245F2B51573A0070DFBD /* GetUserRewardsService.swift in Sources */,
-				7F5E24782B5157CD0070DFBD /* JSONDecoderExtensions.swift in Sources */,
-				7F5E24562B51572C0070DFBD /* UserCurrentRewardsResponse.swift in Sources */,
-				7F5E24852B5157EC0070DFBD /* ShareGiftViewController.swift in Sources */,
-				7F5E247A2B5157CD0070DFBD /* Envoy.swift in Sources */,
+				EF3E61DF35D645DA44971F963490E28F /* ClaimUserRewardRequest.swift in Sources */,
+				41511A30C8C3D395BBAF76BDAAAB7167 /* ClaimUserRewardResponse.swift in Sources */,
+				FED3D5680AD1D3A982323C3C710198A1 /* ClaimUserRewardService.swift in Sources */,
+				B75FC9693559FA0ADEF195A02D602199 /* ClearManagedLinksResponse.swift in Sources */,
+				BE19C54F9460F94FBC9082AE57EB64D4 /* ClearManagedLinksService.swift in Sources */,
+				3CD6C192312FEA510B3C61F3DCAFF774 /* CreateLinkRequest.swift in Sources */,
+				304D3591E34465AEDA1C2817727D0D55 /* CreateLinkResponse.swift in Sources */,
+				9E3B3BBD9FEE99063F431C69C2219359 /* CreateLinkService.swift in Sources */,
+				63E1702A911FB2C166B010E9FCB57EED /* CustomError.swift in Sources */,
+				F0563710B5E850E2AD0260F7BC54BF6E /* DataExtensions.swift in Sources */,
+				BC00542B772405E48568E9D145F8BE95 /* EmptyResponse.swift in Sources */,
+				FA36DDB36383623B1AD37DD20085644D /* EncodableExtensions.swift in Sources */,
+				2A9AF010F24963ECAE25DB69972FBD75 /* Endpoints.swift in Sources */,
+				3856CC83E50C4E3ABA786DB2D816DB31 /* Envoy.swift in Sources */,
+				96642ACD08CA2C6F9559315E50070C5F /* Envoy+Bundle.swift in Sources */,
+				515505D04C988EB63DED7E9F9D540022 /* EnvoySDK-dummy.m in Sources */,
+				4BF2CF867A29C1662FE1184E3016DCB7 /* GetUserCurrentRewardsService.swift in Sources */,
+				5118402B6B736512A44E1AF6B9CE71F1 /* GetUserQuotaService.swift in Sources */,
+				4A95F368BAC2EB00A8F6377690D1F84D /* GetUserRewardsService.swift in Sources */,
+				7CC5F9F270AB1DEDA4780DD2CEFC6540 /* GiftButton.swift in Sources */,
+				B5928D3166B6B44D0E0075F14C2BB26D /* JSONDecoderExtensions.swift in Sources */,
+				788EF6FA297080B1C8ADFD23DA2BC103 /* Keychain.swift in Sources */,
+				A40BD2DA6B63F71DA72DEC52906418FA /* LogPixelEventRequest.swift in Sources */,
+				8C07512C2577E2D9528BDCC898B3C4E1 /* LogPixelEventService.swift in Sources */,
+				D4A773329F538D3159D2C500652E4889 /* ManageLinksRequest.swift in Sources */,
+				7F6326ABB7141AA3EE85A892F8108DFD /* ManageLinksResponse.swift in Sources */,
+				F25DE219D6D67C7C2FA99038B58C0E15 /* ManageLinksService.swift in Sources */,
+				7F4806053361D386F24563DCFBE25C48 /* Path.swift in Sources */,
+				B7C6C2D0ABBE71BAD7DE6B3F892B206E /* PrepareLinkRequest.swift in Sources */,
+				9E8FD7488ACC1CFB73ACDF89C2138B05 /* PrepareLinkResponse.swift in Sources */,
+				324D529AB6E7CE36D6A7019DF0C14F7B /* PrepareLinkService.swift in Sources */,
+				8F7D3DCD0F882872B7D16477B3A7E72E /* Reachability.swift in Sources */,
+				158DFEE0B8C2BE1E4A5D5DDD20996820 /* Resource.swift in Sources */,
+				D9DEF825F6D174DFEA8EBAA5D6AD5FDF /* Result.swift in Sources */,
+				5F15A49D4A125FE0FC767AAE7D4BD21E /* ShareGiftBuilder.swift in Sources */,
+				62DE75B7890C3384A4D722FFEFC77D7A /* ShareGiftInteractor.swift in Sources */,
+				FFEB71DBEA197350FB52F992A5FCF5C5 /* ShareGiftPresenter.swift in Sources */,
+				A9A24CF590FC80D3A151BEF7EF1F619F /* ShareGiftProtocols.swift in Sources */,
+				B73284A5FF85E3082542D0A96ADA544E /* ShareGiftViewController.swift in Sources */,
+				179D02A5101277426F87556462F97841 /* ShareGiftViewState.swift in Sources */,
+				FC39F4DC64001D488D155CE64E16C0B6 /* ShareGiftWireframe.swift in Sources */,
+				020E41E9ECD9A77B4A156FDC766A7DAD /* TrackEvent.swift in Sources */,
+				F7A85370CEBF32932050885EA7BD6812 /* TrackService.swift in Sources */,
+				A2E178C9A2DB71AE587D3647A8536AB3 /* UserCurrentRewardsResponse.swift in Sources */,
+				04622CB6696E6EEE03FA77D14B0BEC7C /* UserDefaultsExtensions.swift in Sources */,
+				64B1EA2F2FF1E8CA7E2326A2F3C9183E /* UserQuotaResponse.swift in Sources */,
+				B6648366DDEA481126D428B9DE16C0B5 /* UserRewardsResponse.swift in Sources */,
+				F97D614A221633E10F1C3A16D0277285 /* WebClient.swift in Sources */,
+				FC7D03E616E30F6260397F51788317B3 /* WebError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		04F39D612879FE3E15AB2BD5D4FB28AC /* PBXTargetDependency */ = {
+		2BE2BA77581168471EE68A8615D062D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EnvoySDK;
 			target = 1B1DE2FFC49949E793315C8C18F4DFC1 /* EnvoySDK */;
-			targetProxy = 3CAE3BD04D2BA627BDD4EA3DE2CEE3E9 /* PBXContainerItemProxy */;
+			targetProxy = CFFEDCEF9D4D61B403C644262DABD0DD /* PBXContainerItemProxy */;
 		};
-		B028BB103732CCC029303B06786476B4 /* PBXTargetDependency */ = {
+		943DADC55468DFEC7F8F7F2EC4B1D101 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "EnvoySDK-EnvoySDK";
 			target = AD62FE3BB77AD2E6074F76BE8174D65A /* EnvoySDK-EnvoySDK */;
-			targetProxy = 6D5F950F87942BC97942D85BBD8F2B77 /* PBXContainerItemProxy */;
+			targetProxy = CDC822CAA898CA21EA0FAB3EBE71EB44 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		009B6041FE1C1E982BCCC203FE6F7218 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFB1F400FD30A96C7F5CA30B3A20FB87 /* EnvoySDK.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EnvoySDK/EnvoySDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EnvoySDK/EnvoySDK-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/EnvoySDK/EnvoySDK.modulemap";
-				PRODUCT_MODULE_NAME = EnvoySDK;
-				PRODUCT_NAME = EnvoySDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		155B5745E1E0202F71D15AE3E26314C0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFB1F400FD30A96C7F5CA30B3A20FB87 /* EnvoySDK.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/EnvoySDK";
-				IBSC_MODULE = EnvoySDK;
-				INFOPLIST_FILE = "Target Support Files/EnvoySDK/ResourceBundle-EnvoySDK-EnvoySDK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				PRODUCT_NAME = EnvoySDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		8B753328EA0EC3FB2082EBC5D4A25052 /* Debug */ = {
+		3F6AF8B2C7FD1F363839ABC695AB7847 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 121342395987B407F9D11C85116AFAB8 /* Pods-EnvoyExamples.debug.xcconfig */;
 			buildSettings = {
@@ -827,6 +769,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = "Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -849,6 +793,63 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		7BB02C8F03C2350C4A18B4C7737D4773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 139AE046D071287C3094C4041E2D43C0 /* EnvoySDK.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/EnvoySDK";
+				IBSC_MODULE = EnvoySDK;
+				INFOPLIST_FILE = "Target Support Files/EnvoySDK/ResourceBundle-EnvoySDK-EnvoySDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_NAME = EnvoySDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		86A1BB4A7946D881C2484C7877FE851D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 139AE046D071287C3094C4041E2D43C0 /* EnvoySDK.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/EnvoySDK/EnvoySDK-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/EnvoySDK/EnvoySDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/EnvoySDK/EnvoySDK.modulemap";
+				PRODUCT_MODULE_NAME = EnvoySDK;
+				PRODUCT_NAME = EnvoySDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -916,44 +917,6 @@
 			};
 			name = Debug;
 		};
-		96F2A45A04DF12FE5A422F8AC744E46D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC959FC91AD2EC4656E5EE443F56863B /* Pods-EnvoyExamples.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1016,9 +979,9 @@
 			};
 			name = Release;
 		};
-		B6A2AA079CE9F0B448DB39587095D996 /* Debug */ = {
+		CD4DCE5D3BDC31F6EA44E98E785499ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0215DC81EB75FA420F39151925272E43 /* EnvoySDK.debug.xcconfig */;
+			baseConfigurationReference = 066F64D9219D713ADC9EE297766595EF /* EnvoySDK.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1029,7 +992,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "Target Support Files/EnvoySDK/EnvoySDK-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "Target Support Files/EnvoySDK/EnvoySDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1044,6 +1010,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1051,9 +1018,49 @@
 			};
 			name = Debug;
 		};
-		C456A1C8280E1459E9801919BF6C6642 /* Debug */ = {
+		DE6F47817E3E2552D444C7FFD258141F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0215DC81EB75FA420F39151925272E43 /* EnvoySDK.debug.xcconfig */;
+			baseConfigurationReference = CC959FC91AD2EC4656E5EE443F56863B /* Pods-EnvoyExamples.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EnvoyExamples/Pods-EnvoyExamples.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EC5B612647F98FD040A9AFF1B3E7E90C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 066F64D9219D713ADC9EE297766595EF /* EnvoySDK.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGNING_ALLOWED = NO;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/EnvoySDK";
@@ -1071,15 +1078,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		012FFD1D41E6551288D9F97BBCA78ED5 /* Build configuration list for PBXNativeTarget "EnvoySDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B6A2AA079CE9F0B448DB39587095D996 /* Debug */,
-				009B6041FE1C1E982BCCC203FE6F7218 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1089,20 +1087,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BC2FD3E3DA268E1146F49092F740DC7 /* Build configuration list for PBXNativeTarget "Pods-EnvoyExamples" */ = {
+		495CFC2340C2A441F480A2ABF5444B03 /* Build configuration list for PBXNativeTarget "Pods-EnvoyExamples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B753328EA0EC3FB2082EBC5D4A25052 /* Debug */,
-				96F2A45A04DF12FE5A422F8AC744E46D /* Release */,
+				3F6AF8B2C7FD1F363839ABC695AB7847 /* Debug */,
+				DE6F47817E3E2552D444C7FFD258141F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFADA4EDBBB9B1485506EA4F304CE024 /* Build configuration list for PBXNativeTarget "EnvoySDK-EnvoySDK" */ = {
+		735C24D170C27A34E1E3E8384E8FC6BE /* Build configuration list for PBXNativeTarget "EnvoySDK-EnvoySDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C456A1C8280E1459E9801919BF6C6642 /* Debug */,
-				155B5745E1E0202F71D15AE3E26314C0 /* Release */,
+				EC5B612647F98FD040A9AFF1B3E7E90C /* Debug */,
+				7BB02C8F03C2350C4A18B4C7737D4773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7252DAD1CD8D0623A9031430F6C4247 /* Build configuration list for PBXNativeTarget "EnvoySDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4DCE5D3BDC31F6EA44E98E785499ED /* Debug */,
+				86A1BB4A7946D881C2484C7877FE851D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
