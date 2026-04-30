@@ -1,6 +1,5 @@
 import Foundation
 import Combine
-import Photos
 import UIKit
 
 public protocol EnvoyProtocol {
@@ -8,49 +7,48 @@ public protocol EnvoyProtocol {
 }
 
 public protocol EnvoyType {
-    
+    @MainActor
     func pushShareGift(
         in navigationController: UINavigationController,
         request: CreateLinkRequest
     )
-    
+    @MainActor
     func presentShareGift(
         from viewController: UIViewController,
         request: CreateLinkRequest
     )
-    
+    @MainActor
     func giftButton(request: CreateLinkRequest) -> UIButton
-    
+    @MainActor
     func createLink(request: CreateLinkRequest,
                     completion: @escaping (CreateLinkResponse?, WebError?) -> ())
-    
+    @MainActor
     func prepLink(request: PrepLinkRequest,
                     completion: @escaping (PrepLinkResponse?, WebError?) -> ())
-
     @MainActor
     func manageLinks(request: ManageLinksRequest,
                      completion: @escaping (ManageLinksResponse?, WebError?) -> ())
-
     @MainActor
     func clearManagedLinks(completion: @escaping (ClearManagedLinksResponse?, WebError?) -> ())
-
+    @MainActor
     func getUserRemainingQuota(userId: String,
                                completion: @escaping (UserQuotaResponse?, WebError?) -> ())
-    
+    @MainActor
     func logPixelEvent(request: LogPixelEventRequest,
                        completion: @escaping (EmptyResponse?, WebError?) -> ())
-    
+    @MainActor
     func getUserRewards(userId: String,
                         completion: @escaping (UserRewardsResponse?, WebError?) -> ())
-    
+    @MainActor
     func claimUserReward(request: ClaimUserRewardRequest,
                          completion: @escaping (ClaimUserRewardResponse?, WebError?) -> ())
-    
+    @MainActor
     func getUserCurrentRewards(
         userId: String,
         completion: @escaping (UserCurrentRewardsResponse?, WebError?) -> ())
 }
 
+@available(iOS 13.0, *)
 public final class Envoy: ObservableObject {
     private enum Constants {
         static let envoyShareLinkHash = "envoy_share_link_hash"
@@ -65,7 +63,7 @@ public final class Envoy: ObservableObject {
     fileprivate let webClient: WebClient
     fileprivate var notificationObserver: NSObjectProtocol?
 
-    public static var shared: Envoy!
+    nonisolated(unsafe) public static var shared: Envoy!
     public var delegate: EnvoyProtocol?
 
     public static func initialize(apiKey: String) {
@@ -74,7 +72,6 @@ public final class Envoy: ObservableObject {
 
     private init(apiKey: String) {
         self.apiKey = apiKey
-//        self.apiUrl = Constants.devEnvironment
         self.apiUrl = Constants.prodEnvironment
 
         self.webClient = WebClient(baseURL: self.apiUrl)
@@ -99,40 +96,42 @@ public final class Envoy: ObservableObject {
         }
     }
 
-    // MARK: Delegate
+    // MARK: Screenshot capture
+    //
+    // We snapshot the foreground key window the moment iOS posts
+    // `userDidTakeScreenshotNotification`. This needs no Photos-library
+    // permission, runs synchronously, and delivers exactly what the user
+    // saw — sidestepping the iOS 26 / iPhone 17 Pro "Full-Screen Preview"
+    // flow that delays or prevents the screenshot from reaching Photos.
     func setupScreenshotNotification() {
-        notificationObserver = NotificationCenter.default.addObserver(forName: UIApplication.userDidTakeScreenshotNotification,
-                                                                      object: nil,
-                                                                      queue: .main) { [weak self] _ in
-            guard let self = self else { return }
-            self.getMostRecentPhoto { image in
-                self.delegate?.userDidTookScreenshot(image)
-            }
+        notificationObserver = NotificationCenter.default.addObserver(
+            forName: UIApplication.userDidTakeScreenshotNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            guard let self else { return }
+            let image = Self.captureKeyWindowImage()
+            self.delegate?.userDidTookScreenshot(image)
         }
     }
 
-    func getMostRecentPhoto(completion: @escaping (UIImage?) -> Void) {
-        let options = PHFetchOptions()
-        options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-        let fetchResult = PHAsset.fetchAssets(with: .image, options: options)
+    private static func captureKeyWindowImage() -> UIImage? {
+        guard let window = UIApplication.shared.connectedScenes
+            .compactMap({ $0 as? UIWindowScene })
+            .first(where: { $0.activationState == .foregroundActive })?
+            .windows
+            .first(where: { $0.isKeyWindow }) else { return nil }
 
-        if let asset = fetchResult.firstObject {
-            let manager = PHImageManager.default()
-            let requestOptions = PHImageRequestOptions()
-            requestOptions.isSynchronous = false
-            requestOptions.deliveryMode = .highQualityFormat
-
-            manager.requestImage(for: asset, targetSize: PHImageManagerMaximumSize, contentMode: .aspectFit, options: requestOptions) { image, _ in
-                completion(image)
-            }
-        } else {
-            completion(nil)
+        let renderer = UIGraphicsImageRenderer(bounds: window.bounds)
+        return renderer.image { _ in
+            window.drawHierarchy(in: window.bounds, afterScreenUpdates: false)
         }
     }
 }
 
+@available(iOS 13.0, *)
 extension Envoy: EnvoyType {
-    
+    @MainActor
     public func pushShareGift(in navigationController: UINavigationController,
                               request: CreateLinkRequest) {
         navigationController.pushViewController(shareGiftViewController(request: request),
@@ -211,7 +210,9 @@ extension Envoy: EnvoyType {
     }
 }
 
+@available(iOS 13.0, *)
 private extension Envoy {
+    @MainActor
     func shareGiftViewController(request: CreateLinkRequest) -> UIViewController {
         let viewController = ShareGiftBuilder.viewController(
             request: request,
