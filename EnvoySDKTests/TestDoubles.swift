@@ -13,12 +13,15 @@ final class FakePasteboard: PasteboardType {
     var content: String?
     /// When nil, detection stays in progress until `finishDetection(with:)` is called.
     var detectionResult: Swift.Result<Bool, Error>?
+    /// Runs while the content is being read, like the system paste prompt.
+    var onRead: (() -> Void)?
     private(set) var detectionCount = 0
     private(set) var readCount = 0
     private var pendingDetections: [(Swift.Result<Bool, Error>) -> Void] = []
 
     var string: String? {
         readCount += 1
+        onRead?()
         return content
     }
 
@@ -35,6 +38,15 @@ final class FakePasteboard: PasteboardType {
         let pending = pendingDetections
         pendingDetections = []
         pending.forEach { $0(result) }
+    }
+
+    func finishOldestDetection(with result: Swift.Result<Bool, Error>) {
+        pendingDetections.removeFirst()(result)
+    }
+
+    /// Like the system releasing the callback without ever calling it.
+    func dropPendingDetections() {
+        pendingDetections = []
     }
 }
 

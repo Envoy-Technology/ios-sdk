@@ -195,4 +195,55 @@ final class DeferredLinkTests: XCTestCase {
         envoy.checkDeferredLink { found = $0 }
         XCTAssertEqual(found, true)
     }
+
+    @MainActor
+    func testLateAnswerToTimedOutCheck_doesNotEndTheRetry() {
+        fixture.pasteboard.content = TestLinks.full
+        let envoy = fixture.makeEnvoy(deferredLinkTimeout: 0.05)
+        let timedOut = expectation(description: "first check timed out")
+        envoy.checkDeferredLink { _ in timedOut.fulfill() }
+        wait(for: [timedOut], timeout: 2)
+
+        var retryResult: Bool?
+        envoy.checkDeferredLink { retryResult = $0 }
+        fixture.pasteboard.finishOldestDetection(with: .failure(TestError.detectionFailed))
+        XCTAssertNil(retryResult, "A late answer to the first check must not end the retry")
+
+        fixture.pasteboard.finishOldestDetection(with: .success(true))
+        XCTAssertEqual(retryResult, true)
+    }
+
+    @MainActor
+    func testCallMadeWhileClipboardIsRead_getsTheResult() {
+        // E.g. the host calls again while the paste prompt is up.
+        fixture.pasteboard.content = TestLinks.full
+        let envoy = fixture.makeEnvoy()
+        var joined: Bool?
+        fixture.pasteboard.onRead = {
+            envoy.checkDeferredLink { joined = $0 }
+        }
+
+        envoy.checkDeferredLink()
+        fixture.pasteboard.finishDetection(with: .success(true))
+
+        XCTAssertEqual(joined, true)
+    }
+
+    @MainActor
+    func testDetectionCallbackDroppedAfterEnvoyIsReleased_stillCompletesAfterTimeout() {
+        fixture.pasteboard.content = TestLinks.full
+        var envoy: Envoy? = fixture.makeEnvoy(deferredLinkTimeout: 0.05)
+        let completed = expectation(description: "check completed")
+        var found: Bool?
+        envoy?.checkDeferredLink {
+            found = $0
+            completed.fulfill()
+        }
+
+        envoy = nil
+        fixture.pasteboard.dropPendingDetections()
+        wait(for: [completed], timeout: 2)
+
+        XCTAssertEqual(found, false)
+    }
 }

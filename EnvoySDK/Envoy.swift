@@ -91,10 +91,10 @@ public final class Envoy: ObservableObject {
     private var deferredLinkCheckID = 0
     private var deferredLinkCheckTimeout: DispatchWorkItem?
     /// Pixel events logged during a deferred-link check, sent once it ends.
-    private var pendingPixelEvents: [(request: LogPixelEventRequest,
-                                      completion: (EmptyResponse?, WebError?) -> ())] = []
-    /// Attribution read from the Keychain, kept until a check stores a new one.
-    private var cachedAttribution: LogPixelEventRequest.Attribution?
+    private var pendingPixelEvents: [PendingPixelEvent] = []
+
+    private typealias PendingPixelEvent = (request: LogPixelEventRequest,
+                                           completion: (EmptyResponse?, WebError?) -> ())
 
     nonisolated(unsafe) public static var shared: Envoy!
     public var delegate: EnvoyProtocol?
@@ -130,7 +130,7 @@ public final class Envoy: ObservableObject {
     /// the clipboard holds a URL, or doesn't answer in time, the check is not used up and a later call tries again.
     /// Pixel events logged while the check runs are sent after it, so they carry the attribution.
     /// Can be called from any thread; `completion` is called on the main thread.
-    public func checkDeferredLink(completion: ((Bool) -> Void)? = nil) {
+    nonisolated public func checkDeferredLink(completion: ((Bool) -> Void)? = nil) {
         onMainThread {
             self.startDeferredLinkCheck(completion: completion)
         }
@@ -149,20 +149,21 @@ public final class Envoy: ObservableObject {
         deferredLinkCheckID += 1
         let checkID = deferredLinkCheckID
 
-        let timeout = DispatchWorkItem { [weak self] in
-            self?.finishDeferredLinkCheck(checkID, detection: .failure(DeferredLinkCheckTimeout()))
+        // Strong captures: the check must finish even if this instance is replaced meanwhile,
+        // and the timeout bounds how long it is kept alive.
+        let timeout = DispatchWorkItem {
+            self.finishDeferredLinkCheck(checkID, detection: .failure(DeferredLinkCheckTimeout()))
         }
         deferredLinkCheckTimeout = timeout
         DispatchQueue.main.asyncAfter(deadline: .now() + deferredLinkTimeout, execute: timeout)
 
-        // Strong capture: the check must finish even if this instance is replaced meanwhile.
         pasteboard.detectProbableWebURL { result in
             self.finishDeferredLinkCheck(checkID, detection: result)
         }
     }
 
     private func finishDeferredLinkCheck(_ checkID: Int, detection: Swift.Result<Bool, Error>) {
-        guard checkID == deferredLinkCheckID, let completions = deferredLinkCompletions else {
+        guard checkID == deferredLinkCheckID, deferredLinkCompletions != nil else {
             return
         }
         deferredLinkCheckTimeout?.cancel()
@@ -185,6 +186,8 @@ public final class Envoy: ObservableObject {
             found = storeDeferredLinkParameters(from: pasteboard.string)
         }
 
+        // Taken only now, so a call made while the clipboard was read (e.g. with the paste prompt up) gets the result.
+        let completions = deferredLinkCompletions ?? []
         deferredLinkCompletions = nil
         // Events held during the check go before anything logged from a completion.
         sendPendingPixelEvents()
@@ -210,44 +213,34 @@ public final class Envoy: ObservableObject {
                 didStore = true
             }
         }
-        if didStore {
-            cachedAttribution = nil
-        }
         return didStore
     }
 
     // MARK: Pixel events
-    private func sendPixelEvent(_ request: LogPixelEventRequest,
-                                completion: @escaping (EmptyResponse?, WebError?) -> ()) {
-        pixelEventService.logPixelEvent(request: request.attributed(with: storedAttribution()),
-                                        completion: completion)
+    private func sendPixelEvents(_ events: [PendingPixelEvent]) {
+        guard !events.isEmpty else { return }
+        // Read once per batch, and fresh each time: another Envoy instance may have stored a link meanwhile.
+        let attribution = LogPixelEventRequest.Attribution(
+            shareLinkHash: keychain.value(forKey: .envoyShareLinkHash),
+            leadUuid: keychain.value(forKey: .envoyLeadUuid)
+        )
+        events.forEach {
+            pixelEventService.logPixelEvent(request: $0.request.attributed(with: attribution),
+                                            completion: $0.completion)
+        }
     }
 
     private func sendPendingPixelEvents() {
         let events = pendingPixelEvents
         pendingPixelEvents = []
-        events.forEach { sendPixelEvent($0.request, completion: $0.completion) }
-    }
-
-    private func storedAttribution() -> LogPixelEventRequest.Attribution {
-        if let cachedAttribution = cachedAttribution {
-            return cachedAttribution
-        }
-        let attribution = LogPixelEventRequest.Attribution(
-            shareLinkHash: keychain.value(forKey: .envoyShareLinkHash),
-            leadUuid: keychain.value(forKey: .envoyLeadUuid)
-        )
-        // Nothing found can also mean the Keychain was locked, so read it again next time.
-        if attribution.shareLinkHash != nil || attribution.leadUuid != nil {
-            cachedAttribution = attribution
-        }
-        return attribution
+        sendPixelEvents(events)
     }
 
     // MARK: Threading
     private struct DeferredLinkCheckTimeout: Error {}
 
-    /// Hosts compiled in Swift 5 mode can call the main-actor API from any thread with only a warning,
+    /// Hosts compiled in Swift 5 mode can end up calling the main-actor API off the main thread
+    /// (e.g. from another SDK's callback) without a compiler error,
     /// so the deferred-link and pixel-event state is touched on the main thread only.
     private func onMainThread(_ work: @escaping () -> Void) {
         if Thread.isMainThread {
@@ -352,7 +345,7 @@ extension Envoy: EnvoyType {
             if self.deferredLinkCompletions != nil {
                 self.pendingPixelEvents.append((request, completion))
             } else {
-                self.sendPixelEvent(request, completion: completion)
+                self.sendPixelEvents([(request, completion)])
             }
         }
     }

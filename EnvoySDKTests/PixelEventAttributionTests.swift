@@ -133,6 +133,24 @@ final class PixelEventAttributionTests: XCTestCase {
     }
 
     @MainActor
+    func testAttributionStoredByAnotherInstance_isUsedForLaterEvents() {
+        // E.g. the host initializes Envoy twice and logs through the newer instance.
+        fixture.keychain.values[.envoyShareLinkHash] = "hash-0"
+        fixture.keychain.values[.envoyLeadUuid] = "lead-0"
+        fixture.pasteboard.content = TestLinks.full
+        let checking = fixture.makeEnvoy()
+        let logging = fixture.makeEnvoy()
+        checking.checkDeferredLink()
+        logging.logPixelEvent(request: LogPixelEventRequest(event: .appDownloaded)) { _, _ in }
+
+        fixture.pasteboard.finishDetection(with: .success(true))
+        logging.logPixelEvent(request: LogPixelEventRequest(event: .accountCreated)) { _, _ in }
+
+        XCTAssertEqual(fixture.pixelEventService.sentBodies.last?["share_link_hash"] as? String, "hash-1")
+        XCTAssertEqual(fixture.pixelEventService.sentBodies.last?["lead_uuid"] as? String, "lead-1")
+    }
+
+    @MainActor
     func testAttributionStoredByCheck_replacesEarlierOne() {
         fixture.keychain.values[.envoyShareLinkHash] = "hash-0"
         fixture.keychain.values[.envoyLeadUuid] = "lead-0"

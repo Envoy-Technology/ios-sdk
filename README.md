@@ -46,8 +46,8 @@ What it does:
 - Calls made while a check is in progress get the result of that check.
 - On iOS 14+ it first checks, without reading the content, whether the clipboard contains a web URL. It reads the clipboard only if it does, so iOS shows its paste banner/prompt only in that case. If the user denies the paste prompt, the check is used up and they are not asked again.
 - It keeps only the `envoy_share_link_hash` and `envoy_lead_uuid` query parameters (stored in the Keychain and sent with pixel events). The rest of the clipboard content is discarded.
-- Pixel events logged while a check is in progress are held until it ends and then sent with the attribution it found, if any. Events logged before the check starts are sent right away without it. So if you start the check right after `initialize`, you can log `.appDownloaded` straight away; if you start it later (e.g. after consent), log `.appDownloaded` in its completion.
-- It can be called from any thread. The completion is called on the main thread.
+- Pixel events logged while a check is in progress are held until it ends and then sent with the attribution it found, if any. Events logged when no check is in progress are sent right away, with whatever attribution is already stored. So if you start the check right after `initialize`, you can log `.appDownloaded` straight away; if you start it later (e.g. after consent), log `.appDownloaded` in its completion.
+- `Envoy.shared.checkDeferredLink` and `Envoy.shared.logPixelEvent` can be called from any thread (through the `EnvoyType` protocol they are main-actor isolated). The completion is called on the main thread.
 
 Disclose this clipboard access and the attribution data in your privacy policy and App Privacy details. The SDK ships a `PrivacyInfo.xcprivacy` privacy manifest that declares the data it collects and its use of `UserDefaults`.
 
@@ -211,9 +211,10 @@ Configure a LogPixelEventRequest with one of the events: `.appDownloaded`, `.acc
 ```swift
 let request = LogPixelEventRequest(event: .appDownloaded)
 
-let request = LogPixelEventRequest(event: .paymentSuccess,
-                                   sharerUserId: "sharer-id",
-                                   extra: .init(title: "Premium", type: "subscription"))
+// With the optional sharer and extra details
+let paymentRequest = LogPixelEventRequest(event: .paymentSuccess,
+                                          sharerUserId: "sharer-id",
+                                          extra: .init(title: "Premium", type: "subscription"))
 ```
 
 The SDK adds the install attribution (`share_link_hash`, `lead_uuid`) stored by `checkDeferredLink` (see 2.1) when the event is sent.
