@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                  = "EnvoySDK"
-  spec.version               = "0.0.15"
+  spec.version               = "0.1.0"
   spec.summary               = "EnvoySDK for iOS"
   spec.homepage              = "https://dev-platform.envoy.is"
   spec.license               = { :type => "MIT", :file => "LICENSE" }
@@ -13,4 +13,8 @@ Pod::Spec.new do |spec|
   spec.platform              = :ios
   spec.swift_version         = "5.0"
   spec.ios.deployment_target = "13.0"
+
+  spec.test_spec 'Tests' do |test_spec|
+    test_spec.source_files = 'EnvoySDKTests/**/*.swift'
+  end
 end
