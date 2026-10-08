@@ -28,7 +28,25 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-## 2.1 Initialize EnvoySDK with delegate (optional)
+## 2.1 Check deferred link (optional)
+Envoy landing pages copy the share link to the clipboard before redirecting to the App Store. To attribute the install to that link, call `checkDeferredLink` after initialization. The SDK no longer reads the clipboard on its own, so you decide when it happens. If you need user consent first (e.g. under GDPR/ePrivacy in the EU), call it only after consent is given.
+
+```swift
+Envoy.initialize(apiKey: {your-api-key})
+Envoy.shared.checkDeferredLink { found in
+    // found == true when Envoy link parameters were stored.
+    // Log pixel events (e.g. .appDownloaded) after this completes so they carry the attribution.
+}
+```
+
+What it does:
+- Runs once per install. Later calls complete with `false` immediately.
+- On iOS 14+ it first checks, without reading the content, whether the clipboard contains a web URL. It reads the clipboard only if it does, so iOS shows its paste banner/prompt only in that case.
+- It keeps only the `envoy_share_link_hash` and `envoy_lead_uuid` query parameters (stored in the Keychain and sent with pixel events). The rest of the clipboard content is discarded.
+
+Disclose this clipboard access and the attribution data in your privacy policy and App Privacy details. The SDK ships a `PrivacyInfo.xcprivacy` privacy manifest that declares the data it collects and its use of `UserDefaults`.
+
+## 2.2 Initialize EnvoySDK with delegate (optional)
 To get inform when user did took screenshot add delegate right after SDK initialization and add EnvoyProtocol AppDelegate extension. 
 
 ```swift

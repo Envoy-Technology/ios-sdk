@@ -11,6 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //For tests switch from prodEnvironment to devEnvironment in Envoy class
         Envoy.initialize(apiKey: Config.apiKey)
         Envoy.shared.delegate = self
+        Envoy.shared.checkDeferredLink()
         return true
     }
 

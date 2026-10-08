@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.source                = { :git => "https://github.com/Envoy-Technology/ios-sdk.git", :tag => "#{spec.version}" }
   spec.source_files          = "Classes", "EnvoySDK/**/*.{h,m,swift}"
   spec.resource_bundles      = {
-    spec.name => 'EnvoySDK/**/*.{xcassets,xib}'
+    spec.name => 'EnvoySDK/**/*.{xcassets,xib,xcprivacy}'
   }
   spec.platform              = :ios
   spec.swift_version         = "5.0"

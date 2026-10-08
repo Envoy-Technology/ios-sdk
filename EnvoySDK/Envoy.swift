@@ -8,6 +8,8 @@ public protocol EnvoyProtocol {
 
 public protocol EnvoyType {
     @MainActor
+    func checkDeferredLink(completion: ((Bool) -> Void)?)
+    @MainActor
     func pushShareGift(
         in navigationController: UINavigationController,
         request: CreateLinkRequest
@@ -76,24 +78,58 @@ public final class Envoy: ObservableObject {
 
         self.webClient = WebClient(baseURL: self.apiUrl)
         self.setupScreenshotNotification()
-        if UserDefaults.standard.isFreshInstall {
-            UserDefaults.standard.set(isFreshInstall: false)
-            guard let clipboardLink = UIPasteboard.general.string,
-                  let url = URL(string: clipboardLink),
-                  let components = URLComponents(url: url, resolvingAgainstBaseURL: true),
-                  let parameters = components.queryItems else {
-                return
-            }
-            for parameter in parameters {
-                if parameter.name == Constants.envoyShareLinkHash,
-                   let value = parameter.value {
-                    Keychain.standard.set(value, forKey: .envoyShareLinkHash)
-                } else if parameter.name == Constants.envoyLeadUuid,
-                   let value = parameter.value {
-                    Keychain.standard.set(value, forKey: .envoyLeadUuid)
+    }
+
+    // MARK: Deferred link
+    /// Reads the clipboard once per install
+    /// and returns `true` in completion when Envoy link parameters were found and stored.
+    /// On iOS 14+ the clipboard is read only when it contains a web URL, so iOS shows the paste prompt only then.
+    @MainActor
+    public func checkDeferredLink(completion: ((Bool) -> Void)? = nil) {
+        guard UserDefaults.standard.isFreshInstall else {
+            completion?(false)
+            return
+        }
+        UserDefaults.standard.set(isFreshInstall: false)
+
+        let pasteboard = UIPasteboard.general
+        guard #available(iOS 14.0, *) else {
+            completion?(storeDeferredLinkParameters(from: pasteboard.string))
+            return
+        }
+        pasteboard.detectPatterns(for: [.probableWebURL]) { [weak self] result in
+            DispatchQueue.main.async {
+                guard let self = self,
+                      case .success(let patterns) = result,
+                      patterns.contains(.probableWebURL) else {
+                    completion?(false)
+                    return
                 }
+                completion?(self.storeDeferredLinkParameters(from: pasteboard.string))
             }
         }
+    }
+
+    private func storeDeferredLinkParameters(from clipboardLink: String?) -> Bool {
+        guard let clipboardLink = clipboardLink,
+              let url = URL(string: clipboardLink),
+              let components = URLComponents(url: url, resolvingAgainstBaseURL: true),
+              let parameters = components.queryItems else {
+            return false
+        }
+        var didStore = false
+        for parameter in parameters {
+            if parameter.name == Constants.envoyShareLinkHash,
+               let value = parameter.value {
+                Keychain.standard.set(value, forKey: .envoyShareLinkHash)
+                didStore = true
+            } else if parameter.name == Constants.envoyLeadUuid,
+               let value = parameter.value {
+                Keychain.standard.set(value, forKey: .envoyLeadUuid)
+                didStore = true
+            }
+        }
+        return didStore
     }
 
     // MARK: Screenshot capture
