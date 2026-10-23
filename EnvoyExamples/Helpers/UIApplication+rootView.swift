@@ -38,9 +38,3 @@ extension UIApplication {
         return controller
     }
 }
-
-extension UIImage {
-    var base64: String? {
-        self.jpegData(compressionQuality: 0.1)?.base64EncodedString()
-    }
-}
