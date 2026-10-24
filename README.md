@@ -1,4 +1,8 @@
 <a name="introduction"></a>
+> [!WARNING]
+> **This repository and the `EnvoySDK` CocoaPod are deprecated and no longer maintained.** The pod stays at 0.0.16; CocoaPods trunk becomes read-only on December 2, 2026, so no new versions will be published.
+> Use the Swift Package Manager package instead: **[Envoy-Technology/envoy-ios-sdk](https://github.com/Envoy-Technology/envoy-ios-sdk)**. Its README explains how to migrate from CocoaPods.
+
 # Overview
 
 Envoy iOS SDK aimed to deliver a fast solution to share content out of the iOS Application.
