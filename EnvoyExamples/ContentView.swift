@@ -8,13 +8,7 @@
 import SwiftUI
 import EnvoySDK
 
-protocol EnvoyEventProtocol {
-    func createLink()
-    func prepLink()
-    func createLinkWithImage(image: UIImage)
-}
-
-struct ContentView: View, EnvoyEventProtocol {
+struct ContentView: View {
 
     let navigation: UINavigationController
     
@@ -154,6 +148,14 @@ struct ContentView: View, EnvoyEventProtocol {
             }
             .padding(20)
         }
+        .onAppear {
+            Envoy.shared.startScreenshotSharing(from: self.navigation) {
+                self.mockedScreenshotShare()
+            }
+        }
+        .onDisappear {
+            Envoy.shared.stopScreenshotSharing()
+        }
     }
     
     internal func createLink() {
@@ -167,11 +169,6 @@ struct ContentView: View, EnvoyEventProtocol {
             print(response)
             print(error)
         }
-    }
-
-    internal func createLinkWithImage(image: UIImage) {
-        let request = self.mockedScreenshotLinkRequest(image: image)
-        Envoy.shared.pushShareGift(in: self.navigation, request: request)
     }
 
     private func claimUserReward() {
@@ -237,18 +234,16 @@ struct ContentView: View, EnvoyEventProtocol {
                                  isSandbox: true)
     }
 
-    private func mockedScreenshotLinkRequest(image: UIImage) -> CreateLinkRequest {
-        let imageBase64 = image.base64
-        let contentSetting = CreateLinkRequest.ContentSetting(
-            contentType: "SCREENSHOT",
-            contentName: "Test screenshot Base64",
-            contentDescription: "Content description Base64",
-            base64_file: imageBase64)
-
-        return CreateLinkRequest(autoplay: nil,
-                                 contentSetting: contentSetting,
-                                 sharerId: "test12345",
-                                 isSandbox: true)
+    private func mockedScreenshotShare() -> ScreenshotShare {
+        let request = CreateLinkRequest.forArticle(
+            url: "https://grokipedia.com/page/Elon_Musk",
+            id: "Elon_Musk",
+            title: "Elon Musk",
+            description: "Grokipedia article",
+            sharerId: "test12345",
+            contentType: .screenshot,
+            isSandbox: true)
+        return ScreenshotShare(request: request, message: "Your friend wants to gift you this article")
     }
 
 }

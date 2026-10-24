@@ -608,7 +608,6 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EnvoyExamples/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To capture screenshot from photo library you will need to set description for the users. It's in .plist in \"Privacy - Photo Library Usage Description\".";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -640,7 +639,6 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EnvoyExamples/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To capture screenshot from photo library you will need to set description for the users. It's in .plist in \"Privacy - Photo Library Usage Description\".";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
